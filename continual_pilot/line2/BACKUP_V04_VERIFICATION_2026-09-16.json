@@ -1,0 +1,84 @@
+{
+  "schema": "external-backup-verification-v1",
+  "verified_utc": "2026-09-16T16:58:31.245371+00:00",
+  "repository": "FearmessOp/continual-pilot",
+  "release_id": 390088986,
+  "release_tag": "archive-v04-control-01",
+  "release_is_draft_at_verification": true,
+  "source_commit": "e25ca41c470686c036e2e82f747ab9cc79cd1dcd",
+  "original_manifest_sha256": "2c37cd3ff958c0fae9f0a7983958bdd85ba924de4af41fe796b4391baa89c29d",
+  "downloaded_index_sha256": "a9658d77425564737dc39a4d689dad426fd83ff0ae71c6d402f9a08930f682e3",
+  "verification_method": "GitHub release assets downloaded to a separate directory; complete ZIP members streamed and checked against original manifest SHA256 and byte counts; exact coverage and no duplicate members",
+  "parts": [
+    {
+      "name": "v04-raw-part-001.zip",
+      "bytes": 535208992,
+      "sha256": "6ab6d0f390ce8180e8fc05f2ad16136956dc73c202ce422d321d49142928cedd",
+      "verified_files": 332
+    },
+    {
+      "name": "v04-raw-part-002.zip",
+      "bytes": 529766092,
+      "sha256": "8a32a17f8c8c9c20b8f9d3cf2b3fae63d63da01db3ccbbefa06cdabcad6d8124",
+      "verified_files": 327
+    },
+    {
+      "name": "v04-raw-part-003.zip",
+      "bytes": 533839467,
+      "sha256": "72e93b1df162d083dc23dd86d54e292f3c5e9214327d8876f9c7711c73f87ec2",
+      "verified_files": 330
+    },
+    {
+      "name": "v04-raw-part-004.zip",
+      "bytes": 531744722,
+      "sha256": "58c6b5b0cb6384a6b5855fbe2e6ead578fd5947185a79c14b6446db129485f10",
+      "verified_files": 330
+    },
+    {
+      "name": "v04-raw-part-005.zip",
+      "bytes": 533384234,
+      "sha256": "234ba0a2ab870f0a11404c661eec06a757cd65dfcaf08add9619b86c3b961b4e",
+      "verified_files": 330
+    },
+    {
+      "name": "v04-raw-part-006.zip",
+      "bytes": 536526573,
+      "sha256": "3d456f2d7de8080f71693b8f1a0b6660010238a0065bc5a299b6c36342c67f60",
+      "verified_files": 330
+    },
+    {
+      "name": "v04-raw-part-007.zip",
+      "bytes": 536016734,
+      "sha256": "9dbbf488cd4b7831c4a1b46ab6425d1a7c5cc33ee65bea544ca6949aedd5caad",
+      "verified_files": 330
+    },
+    {
+      "name": "v04-raw-part-008.zip",
+      "bytes": 536242277,
+      "sha256": "292d109b40f17a046eebdc3688fb6e53b97f97e817b512284936f8d6802792e8",
+      "verified_files": 329
+    },
+    {
+      "name": "v04-raw-part-009.zip",
+      "bytes": 532658295,
+      "sha256": "3170572da4400f10a1b2c78e924678cc4fdee7b927795b06a87d78a2db251e58",
+      "verified_files": 331
+    },
+    {
+      "name": "v04-raw-part-010.zip",
+      "bytes": 534570366,
+      "sha256": "54d0450e9c454c2502e92e11d145642aac44ddcc2a6f855b21a8693074f1b531",
+      "verified_files": 330
+    },
+    {
+      "name": "v04-raw-part-011.zip",
+      "bytes": 493555865,
+      "sha256": "44d7bb4bc3c2aac699c315b8ddd95501843f6516417652190fe65279e2284c98",
+      "verified_files": 352
+    }
+  ],
+  "verified_files_including_manifest": 3651,
+  "verified_bytes_including_manifest": 5832842691,
+  "all_files_match": true,
+  "raw_artifacts_added_to_git_history": false
+}

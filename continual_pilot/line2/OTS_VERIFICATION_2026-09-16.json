@@ -1,0 +1,44 @@
+{
+  "verified_utc": "2026-09-16T17:02:08.820804+00:00",
+  "protocol_sha256": "0800b0647a0feec22dc13b83ddfaaa7478dc4cd8fe54d3a923423f3cd8d136f7",
+  "upgraded_receipt_sha256": "3acf5560e2e668e888c2c6419ce7414a980967a4c0f78671a98ea098f633b13b",
+  "verification_script_sha256": "93a08362148dd14e5c03e6000c9944f657991da2372945f2a3e0ebf23e3e215f",
+  "verified_attestations": [
+    {
+      "height": 967295,
+      "merkle_root_internal_hex": "abf8aa580ae144a265593c7ff1f618be403fa1eb329a77570fce8ea5a0d3de74",
+      "block_time_unix": 1789571922,
+      "block_time_utc": "2026-09-16T15:18:42+00:00",
+      "header_hash_and_pow_verified": true,
+      "ots_merkle_commitment_verified": true,
+      "sources": [
+        {
+          "service": "https://blockstream.info/api",
+          "block_hash": "0000000000000000000191a3cc3dda7e3d8f40cbdea3181eb7c5a0e2de06853a",
+          "header_hex": "0080b5209ffba922d98c8572684501debba9c745d9806e96cadd00000000000000000000abf8aa580ae144a265593c7ff1f618be403fa1eb329a77570fce8ea5a0d3de7452b3aa6a5e350217b804b0d4",
+          "status": {
+            "in_best_chain": true,
+            "height": 967295,
+            "next_best": "00000000000000000000e150d6694037e9896710592ffa449775ad18e974eab7"
+          },
+          "tip_height": 967302,
+          "confirmations": 8
+        },
+        {
+          "service": "https://mempool.space/api",
+          "block_hash": "0000000000000000000191a3cc3dda7e3d8f40cbdea3181eb7c5a0e2de06853a",
+          "header_hex": "0080b5209ffba922d98c8572684501debba9c745d9806e96cadd00000000000000000000abf8aa580ae144a265593c7ff1f618be403fa1eb329a77570fce8ea5a0d3de7452b3aa6a5e350217b804b0d4",
+          "status": {
+            "in_best_chain": true,
+            "height": 967295,
+            "next_best": null
+          },
+          "tip_height": 967302,
+          "confirmations": 8
+        }
+      ]
+    }
+  ],
+  "trust_model": "OTS operations, Merkle commitment, header hash and declared-target proof of work verified locally. Best-chain membership and height cross-checked using two HTTPS explorers. No local full-chain, difficulty-transition or cumulative-work validation performed. Block header time is not the exact document creation time.",
+  "local_full_chain_validation": false
+}
