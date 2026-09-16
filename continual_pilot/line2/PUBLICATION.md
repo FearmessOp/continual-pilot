@@ -70,3 +70,30 @@ Sonraki izin yalnızca Hat 2 uygulama/testleri ve v0.4 kabul–kapı kontrolleri
 Süre pilotu, güç pilotu ve ana deney bu izin kapsamında değildir.
 GitHub'a gönderim ve Bitcoin doğrulaması tamamlandığında gerçek kimlikler
 ve durumları ayrıca raporlanır; hazırlık adımları başarı olarak sunulmaz.
+
+## Doğrulanan uzak yedek ve damga durumu — 2026-09-16
+
+GitHub deposu: https://github.com/FearmessOp/continual-pilot
+Görünürlük: özel. Lisans: MIT.
+
+2026-09-16T14:58:27Z itibarıyla GitHub API üzerinden doğrulanan commit:
+88faed2f32e789a58d62922a52b76cc7dfc1e586
+
+İlk commit 29f224ac169a67516b484f1446a3532ca324c128 de uzak depoda
+erişilebilir olarak doğrulandı. Uzak commit'ten indirilen protokol
+baytlarının SHA-256 değeri kilitli 0800b064…136f7 özetiyle birebir eşleşti.
+Kaynaklar, tarihsel sonuçlar, MIT lisansı ve ilk OpenTimestamps makbuzu
+bu gönderimde yer aldı. Gönderim sonrası çalışma ağacı temizdi.
+Bu özel uzak yedek, herkese açık yayımlama anlamına gelmez.
+
+2026-09-16T14:59:00Z itibarıyla bekleyen takvimden yükseltme denemesi:
+“Pending confirmation in Bitcoin blockchain”.
+Henüz Bitcoin blok tasdiki alınmadı; bağımsız zincir doğrulaması yapılmadı.
+Özgün makbuz korundu, yükseltilmiş makbuz oluşturulmadı.
+Takvim kabulü ile doğrulanmış Bitcoin zaman damgası ayrı durumlardır.
+
+Bu aşamaya kadar Hat 2 uygulama/test veya kabul/kapı koşusu başlatılmadı.
+Sonraki uygulama ve mekanik testler, deney sonuçlarının üretildiği
+kabul/kapı aşamasından ayrı tutulacak; o aşama öncesinde damga durumu
+yeniden kontrol edilecektir. Süre pilotu, güç pilotu ve ana deney yasak
+kapsamda kalır.
