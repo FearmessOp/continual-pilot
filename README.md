@@ -1,56 +1,84 @@
-# Sürekli öğrenme pilotu — kapatılmış araştırma arşivi
+# Continual learning pilot — closed research archive
 
-**16 Eylül 2026: Son v0.5 denemesi tamamlandı ve araştırma hattı kapatıldı.**
+[Original Turkish README](README.tr.md)
 
-Bu depo, sentetik sürekli öğrenme deneylerinin tasarımını, keşifsel
-pilotlarını, önkayıtlarını ve başarısız fizibilite kontrollerini korur.
-Yönlendirme ve yenilemenin sürekli öğrenmede üstünlüğü gösterilmedi;
-planlanan ana faktöriyel deney çalıştırılmadı.
+**16 September 2026: The final v0.5 attempt is complete and this research line is closed.**
 
-## Son sonuç
+This repository preserves the design, exploratory pilots, preregistrations,
+and failed feasibility checks of synthetic continual-learning experiments.
+It does not demonstrate an advantage of routing and renewal in continual
+learning. The planned main factorial experiment was not run.
 
-- v0.4: 200 adaydan hiçbiri jeneratör kabulünü geçmedi.
-- v0.5: marj eşiği 0,1 ile ilk beş adaydan üç jeneratör kabul edildi.
-- İlk çiftin R1/M1 kontrolünde A temiz doğruluğu **%92,835**;
-  Wilson %95 aralığı **[%92,4693; %93,1843]**.
-  Gerekli eşik **%93,2525** olduğundan kapı geçilmedi.
-- CPR hareketi ve B/D'nin tek-ağ referansına göre en fazla 2 puan
-  kayıp kontrolleri geçti; bunlar öğrenilebilirlik başarısı değildir.
-- R2/M2 eğitimi, kalan çiftler, temsil tanısı, süre/güç pilotları ve
-  ana deney durma kuralı nedeniyle çalıştırılmadı.
-- Başka eşik, havuz veya bilimsel revizyon denenmeyecek.
+## Final outcome
 
-## Okuma sırası
+- **v0.4:** None of 200 candidates passed generator acceptance.
+- **v0.5:** With a normalized margin threshold of 0.1, three generators
+  were accepted among the first five candidates.
+- In the first pair's R1/M1 control, A achieved **92.835% clean accuracy**,
+  with a **95% Wilson interval of [92.4693%, 93.1843%]**.
+  The required threshold was **93.2525%**, so the learnability gate failed.
+- CPR movement checks and the checks requiring B/D to lose no more than
+  2 percentage points relative to their single-network references passed.
+  These are not evidence of successful absolute learnability.
+- R2/M2 training, the remaining pairs, the representation diagnostic,
+  duration/power pilots, and the main experiment were not run under the
+  stopping rule.
+- No further threshold, candidate pool, or scientific revision will be tried.
 
-1. [Nihai sonuçlar, tablolar ve öğrenilenler](continual_pilot/line2/FINAL_RESULTS_AND_LESSONS.md)
-2. [v0.5 sonuç öncesi son deneme protokolü](continual_pilot/line2/PREREGISTRATION_V05_2026-09-16.md)
-3. [v0.5 içerik kilidi](continual_pilot/line2/LOCK_V05_2026-09-16.md)
-4. [113 mekanik testin kaynağa bağlı kanıtı](continual_pilot/line2/validation_v05_2026-09-16_01.json)
-5. [Tarihsel araştırma günlüğü](continual_pilot/README.md)
+## Reading guide
 
-**Gelecek iş — uygulanmayan kapsam:** [kilitli kapsamlı protokolün](continual_pilot/line2/PREREGISTRATION_DRAFT.md)
-süre doğrulaması, güç pilotu ve ana deney bölümleri.
-Bu etiket yeni çalışma izni veya devam taahhüdü değildir.
+1. [Final results, tables, and lessons — English](continual_pilot/line2/FINAL_RESULTS_AND_LESSONS.en.md)
+   ([Turkish original](continual_pilot/line2/FINAL_RESULTS_AND_LESSONS.md)).
+2. [Final-attempt v0.5 preregistration — Turkish](continual_pilot/line2/PREREGISTRATION_V05_2026-09-16.md).
+3. [v0.5 content lock](continual_pilot/line2/LOCK_V05_2026-09-16.md).
+4. [Source-bound evidence for 113 mechanical tests](continual_pilot/line2/validation_v05_2026-09-16_01.json).
+5. [Project guide](continual_pilot/README.md) and
+   [preserved Turkish research log](continual_pilot/README.tr.md).
+6. [Non-normative English translation of the comprehensive protocol](continual_pilot/line2/PREREGISTRATION.en.md).
 
-## Kayıtlar ve sınırlamalar
+**Future work — unexecuted scope:** the filtered-duration validation,
+power pilot, and main experiment in the
+[locked comprehensive protocol](continual_pilot/line2/PREREGISTRATION_DRAFT.md).
+This label is neither permission to resume nor a commitment to continue.
 
-[Ham arşivler sürüm eklerinde](https://github.com/FearmessOp/continual-pilot/releases)
-tutulur; büyük ham veri arşivleri Git geçmişine eklenmez.
-[v0.4 dış yedeği](continual_pilot/line2/BACKUP_V04_VERIFICATION_2026-09-16.json),
-geri indirilen 11 parçadaki manifest dahil 3.651 dosyayla doğrulandı.
+## Records and limitations
 
-[Özgün protokolün Bitcoin tasdiki](continual_pilot/line2/OTS_VERIFICATION_2026-09-16.json),
-967295 numaralı blokta Merkle/başlık/iş ispatı kontrolleri ve iki HTTPS
-gezginiyle doğrulandı. Yerel tam zincir doğrulaması değildir;
-bu tasdik v0.5 belgesinin zaman damgası olarak sunulmaz.
+[Raw archives are release assets](https://github.com/FearmessOp/continual-pilot/releases);
+large raw archives are not stored in Git history.
+The [v0.4 external backup](continual_pilot/line2/BACKUP_V04_VERIFICATION_2026-09-16.json)
+was verified after downloading 11 volumes containing 3651 files, including
+the manifest. The [v0.5 backup verification](continual_pilot/line2/BACKUP_V05_VERIFICATION_2026-09-16.json)
+records the final attempt's external archive checks.
 
-Eski günlüklerdeki “güncel”, “sonraki adım” ve çalıştırma talimatları
-tarihsel bağlamlarına aittir. Eski güçlü nedensel yorumlar nihai yazının
-sınırlamalarıyla okunmalıdır. Mekanik test başarısı bilimsel başarı değildir.
+The [original protocol's Bitcoin attestation](continual_pilot/line2/OTS_VERIFICATION_2026-09-16.json)
+was verified at block **967295**, using Merkle commitment, header and
+proof-of-work checks, with chain placement cross-checked through two HTTPS
+explorers. This was not local full-chain validation. It does not timestamp
+the v0.5 document or any English translation.
 
-Çalışmalar CPU üzerinde Python, NumPy ve PyTorch ile gerçekleştirildi.
-Kesin sürümler, tohumlar ve kaynak özetleri koşu kayıtlarında bulunur.
-Tarihsel komutları çalıştırmak bazı eski sonuçların üzerine yazabilir;
-arşiv kayıtları değişmeden korunmalıdır.
+The locked Turkish protocol remains authoritative. Its SHA-256 is:
 
-Lisans: [MIT](LICENSE).
+0800b0647a0feec22dc13b83ddfaaa7478dc4cd8fe54d3a923423f3cd8d136f7
+
+Historical statements such as “current status,” “next step,” and execution
+instructions apply to the stage when they were written. Earlier strong
+causal interpretations must be read with the final report's limitations.
+Passing mechanical tests is not scientific success.
+
+## Environment and execution boundary
+
+Experiments used CPU execution with Python, NumPy, and PyTorch.
+Exact versions, seeds, and source hashes are preserved in the run records.
+See the [project guide](continual_pilot/README.md) for the environment and
+historical command references. Historical commands may overwrite old
+results; the archives must remain unchanged. No new scientific run is
+authorized by these documentation updates.
+
+## Privacy and license
+
+The [privacy audit](continual_pilot/line2/PRIVACY_AUDIT_2026-09-16.md)
+documents the history cleanup and its limits: old commits retained by
+GitHub were still accessible by object ID at verification time. Cleaned
+branch history must not be confused with complete server-side erasure.
+
+License: [MIT](LICENSE).
