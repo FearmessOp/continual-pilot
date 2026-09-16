@@ -1,3 +1,42 @@
+# Nihai durum — araştırma hattı kapatıldı (2026-09-16)
+
+**v0.5 son denemesi tamamlandı. Yeni eşik, havuz, bilimsel revizyon veya
+eğitim koşusu planlanmıyor.**
+
+[Sonuç ve öğrenilenler](line2/FINAL_RESULTS_AND_LESSONS.md),
+[son deneme önkaydı](line2/PREREGISTRATION_V05_2026-09-16.md) ve
+[içerik kilidi](line2/LOCK_V05_2026-09-16.md).
+
+- Jeneratör kabulü: ilk beş adaydan 11002, 11003 ve 11004 kabul edildi.
+- İlk çiftin R1/M1 kapısında A: %92,835 temiz doğruluk;
+  Wilson %95 aralığı [%92,469272; %93,184276], gerekli eşik %93,2525.
+  Kapı geçilmedi.
+- C ve CPR'li uzman-1 referansı da öğrenilebilirlik kapısını geçemedi.
+  CPR hareket kontrolü ve B/D'nin tek-ağ referansına göre en fazla
+  2 puan kayıp kontrolü geçti; bunlar mutlak öğrenilebilirlik başarısı değildir.
+- R2/M2 kontrol eğitimi, diğer çiftler, temsil tanısı, süre/güç pilotları
+  ve ana deney başlatılmadı.
+- 113 mekanik testin başarısı, bilimsel kapının geçtiği anlamına gelmez.
+- [v0.4 ham dış yedeği](line2/BACKUP_V04_VERIFICATION_2026-09-16.json)
+  GitHub sürüm eklerinden geri indirilerek manifestle doğrulandı.
+- [Özgün protokolün Bitcoin tasdiki](line2/OTS_VERIFICATION_2026-09-16.json)
+  Merkle/başlık/iş ispatı ve iki gezgin üzerinden doğrulandı;
+  yerel tam zincir doğrulaması değildir ve v0.5 belgesini damgalamaz.
+
+**Gelecek iş — uygulanmayan kapsam:** [kilitli kapsamlı protokolün](line2/PREREGISTRATION_DRAFT.md)
+filtreli süre doğrulaması, güç pilotu ve ana faktöriyel deneyi.
+Bu etiket devam izni veya taahhüdü değildir; özgün kilitli belge korunur.
+
+## Aşağıdaki metin tarihsel araştırma günlüğüdür
+
+Aşağıdaki “güncel durum”, “sonraki adım” ve çalıştırma ifadeleri yazıldıkları
+tura aittir; yukarıdaki nihai kapanışın yerine geçmez. Eski kesin neden,
+tam unutma, imkânsızlık ve tarihsel tahmin eşitliği yorumları
+[nihai yazıdaki sınırlamalarla](line2/FINAL_RESULTS_AND_LESSONS.md) okunmalıdır.
+Tarihsel komutlar bu kapanış kapsamında yeni deney izni değildir.
+
+---
+
 # Sürekli öğrenme — en küçük CPU pilotu
 
 ## Güncel durum — kısaltılmış pilotta 1.024 örnek seçildi

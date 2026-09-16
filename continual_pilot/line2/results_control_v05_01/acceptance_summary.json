@@ -1,0 +1,507 @@
+{
+  "active_revision": "v0.5-final",
+  "margin_threshold": 0.1,
+  "teacher_pool_start": 11000,
+  "maximum_candidates": 200,
+  "final_scientific_attempt": true,
+  "accepted": true,
+  "required_generators": 3,
+  "accepted_generators": [
+    {
+      "pair": 0,
+      "teacher_seed": 11002
+    },
+    {
+      "pair": 1,
+      "teacher_seed": 11003
+    },
+    {
+      "pair": 2,
+      "teacher_seed": 11004
+    }
+  ],
+  "attempts_tried": 5,
+  "rejected_count": 2,
+  "rejected_candidates_by_criterion": {
+    "balance": 2
+  },
+  "candidate_reports": [
+    {
+      "accepted": false,
+      "reasons": [
+        {
+          "mixture": 0,
+          "criterion": "balance"
+        },
+        {
+          "mixture": 1,
+          "criterion": "balance"
+        }
+      ],
+      "mixtures": {
+        "M1": {
+          "exclusion_proposals": 100000,
+          "excluded_count": 27577,
+          "exclusion_fraction": 0.27577,
+          "exclusion_passed": true,
+          "acceptance_proposals": 27654,
+          "budget_exhausted": false,
+          "accepted_sample_count": 20000,
+          "class_counts": [
+            [
+              4697,
+              4506,
+              4257,
+              6540
+            ],
+            [
+              5486,
+              3392,
+              4311,
+              6811
+            ]
+          ],
+          "class_fractions": [
+            [
+              0.23485,
+              0.2253,
+              0.21285,
+              0.327
+            ],
+            [
+              0.2743,
+              0.1696,
+              0.21555,
+              0.34055
+            ]
+          ],
+          "disagreement_count": 11552,
+          "disagreement_fraction": 0.5776,
+          "balance_passed": false,
+          "disagreement_passed": true
+        },
+        "M2": {
+          "exclusion_proposals": 100000,
+          "excluded_count": 27612,
+          "exclusion_fraction": 0.27612,
+          "exclusion_passed": true,
+          "acceptance_proposals": 27833,
+          "budget_exhausted": false,
+          "accepted_sample_count": 20000,
+          "class_counts": [
+            [
+              5635,
+              5591,
+              5370,
+              3404
+            ],
+            [
+              5246,
+              6462,
+              5032,
+              3260
+            ]
+          ],
+          "class_fractions": [
+            [
+              0.28175,
+              0.27955,
+              0.2685,
+              0.1702
+            ],
+            [
+              0.2623,
+              0.3231,
+              0.2516,
+              0.163
+            ]
+          ],
+          "disagreement_count": 12293,
+          "disagreement_fraction": 0.61465,
+          "balance_passed": false,
+          "disagreement_passed": true
+        }
+      },
+      "attempt_one_based": 1,
+      "teacher_seed": 11000,
+      "artifact_directory": "candidates/teacher11000",
+      "seconds": 2.924554799999896
+    },
+    {
+      "accepted": false,
+      "reasons": [
+        {
+          "mixture": 1,
+          "criterion": "balance"
+        }
+      ],
+      "mixtures": {
+        "M1": {
+          "exclusion_proposals": 100000,
+          "excluded_count": 23615,
+          "exclusion_fraction": 0.23615,
+          "exclusion_passed": true,
+          "acceptance_proposals": 25975,
+          "budget_exhausted": false,
+          "accepted_sample_count": 20000,
+          "class_counts": [
+            [
+              6438,
+              3835,
+              3747,
+              5980
+            ],
+            [
+              6803,
+              4766,
+              3839,
+              4592
+            ]
+          ],
+          "class_fractions": [
+            [
+              0.3219,
+              0.19175,
+              0.18735,
+              0.299
+            ],
+            [
+              0.34015,
+              0.2383,
+              0.19195,
+              0.2296
+            ]
+          ],
+          "disagreement_count": 11991,
+          "disagreement_fraction": 0.59955,
+          "balance_passed": true,
+          "disagreement_passed": true
+        },
+        "M2": {
+          "exclusion_proposals": 100000,
+          "excluded_count": 21065,
+          "exclusion_fraction": 0.21065,
+          "exclusion_passed": true,
+          "acceptance_proposals": 25219,
+          "budget_exhausted": false,
+          "accepted_sample_count": 20000,
+          "class_counts": [
+            [
+              3641,
+              6326,
+              6387,
+              3646
+            ],
+            [
+              3164,
+              5791,
+              6625,
+              4420
+            ]
+          ],
+          "class_fractions": [
+            [
+              0.18205,
+              0.3163,
+              0.31935,
+              0.1823
+            ],
+            [
+              0.1582,
+              0.28955,
+              0.33125,
+              0.221
+            ]
+          ],
+          "disagreement_count": 11963,
+          "disagreement_fraction": 0.59815,
+          "balance_passed": false,
+          "disagreement_passed": true
+        }
+      },
+      "attempt_one_based": 2,
+      "teacher_seed": 11001,
+      "artifact_directory": "candidates/teacher11001",
+      "seconds": 3.192171900000176
+    },
+    {
+      "accepted": true,
+      "reasons": [],
+      "mixtures": {
+        "M1": {
+          "exclusion_proposals": 100000,
+          "excluded_count": 23352,
+          "exclusion_fraction": 0.23352,
+          "exclusion_passed": true,
+          "acceptance_proposals": 26088,
+          "budget_exhausted": false,
+          "accepted_sample_count": 20000,
+          "class_counts": [
+            [
+              5126,
+              6408,
+              4486,
+              3980
+            ],
+            [
+              5372,
+              5595,
+              4354,
+              4679
+            ]
+          ],
+          "class_fractions": [
+            [
+              0.2563,
+              0.3204,
+              0.2243,
+              0.199
+            ],
+            [
+              0.2686,
+              0.27975,
+              0.2177,
+              0.23395
+            ]
+          ],
+          "disagreement_count": 12343,
+          "disagreement_fraction": 0.61715,
+          "balance_passed": true,
+          "disagreement_passed": true
+        },
+        "M2": {
+          "exclusion_proposals": 100000,
+          "excluded_count": 22305,
+          "exclusion_fraction": 0.22305,
+          "exclusion_passed": true,
+          "acceptance_proposals": 25586,
+          "budget_exhausted": false,
+          "accepted_sample_count": 20000,
+          "class_counts": [
+            [
+              4355,
+              3841,
+              6373,
+              5431
+            ],
+            [
+              4474,
+              4704,
+              5820,
+              5002
+            ]
+          ],
+          "class_fractions": [
+            [
+              0.21775,
+              0.19205,
+              0.31865,
+              0.27155
+            ],
+            [
+              0.2237,
+              0.2352,
+              0.291,
+              0.2501
+            ]
+          ],
+          "disagreement_count": 12794,
+          "disagreement_fraction": 0.6397,
+          "balance_passed": true,
+          "disagreement_passed": true
+        }
+      },
+      "attempt_one_based": 3,
+      "teacher_seed": 11002,
+      "artifact_directory": "candidates/teacher11002",
+      "seconds": 2.578299799999513
+    },
+    {
+      "accepted": true,
+      "reasons": [],
+      "mixtures": {
+        "M1": {
+          "exclusion_proposals": 100000,
+          "excluded_count": 17526,
+          "exclusion_fraction": 0.17526,
+          "exclusion_passed": true,
+          "acceptance_proposals": 24288,
+          "budget_exhausted": false,
+          "accepted_sample_count": 20000,
+          "class_counts": [
+            [
+              5043,
+              4245,
+              4827,
+              5885
+            ],
+            [
+              4929,
+              4602,
+              4795,
+              5674
+            ]
+          ],
+          "class_fractions": [
+            [
+              0.25215,
+              0.21225,
+              0.24135,
+              0.29425
+            ],
+            [
+              0.24645,
+              0.2301,
+              0.23975,
+              0.2837
+            ]
+          ],
+          "disagreement_count": 13433,
+          "disagreement_fraction": 0.67165,
+          "balance_passed": true,
+          "disagreement_passed": true
+        },
+        "M2": {
+          "exclusion_proposals": 100000,
+          "excluded_count": 16732,
+          "exclusion_fraction": 0.16732,
+          "exclusion_passed": true,
+          "acceptance_proposals": 24050,
+          "budget_exhausted": false,
+          "accepted_sample_count": 20000,
+          "class_counts": [
+            [
+              5123,
+              5769,
+              5261,
+              3847
+            ],
+            [
+              5107,
+              5193,
+              5322,
+              4378
+            ]
+          ],
+          "class_fractions": [
+            [
+              0.25615,
+              0.28845,
+              0.26305,
+              0.19235
+            ],
+            [
+              0.25535,
+              0.25965,
+              0.2661,
+              0.2189
+            ]
+          ],
+          "disagreement_count": 13571,
+          "disagreement_fraction": 0.67855,
+          "balance_passed": true,
+          "disagreement_passed": true
+        }
+      },
+      "attempt_one_based": 4,
+      "teacher_seed": 11003,
+      "artifact_directory": "candidates/teacher11003",
+      "seconds": 2.224507499999163
+    },
+    {
+      "accepted": true,
+      "reasons": [],
+      "mixtures": {
+        "M1": {
+          "exclusion_proposals": 100000,
+          "excluded_count": 21435,
+          "exclusion_fraction": 0.21435,
+          "exclusion_passed": true,
+          "acceptance_proposals": 25447,
+          "budget_exhausted": false,
+          "accepted_sample_count": 20000,
+          "class_counts": [
+            [
+              5036,
+              5038,
+              4269,
+              5657
+            ],
+            [
+              4593,
+              5314,
+              4620,
+              5473
+            ]
+          ],
+          "class_fractions": [
+            [
+              0.2518,
+              0.2519,
+              0.21345,
+              0.28285
+            ],
+            [
+              0.22965,
+              0.2657,
+              0.231,
+              0.27365
+            ]
+          ],
+          "disagreement_count": 12045,
+          "disagreement_fraction": 0.60225,
+          "balance_passed": true,
+          "disagreement_passed": true
+        },
+        "M2": {
+          "exclusion_proposals": 100000,
+          "excluded_count": 21301,
+          "exclusion_fraction": 0.21301,
+          "exclusion_passed": true,
+          "acceptance_proposals": 25327,
+          "budget_exhausted": false,
+          "accepted_sample_count": 20000,
+          "class_counts": [
+            [
+              4837,
+              5541,
+              5428,
+              4194
+            ],
+            [
+              5055,
+              5576,
+              5291,
+              4078
+            ]
+          ],
+          "class_fractions": [
+            [
+              0.24185,
+              0.27705,
+              0.2714,
+              0.2097
+            ],
+            [
+              0.25275,
+              0.2788,
+              0.26455,
+              0.2039
+            ]
+          ],
+          "disagreement_count": 12055,
+          "disagreement_fraction": 0.60275,
+          "balance_passed": true,
+          "disagreement_passed": true
+        }
+      },
+      "attempt_one_based": 5,
+      "teacher_seed": 11004,
+      "artifact_directory": "candidates/teacher11004",
+      "seconds": 2.4307477999991534
+    }
+  ],
+  "seconds": 13.470206899999539,
+  "next_action": "stationary_controls_only",
+  "learner_performance_used_for_selection": false
+}

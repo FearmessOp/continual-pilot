@@ -1,0 +1,13 @@
+{
+  "verified_utc": "2026-09-16T17:22:58.050327+00:00",
+  "repository": "FearmessOp/continual-pilot",
+  "release_tag": "archive-v05-final-01",
+  "archive_sha256": "09c71e63e75f33ba87980fe414be28472816df54756b370e22dd4f916987baa8",
+  "archive_bytes": 192830687,
+  "manifest_sha256": "143f42ef5c780559cfe0a07eb1a8c46cf77cd89fed43633c18be16ac4ce435a4",
+  "verified_files_including_manifest": 210,
+  "verified_bytes_including_manifest": 192795581,
+  "all_files_match": true,
+  "method": "GitHub release download into separate directory; archive SHA256 and exact ZIP member coverage; every member checked against original manifest SHA256 and size",
+  "raw_artifacts_added_to_git_history": false
+}
