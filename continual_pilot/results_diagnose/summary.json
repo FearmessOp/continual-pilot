@@ -1,0 +1,172 @@
+{
+  "config": {
+    "seed": 7,
+    "alpha": 0.5,
+    "noise": 0.05,
+    "reference_length": 10000,
+    "long_length": 40000,
+    "lr": 0.001,
+    "context_window": 64,
+    "threads": 1,
+    "output": "continual_pilot/results_diagnose"
+  },
+  "environment": {
+    "python": "3.13.2",
+    "torch": "2.7.1+cu118",
+    "numpy": "2.2.6",
+    "device": "cpu"
+  },
+  "protocol": [
+    "Each control changes exactly one thing from the reference.",
+    "no_context also reduces input width and parameter count.",
+    "long_40k shares its first 10k examples with the reference.",
+    "Prediction always precedes the label (prequential).",
+    "Frozen accuracy uses a fresh evaluation stream, excluded from updates.",
+    "Single seed, exploratory; not a significance test.",
+    "Generator is NOT modified; debiasing is measured only."
+  ],
+  "generator_balance": {
+    "M1": {
+      "R1_class_fractions": [
+        0.2305,
+        0.0122,
+        0.42035,
+        0.33695
+      ],
+      "disagreement": 0.70595,
+      "debiased_R1_class_fractions": [
+        0.23075,
+        0.01235,
+        0.42085,
+        0.33605
+      ],
+      "debiased_min_class_fraction": 0.01235
+    },
+    "M2": {
+      "R1_class_fractions": [
+        0.31795,
+        0.02985,
+        0.2791,
+        0.3731
+      ],
+      "disagreement": 0.73345,
+      "debiased_R1_class_fractions": [
+        0.3183,
+        0.0302,
+        0.27955,
+        0.37195
+      ],
+      "debiased_min_class_fraction": 0.0302
+    }
+  },
+  "context_summary_probe": {
+    "regime_probe_test_accuracy": 1.0,
+    "chance_level": 0.5,
+    "test_examples": 896,
+    "note": "Chance means this linear probe cannot separate regimes; not a proof that the summary is information-free."
+  },
+  "controls": {
+    "reference": {
+      "online_accuracy": 0.8447,
+      "online_clean_accuracy": 0.8873,
+      "oracle_accuracy": 0.9498,
+      "last_tail_accuracy": 0.852,
+      "total_regret": 1051,
+      "frozen_noisy_accuracy": 0.8496,
+      "frozen_clean_accuracy": 0.8904,
+      "hidden": 64,
+      "uses_context": true,
+      "minibatch": 1,
+      "stream_length": 10000,
+      "optimizer_steps": 10000,
+      "parameters": 10820,
+      "parameter_bytes": 43280,
+      "seconds": 5.114088899999842
+    },
+    "no_context": {
+      "online_accuracy": 0.8626,
+      "online_clean_accuracy": 0.9066,
+      "oracle_accuracy": 0.9498,
+      "last_tail_accuracy": 0.868,
+      "total_regret": 872,
+      "frozen_noisy_accuracy": 0.8708,
+      "frozen_clean_accuracy": 0.914,
+      "hidden": 64,
+      "uses_context": false,
+      "minibatch": 1,
+      "stream_length": 10000,
+      "optimizer_steps": 10000,
+      "parameters": 2372,
+      "parameter_bytes": 9488,
+      "seconds": 4.7213500999987446
+    },
+    "hidden_128": {
+      "online_accuracy": 0.8436,
+      "online_clean_accuracy": 0.8858,
+      "oracle_accuracy": 0.9498,
+      "last_tail_accuracy": 0.846,
+      "total_regret": 1062,
+      "frozen_noisy_accuracy": 0.8488,
+      "frozen_clean_accuracy": 0.8894,
+      "hidden": 128,
+      "uses_context": true,
+      "minibatch": 1,
+      "stream_length": 10000,
+      "optimizer_steps": 10000,
+      "parameters": 21636,
+      "parameter_bytes": 86544,
+      "seconds": 5.2967539000001125
+    },
+    "hidden_256": {
+      "online_accuracy": 0.8399,
+      "online_clean_accuracy": 0.8822,
+      "oracle_accuracy": 0.9498,
+      "last_tail_accuracy": 0.847,
+      "total_regret": 1099,
+      "frozen_noisy_accuracy": 0.8486,
+      "frozen_clean_accuracy": 0.889,
+      "hidden": 256,
+      "uses_context": true,
+      "minibatch": 1,
+      "stream_length": 10000,
+      "optimizer_steps": 10000,
+      "parameters": 43268,
+      "parameter_bytes": 173072,
+      "seconds": 5.90985179999916
+    },
+    "minibatch_16": {
+      "online_accuracy": 0.8179,
+      "online_clean_accuracy": 0.8599,
+      "oracle_accuracy": 0.9498,
+      "last_tail_accuracy": 0.847,
+      "total_regret": 1319,
+      "frozen_noisy_accuracy": 0.8624,
+      "frozen_clean_accuracy": 0.9062,
+      "hidden": 64,
+      "uses_context": true,
+      "minibatch": 16,
+      "stream_length": 10000,
+      "optimizer_steps": 625,
+      "parameters": 10820,
+      "parameter_bytes": 43280,
+      "seconds": 0.8736278999986098
+    },
+    "long_40k": {
+      "online_accuracy": 0.864275,
+      "online_clean_accuracy": 0.9073,
+      "oracle_accuracy": 0.9503,
+      "last_tail_accuracy": 0.885,
+      "total_regret": 3441,
+      "frozen_noisy_accuracy": 0.8758,
+      "frozen_clean_accuracy": 0.9192,
+      "hidden": 64,
+      "uses_context": true,
+      "minibatch": 1,
+      "stream_length": 40000,
+      "optimizer_steps": 40000,
+      "parameters": 10820,
+      "parameter_bytes": 43280,
+      "seconds": 19.883029100001295
+    }
+  }
+}

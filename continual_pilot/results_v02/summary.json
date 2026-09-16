@@ -1,0 +1,432 @@
+{
+  "revision": "v0.2-combined",
+  "config": {
+    "seed": 7,
+    "alpha": 0.5,
+    "noise": 0.05,
+    "length": 40000,
+    "minibatch": 16,
+    "lr": 0.001,
+    "hidden": 64,
+    "context_window": 64,
+    "eval_count": 20000,
+    "block": 1000,
+    "threads": 1,
+    "output": "continual_pilot/results_v02"
+  },
+  "environment": {
+    "python": "3.13.2",
+    "torch": "2.7.1+cu118",
+    "numpy": "2.2.6",
+    "device": "cpu"
+  },
+  "protocol": [
+    "Combined candidate merges three calibration controls; not a per-factor causal decomposition.",
+    "Gate threshold uses majority baseline from an INDEPENDENT calibration stream, never the evaluation stream.",
+    "Frozen clean accuracy is the single gate metric on the clean scale.",
+    "Wilson 95% interval reported; if it straddles the gate the result is INDETERMINATE with one seed.",
+    "Paired bootstrap compares combined vs reference on the SHARED evaluation stream; single-model SE is not used.",
+    "Evaluation distribution is M1 (learnability). If the gate is passed, an M2 frozen accuracy must also be reported before returning to the four-phase experiment.",
+    "Combined gain need not be additive: long_40k's benefit came from 40k steps; minibatch 16 yields only length/16 steps. Read the curve as a step-count vs step-noise trade-off, not a refutation.",
+    "Single seed, exploratory; not a significance test.",
+    "Generator is NOT modified. Four-phase experiment NOT rerun."
+  ],
+  "generator_balance": {
+    "M1": {
+      "R1_class_fractions": [
+        0.2305,
+        0.0122,
+        0.42035,
+        0.33695
+      ],
+      "disagreement": 0.70595,
+      "debiased_R1_class_fractions": [
+        0.23075,
+        0.01235,
+        0.42085,
+        0.33605
+      ],
+      "debiased_min_class_fraction": 0.01235
+    },
+    "M2": {
+      "R1_class_fractions": [
+        0.31795,
+        0.02985,
+        0.2791,
+        0.3731
+      ],
+      "disagreement": 0.73345,
+      "debiased_R1_class_fractions": [
+        0.3183,
+        0.0302,
+        0.27955,
+        0.37195
+      ],
+      "debiased_min_class_fraction": 0.0302
+    }
+  },
+  "gate": {
+    "metric": "frozen_clean_accuracy",
+    "calibration_majority_baseline": {
+      "calibration_count": 20000,
+      "class_fractions": [
+        0.2295,
+        0.0125,
+        0.42125,
+        0.33675
+      ],
+      "majority_class": 2,
+      "majority_baseline_accuracy": 0.42125
+    },
+    "ceiling": 1.0,
+    "fraction": 0.9,
+    "threshold": 0.942125,
+    "formula": "base + 0.9 * (1.0 - base) on the clean scale"
+  },
+  "summary_probe_full_noisy": {
+    "feature_dimension": 132,
+    "regime_probe_test_accuracy": 0.9587053571428571,
+    "chance_level": 0.5,
+    "raw_test_rows": 896,
+    "distinct_windows_per_stream": 448,
+    "effective_independent_blocks_estimate": 14,
+    "note": "Windows overlap; raw rows overstate independence. Uses NOISY labels to match the student. Chance means this linear probe cannot separate regimes here, not that the summary is empty."
+  },
+  "summary_probe_4freq_noisy": {
+    "feature_dimension": 4,
+    "regime_probe_test_accuracy": 1.0,
+    "chance_level": 0.5,
+    "raw_test_rows": 896,
+    "distinct_windows_per_stream": 448,
+    "effective_independent_blocks_estimate": 14,
+    "note": "Windows overlap; raw rows overstate independence. Uses NOISY labels to match the student. Chance means this linear probe cannot separate regimes here, not that the summary is empty."
+  },
+  "controls": {
+    "reference": {
+      "hidden": 64,
+      "uses_context": true,
+      "minibatch": 1,
+      "stream_length": 10000,
+      "optimizer_steps": 10000,
+      "initial_state_sha256": "f41f457806fe323c795216b3902097bf84228abc9a34b8cdf80345a99fab7d8d",
+      "training_seconds": 5.494405099998403,
+      "frozen_clean_accuracy": 0.88305,
+      "frozen_noisy_accuracy": 0.8442,
+      "frozen_clean_wilson_95": [
+        0.8785224260274689,
+        0.887430449744153
+      ],
+      "eval_count": 20000,
+      "confusion_matrix_true_by_pred": [
+        [
+          3600,
+          3,
+          762,
+          249
+        ],
+        [
+          26,
+          27,
+          95,
+          85
+        ],
+        [
+          112,
+          12,
+          8090,
+          83
+        ],
+        [
+          189,
+          1,
+          722,
+          5944
+        ]
+      ],
+      "class_support": [
+        4614,
+        233,
+        8297,
+        6856
+      ],
+      "per_class_recall": [
+        0.7802340702210663,
+        0.11587982832618025,
+        0.9750512233337351,
+        0.8669778296382731
+      ]
+    },
+    "combined": {
+      "hidden": 64,
+      "uses_context": false,
+      "minibatch": 16,
+      "stream_length": 40000,
+      "optimizer_steps": 2500,
+      "initial_state_sha256": "57cf9334bbbbc44469b1bc3399377501473a9abfdc040f437e0c939be978319c",
+      "training_seconds": 3.14440839999952,
+      "frozen_clean_accuracy": 0.9359,
+      "frozen_noisy_accuracy": 0.8927,
+      "frozen_clean_wilson_95": [
+        0.9324210119130637,
+        0.9392115649015816
+      ],
+      "eval_count": 20000,
+      "confusion_matrix_true_by_pred": [
+        [
+          4165,
+          0,
+          329,
+          120
+        ],
+        [
+          55,
+          34,
+          78,
+          66
+        ],
+        [
+          180,
+          7,
+          7990,
+          120
+        ],
+        [
+          135,
+          0,
+          192,
+          6529
+        ]
+      ],
+      "class_support": [
+        4614,
+        233,
+        8297,
+        6856
+      ],
+      "per_class_recall": [
+        0.9026874729085392,
+        0.1459227467811159,
+        0.9629986742195974,
+        0.9523045507584598
+      ]
+    }
+  },
+  "learning_curve_combined": [
+    {
+      "block_end": 1000,
+      "count": 1000,
+      "online_clean_accuracy": 0.593
+    },
+    {
+      "block_end": 2000,
+      "count": 1000,
+      "online_clean_accuracy": 0.843
+    },
+    {
+      "block_end": 3000,
+      "count": 1000,
+      "online_clean_accuracy": 0.899
+    },
+    {
+      "block_end": 4000,
+      "count": 1000,
+      "online_clean_accuracy": 0.915
+    },
+    {
+      "block_end": 5000,
+      "count": 1000,
+      "online_clean_accuracy": 0.918
+    },
+    {
+      "block_end": 6000,
+      "count": 1000,
+      "online_clean_accuracy": 0.916
+    },
+    {
+      "block_end": 7000,
+      "count": 1000,
+      "online_clean_accuracy": 0.924
+    },
+    {
+      "block_end": 8000,
+      "count": 1000,
+      "online_clean_accuracy": 0.905
+    },
+    {
+      "block_end": 9000,
+      "count": 1000,
+      "online_clean_accuracy": 0.929
+    },
+    {
+      "block_end": 10000,
+      "count": 1000,
+      "online_clean_accuracy": 0.918
+    },
+    {
+      "block_end": 11000,
+      "count": 1000,
+      "online_clean_accuracy": 0.933
+    },
+    {
+      "block_end": 12000,
+      "count": 1000,
+      "online_clean_accuracy": 0.913
+    },
+    {
+      "block_end": 13000,
+      "count": 1000,
+      "online_clean_accuracy": 0.926
+    },
+    {
+      "block_end": 14000,
+      "count": 1000,
+      "online_clean_accuracy": 0.918
+    },
+    {
+      "block_end": 15000,
+      "count": 1000,
+      "online_clean_accuracy": 0.93
+    },
+    {
+      "block_end": 16000,
+      "count": 1000,
+      "online_clean_accuracy": 0.936
+    },
+    {
+      "block_end": 17000,
+      "count": 1000,
+      "online_clean_accuracy": 0.916
+    },
+    {
+      "block_end": 18000,
+      "count": 1000,
+      "online_clean_accuracy": 0.926
+    },
+    {
+      "block_end": 19000,
+      "count": 1000,
+      "online_clean_accuracy": 0.92
+    },
+    {
+      "block_end": 20000,
+      "count": 1000,
+      "online_clean_accuracy": 0.933
+    },
+    {
+      "block_end": 21000,
+      "count": 1000,
+      "online_clean_accuracy": 0.925
+    },
+    {
+      "block_end": 22000,
+      "count": 1000,
+      "online_clean_accuracy": 0.94
+    },
+    {
+      "block_end": 23000,
+      "count": 1000,
+      "online_clean_accuracy": 0.943
+    },
+    {
+      "block_end": 24000,
+      "count": 1000,
+      "online_clean_accuracy": 0.928
+    },
+    {
+      "block_end": 25000,
+      "count": 1000,
+      "online_clean_accuracy": 0.925
+    },
+    {
+      "block_end": 26000,
+      "count": 1000,
+      "online_clean_accuracy": 0.939
+    },
+    {
+      "block_end": 27000,
+      "count": 1000,
+      "online_clean_accuracy": 0.94
+    },
+    {
+      "block_end": 28000,
+      "count": 1000,
+      "online_clean_accuracy": 0.944
+    },
+    {
+      "block_end": 29000,
+      "count": 1000,
+      "online_clean_accuracy": 0.928
+    },
+    {
+      "block_end": 30000,
+      "count": 1000,
+      "online_clean_accuracy": 0.935
+    },
+    {
+      "block_end": 31000,
+      "count": 1000,
+      "online_clean_accuracy": 0.931
+    },
+    {
+      "block_end": 32000,
+      "count": 1000,
+      "online_clean_accuracy": 0.932
+    },
+    {
+      "block_end": 33000,
+      "count": 1000,
+      "online_clean_accuracy": 0.936
+    },
+    {
+      "block_end": 34000,
+      "count": 1000,
+      "online_clean_accuracy": 0.936
+    },
+    {
+      "block_end": 35000,
+      "count": 1000,
+      "online_clean_accuracy": 0.922
+    },
+    {
+      "block_end": 36000,
+      "count": 1000,
+      "online_clean_accuracy": 0.945
+    },
+    {
+      "block_end": 37000,
+      "count": 1000,
+      "online_clean_accuracy": 0.941
+    },
+    {
+      "block_end": 38000,
+      "count": 1000,
+      "online_clean_accuracy": 0.922
+    },
+    {
+      "block_end": 39000,
+      "count": 1000,
+      "online_clean_accuracy": 0.935
+    },
+    {
+      "block_end": 40000,
+      "count": 1000,
+      "online_clean_accuracy": 0.927
+    }
+  ],
+  "paired_bootstrap_combined_vs_reference": {
+    "observed_mean_difference": -0.05285,
+    "ci_low": -0.0571,
+    "ci_high": -0.048898750000000005,
+    "note": "difference = combined_errors - reference_errors on clean rule; positive favors reference, negative favors combined."
+  },
+  "gate_decision": {
+    "combined_frozen_clean_accuracy": 0.9359,
+    "threshold": 0.942125,
+    "wilson_95": [
+      0.9324210119130637,
+      0.9392115649015816
+    ],
+    "decision": "failed",
+    "next_step": "Move to v0.2 generator (common-component calibration + acceptance criterion); retry gate there."
+  }
+}

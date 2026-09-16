@@ -1,0 +1,1038 @@
+{
+  "label": "Exploration-derived phase-length pilot; learnability gate NOT passed.",
+  "config": {
+    "generator_seed": 1000,
+    "alpha": 0.5,
+    "noise": 0.05,
+    "calibration_count": 20000,
+    "hidden": 64,
+    "model_seed": 7,
+    "lr": 0.001,
+    "minibatch": 16,
+    "capacity": 512,
+    "replay_per_new_example": 8,
+    "stream_seeds": [
+      240001,
+      240002,
+      240003
+    ],
+    "phase1_count": 40000,
+    "phase2_count": 10000,
+    "phase3_candidates": [
+      1024,
+      1536
+    ],
+    "phase4_count": 4000,
+    "evaluation_seed": 249001,
+    "evaluation_count": 20000,
+    "window_updates": 30,
+    "minimum_phase2_accuracy": 0.86,
+    "damage_band": [
+      0.2,
+      0.4
+    ]
+  },
+  "rows": [
+    {
+      "seed": 240001,
+      "method": "A",
+      "phase3_count": 1024,
+      "phase3_updates": 64,
+      "phase2_state_sha256": "a8ff4124364c891021f5d2a814a13f0ea47bd963d5731f8d20ba2fc50aab83f6",
+      "frozen": {
+        "2": {
+          "r1_accuracy": 0.864,
+          "r2_accuracy": 0.39735
+        },
+        "3": {
+          "r1_accuracy": 0.6153,
+          "r2_accuracy": 0.63225
+        },
+        "4": {
+          "r1_accuracy": 0.8638,
+          "r2_accuracy": 0.40925
+        }
+      },
+      "damage": 0.24870000000000003,
+      "recovery": 0.24850000000000005,
+      "window": {
+        "count": 480,
+        "updates": 30,
+        "online_clean_errors": 172,
+        "phase2_reference_clean_errors": 65,
+        "extra_errors": 107,
+        "extra_errors_per_example": 0.22291666666666668
+      },
+      "phases": {
+        "1": {
+          "count": 40000,
+          "optimizer_steps": 2500,
+          "clean_accuracy": 0.8323,
+          "noisy_accuracy": 0.794575,
+          "oracle_regret": 6271,
+          "oracle_regret_per_example": 0.156775,
+          "replay_examples": 0,
+          "training_examples_including_replay": 40000,
+          "maximum_batch": 16
+        },
+        "2": {
+          "count": 10000,
+          "optimizer_steps": 625,
+          "clean_accuracy": 0.8603,
+          "noisy_accuracy": 0.8205,
+          "oracle_regret": 1302,
+          "oracle_regret_per_example": 0.1302,
+          "replay_examples": 0,
+          "training_examples_including_replay": 10000,
+          "maximum_batch": 16
+        },
+        "3": {
+          "count": 1024,
+          "optimizer_steps": 64,
+          "clean_accuracy": 0.4931640625,
+          "noisy_accuracy": 0.4775390625,
+          "oracle_regret": 487,
+          "oracle_regret_per_example": 0.4755859375,
+          "replay_examples": 0,
+          "training_examples_including_replay": 1024,
+          "maximum_batch": 16
+        },
+        "4": {
+          "count": 4000,
+          "optimizer_steps": 250,
+          "clean_accuracy": 0.81825,
+          "noisy_accuracy": 0.779,
+          "oracle_regret": 686,
+          "oracle_regret_per_example": 0.1715,
+          "replay_examples": 0,
+          "training_examples_including_replay": 4000,
+          "maximum_batch": 16
+        }
+      },
+      "total_optimizer_steps": 3439
+    },
+    {
+      "seed": 240001,
+      "method": "A",
+      "phase3_count": 1536,
+      "phase3_updates": 96,
+      "phase2_state_sha256": "a8ff4124364c891021f5d2a814a13f0ea47bd963d5731f8d20ba2fc50aab83f6",
+      "frozen": {
+        "2": {
+          "r1_accuracy": 0.864,
+          "r2_accuracy": 0.39735
+        },
+        "3": {
+          "r1_accuracy": 0.5343,
+          "r2_accuracy": 0.70825
+        },
+        "4": {
+          "r1_accuracy": 0.86415,
+          "r2_accuracy": 0.41175
+        }
+      },
+      "damage": 0.3297,
+      "recovery": 0.32985,
+      "window": {
+        "count": 480,
+        "updates": 30,
+        "online_clean_errors": 200,
+        "phase2_reference_clean_errors": 65,
+        "extra_errors": 135,
+        "extra_errors_per_example": 0.28125
+      },
+      "phases": {
+        "1": {
+          "count": 40000,
+          "optimizer_steps": 2500,
+          "clean_accuracy": 0.8323,
+          "noisy_accuracy": 0.794575,
+          "oracle_regret": 6271,
+          "oracle_regret_per_example": 0.156775,
+          "replay_examples": 0,
+          "training_examples_including_replay": 40000,
+          "maximum_batch": 16
+        },
+        "2": {
+          "count": 10000,
+          "optimizer_steps": 625,
+          "clean_accuracy": 0.8603,
+          "noisy_accuracy": 0.8205,
+          "oracle_regret": 1302,
+          "oracle_regret_per_example": 0.1302,
+          "replay_examples": 0,
+          "training_examples_including_replay": 10000,
+          "maximum_batch": 16
+        },
+        "3": {
+          "count": 1536,
+          "optimizer_steps": 96,
+          "clean_accuracy": 0.5397135416666666,
+          "noisy_accuracy": 0.5201822916666666,
+          "oracle_regret": 665,
+          "oracle_regret_per_example": 0.4329427083333333,
+          "replay_examples": 0,
+          "training_examples_including_replay": 1536,
+          "maximum_batch": 16
+        },
+        "4": {
+          "count": 4000,
+          "optimizer_steps": 250,
+          "clean_accuracy": 0.8015,
+          "noisy_accuracy": 0.763,
+          "oracle_regret": 750,
+          "oracle_regret_per_example": 0.1875,
+          "replay_examples": 0,
+          "training_examples_including_replay": 4000,
+          "maximum_batch": 16
+        }
+      },
+      "total_optimizer_steps": 3471
+    },
+    {
+      "seed": 240001,
+      "method": "replay",
+      "phase3_count": 1024,
+      "phase3_updates": 64,
+      "phase2_state_sha256": "47ffbc1fc8f6a640c9e103dbc28d44710a8239ed71cf58300616bee7cdf4f3ab",
+      "frozen": {
+        "2": {
+          "r1_accuracy": 0.8201,
+          "r2_accuracy": 0.403
+        },
+        "3": {
+          "r1_accuracy": 0.7841,
+          "r2_accuracy": 0.43505
+        },
+        "4": {
+          "r1_accuracy": 0.80905,
+          "r2_accuracy": 0.4039
+        }
+      },
+      "damage": 0.03600000000000003,
+      "recovery": 0.024950000000000028,
+      "window": {
+        "count": 480,
+        "updates": 30,
+        "online_clean_errors": 104,
+        "phase2_reference_clean_errors": 85,
+        "extra_errors": 19,
+        "extra_errors_per_example": 0.03958333333333333
+      },
+      "phases": {
+        "1": {
+          "count": 40000,
+          "optimizer_steps": 2500,
+          "clean_accuracy": 0.816675,
+          "noisy_accuracy": 0.7799,
+          "oracle_regret": 6858,
+          "oracle_regret_per_example": 0.17145,
+          "replay_examples": 319964,
+          "training_examples_including_replay": 359964,
+          "maximum_batch": 144
+        },
+        "2": {
+          "count": 10000,
+          "optimizer_steps": 625,
+          "clean_accuracy": 0.8214,
+          "noisy_accuracy": 0.7826,
+          "oracle_regret": 1681,
+          "oracle_regret_per_example": 0.1681,
+          "replay_examples": 80000,
+          "training_examples_including_replay": 90000,
+          "maximum_batch": 144
+        },
+        "3": {
+          "count": 1024,
+          "optimizer_steps": 64,
+          "clean_accuracy": 0.419921875,
+          "noisy_accuracy": 0.4150390625,
+          "oracle_regret": 551,
+          "oracle_regret_per_example": 0.5380859375,
+          "replay_examples": 8192,
+          "training_examples_including_replay": 9216,
+          "maximum_batch": 144
+        },
+        "4": {
+          "count": 4000,
+          "optimizer_steps": 250,
+          "clean_accuracy": 0.81525,
+          "noisy_accuracy": 0.77675,
+          "oracle_regret": 695,
+          "oracle_regret_per_example": 0.17375,
+          "replay_examples": 32000,
+          "training_examples_including_replay": 36000,
+          "maximum_batch": 144
+        }
+      },
+      "total_optimizer_steps": 3439
+    },
+    {
+      "seed": 240001,
+      "method": "replay",
+      "phase3_count": 1536,
+      "phase3_updates": 96,
+      "phase2_state_sha256": "47ffbc1fc8f6a640c9e103dbc28d44710a8239ed71cf58300616bee7cdf4f3ab",
+      "frozen": {
+        "2": {
+          "r1_accuracy": 0.8201,
+          "r2_accuracy": 0.403
+        },
+        "3": {
+          "r1_accuracy": 0.7839,
+          "r2_accuracy": 0.4355
+        },
+        "4": {
+          "r1_accuracy": 0.80395,
+          "r2_accuracy": 0.3986
+        }
+      },
+      "damage": 0.03620000000000001,
+      "recovery": 0.020050000000000012,
+      "window": {
+        "count": 480,
+        "updates": 30,
+        "online_clean_errors": 98,
+        "phase2_reference_clean_errors": 85,
+        "extra_errors": 13,
+        "extra_errors_per_example": 0.027083333333333334
+      },
+      "phases": {
+        "1": {
+          "count": 40000,
+          "optimizer_steps": 2500,
+          "clean_accuracy": 0.816675,
+          "noisy_accuracy": 0.7799,
+          "oracle_regret": 6858,
+          "oracle_regret_per_example": 0.17145,
+          "replay_examples": 319964,
+          "training_examples_including_replay": 359964,
+          "maximum_batch": 144
+        },
+        "2": {
+          "count": 10000,
+          "optimizer_steps": 625,
+          "clean_accuracy": 0.8214,
+          "noisy_accuracy": 0.7826,
+          "oracle_regret": 1681,
+          "oracle_regret_per_example": 0.1681,
+          "replay_examples": 80000,
+          "training_examples_including_replay": 90000,
+          "maximum_batch": 144
+        },
+        "3": {
+          "count": 1536,
+          "optimizer_steps": 96,
+          "clean_accuracy": 0.4134114583333333,
+          "noisy_accuracy": 0.4075520833333333,
+          "oracle_regret": 838,
+          "oracle_regret_per_example": 0.5455729166666666,
+          "replay_examples": 12288,
+          "training_examples_including_replay": 13824,
+          "maximum_batch": 144
+        },
+        "4": {
+          "count": 4000,
+          "optimizer_steps": 250,
+          "clean_accuracy": 0.8105,
+          "noisy_accuracy": 0.773,
+          "oracle_regret": 710,
+          "oracle_regret_per_example": 0.1775,
+          "replay_examples": 32000,
+          "training_examples_including_replay": 36000,
+          "maximum_batch": 144
+        }
+      },
+      "total_optimizer_steps": 3471
+    },
+    {
+      "seed": 240002,
+      "method": "A",
+      "phase3_count": 1024,
+      "phase3_updates": 64,
+      "phase2_state_sha256": "8429302919628c8f1f044d423e037a887b40b5f640234bc849dd6281a320c73c",
+      "frozen": {
+        "2": {
+          "r1_accuracy": 0.8661,
+          "r2_accuracy": 0.404
+        },
+        "3": {
+          "r1_accuracy": 0.6042,
+          "r2_accuracy": 0.64445
+        },
+        "4": {
+          "r1_accuracy": 0.86395,
+          "r2_accuracy": 0.40465
+        }
+      },
+      "damage": 0.2619,
+      "recovery": 0.25975000000000004,
+      "window": {
+        "count": 480,
+        "updates": 30,
+        "online_clean_errors": 173,
+        "phase2_reference_clean_errors": 72,
+        "extra_errors": 101,
+        "extra_errors_per_example": 0.21041666666666667
+      },
+      "phases": {
+        "1": {
+          "count": 40000,
+          "optimizer_steps": 2500,
+          "clean_accuracy": 0.8243,
+          "noisy_accuracy": 0.786425,
+          "oracle_regret": 6551,
+          "oracle_regret_per_example": 0.163775,
+          "replay_examples": 0,
+          "training_examples_including_replay": 40000,
+          "maximum_batch": 16
+        },
+        "2": {
+          "count": 10000,
+          "optimizer_steps": 625,
+          "clean_accuracy": 0.8538,
+          "noisy_accuracy": 0.8139,
+          "oracle_regret": 1359,
+          "oracle_regret_per_example": 0.1359,
+          "replay_examples": 0,
+          "training_examples_including_replay": 10000,
+          "maximum_batch": 16
+        },
+        "3": {
+          "count": 1024,
+          "optimizer_steps": 64,
+          "clean_accuracy": 0.4736328125,
+          "noisy_accuracy": 0.4599609375,
+          "oracle_regret": 495,
+          "oracle_regret_per_example": 0.4833984375,
+          "replay_examples": 0,
+          "training_examples_including_replay": 1024,
+          "maximum_batch": 16
+        },
+        "4": {
+          "count": 4000,
+          "optimizer_steps": 250,
+          "clean_accuracy": 0.8075,
+          "noisy_accuracy": 0.77,
+          "oracle_regret": 711,
+          "oracle_regret_per_example": 0.17775,
+          "replay_examples": 0,
+          "training_examples_including_replay": 4000,
+          "maximum_batch": 16
+        }
+      },
+      "total_optimizer_steps": 3439
+    },
+    {
+      "seed": 240002,
+      "method": "A",
+      "phase3_count": 1536,
+      "phase3_updates": 96,
+      "phase2_state_sha256": "8429302919628c8f1f044d423e037a887b40b5f640234bc849dd6281a320c73c",
+      "frozen": {
+        "2": {
+          "r1_accuracy": 0.8661,
+          "r2_accuracy": 0.404
+        },
+        "3": {
+          "r1_accuracy": 0.5072,
+          "r2_accuracy": 0.7174
+        },
+        "4": {
+          "r1_accuracy": 0.8622,
+          "r2_accuracy": 0.40705
+        }
+      },
+      "damage": 0.3589,
+      "recovery": 0.355,
+      "window": {
+        "count": 480,
+        "updates": 30,
+        "online_clean_errors": 203,
+        "phase2_reference_clean_errors": 72,
+        "extra_errors": 131,
+        "extra_errors_per_example": 0.27291666666666664
+      },
+      "phases": {
+        "1": {
+          "count": 40000,
+          "optimizer_steps": 2500,
+          "clean_accuracy": 0.8243,
+          "noisy_accuracy": 0.786425,
+          "oracle_regret": 6551,
+          "oracle_regret_per_example": 0.163775,
+          "replay_examples": 0,
+          "training_examples_including_replay": 40000,
+          "maximum_batch": 16
+        },
+        "2": {
+          "count": 10000,
+          "optimizer_steps": 625,
+          "clean_accuracy": 0.8538,
+          "noisy_accuracy": 0.8139,
+          "oracle_regret": 1359,
+          "oracle_regret_per_example": 0.1359,
+          "replay_examples": 0,
+          "training_examples_including_replay": 10000,
+          "maximum_batch": 16
+        },
+        "3": {
+          "count": 1536,
+          "optimizer_steps": 96,
+          "clean_accuracy": 0.5397135416666666,
+          "noisy_accuracy": 0.5221354166666666,
+          "oracle_regret": 648,
+          "oracle_regret_per_example": 0.421875,
+          "replay_examples": 0,
+          "training_examples_including_replay": 1536,
+          "maximum_batch": 16
+        },
+        "4": {
+          "count": 4000,
+          "optimizer_steps": 250,
+          "clean_accuracy": 0.78975,
+          "noisy_accuracy": 0.75425,
+          "oracle_regret": 774,
+          "oracle_regret_per_example": 0.1935,
+          "replay_examples": 0,
+          "training_examples_including_replay": 4000,
+          "maximum_batch": 16
+        }
+      },
+      "total_optimizer_steps": 3471
+    },
+    {
+      "seed": 240002,
+      "method": "replay",
+      "phase3_count": 1024,
+      "phase3_updates": 64,
+      "phase2_state_sha256": "bac90fff9c15d9a63e47054885be4a5a18e2599b91acb6a2232788c4f3da8564",
+      "frozen": {
+        "2": {
+          "r1_accuracy": 0.82105,
+          "r2_accuracy": 0.39645
+        },
+        "3": {
+          "r1_accuracy": 0.804,
+          "r2_accuracy": 0.4302
+        },
+        "4": {
+          "r1_accuracy": 0.81315,
+          "r2_accuracy": 0.39225
+        }
+      },
+      "damage": 0.0170499999999999,
+      "recovery": 0.009149999999999991,
+      "window": {
+        "count": 480,
+        "updates": 30,
+        "online_clean_errors": 99,
+        "phase2_reference_clean_errors": 87,
+        "extra_errors": 12,
+        "extra_errors_per_example": 0.025
+      },
+      "phases": {
+        "1": {
+          "count": 40000,
+          "optimizer_steps": 2500,
+          "clean_accuracy": 0.811325,
+          "noisy_accuracy": 0.77415,
+          "oracle_regret": 7042,
+          "oracle_regret_per_example": 0.17605,
+          "replay_examples": 319964,
+          "training_examples_including_replay": 359964,
+          "maximum_batch": 144
+        },
+        "2": {
+          "count": 10000,
+          "optimizer_steps": 625,
+          "clean_accuracy": 0.8088,
+          "noisy_accuracy": 0.7718,
+          "oracle_regret": 1780,
+          "oracle_regret_per_example": 0.178,
+          "replay_examples": 80000,
+          "training_examples_including_replay": 90000,
+          "maximum_batch": 144
+        },
+        "3": {
+          "count": 1024,
+          "optimizer_steps": 64,
+          "clean_accuracy": 0.4189453125,
+          "noisy_accuracy": 0.40625,
+          "oracle_regret": 550,
+          "oracle_regret_per_example": 0.537109375,
+          "replay_examples": 8192,
+          "training_examples_including_replay": 9216,
+          "maximum_batch": 144
+        },
+        "4": {
+          "count": 4000,
+          "optimizer_steps": 250,
+          "clean_accuracy": 0.8115,
+          "noisy_accuracy": 0.77075,
+          "oracle_regret": 708,
+          "oracle_regret_per_example": 0.177,
+          "replay_examples": 32000,
+          "training_examples_including_replay": 36000,
+          "maximum_batch": 144
+        }
+      },
+      "total_optimizer_steps": 3439
+    },
+    {
+      "seed": 240002,
+      "method": "replay",
+      "phase3_count": 1536,
+      "phase3_updates": 96,
+      "phase2_state_sha256": "bac90fff9c15d9a63e47054885be4a5a18e2599b91acb6a2232788c4f3da8564",
+      "frozen": {
+        "2": {
+          "r1_accuracy": 0.82105,
+          "r2_accuracy": 0.39645
+        },
+        "3": {
+          "r1_accuracy": 0.7896,
+          "r2_accuracy": 0.44615
+        },
+        "4": {
+          "r1_accuracy": 0.8083,
+          "r2_accuracy": 0.4008
+        }
+      },
+      "damage": 0.03144999999999998,
+      "recovery": 0.01870000000000005,
+      "window": {
+        "count": 480,
+        "updates": 30,
+        "online_clean_errors": 100,
+        "phase2_reference_clean_errors": 87,
+        "extra_errors": 13,
+        "extra_errors_per_example": 0.027083333333333334
+      },
+      "phases": {
+        "1": {
+          "count": 40000,
+          "optimizer_steps": 2500,
+          "clean_accuracy": 0.811325,
+          "noisy_accuracy": 0.77415,
+          "oracle_regret": 7042,
+          "oracle_regret_per_example": 0.17605,
+          "replay_examples": 319964,
+          "training_examples_including_replay": 359964,
+          "maximum_batch": 144
+        },
+        "2": {
+          "count": 10000,
+          "optimizer_steps": 625,
+          "clean_accuracy": 0.8088,
+          "noisy_accuracy": 0.7718,
+          "oracle_regret": 1780,
+          "oracle_regret_per_example": 0.178,
+          "replay_examples": 80000,
+          "training_examples_including_replay": 90000,
+          "maximum_batch": 144
+        },
+        "3": {
+          "count": 1536,
+          "optimizer_steps": 96,
+          "clean_accuracy": 0.4114583333333333,
+          "noisy_accuracy": 0.400390625,
+          "oracle_regret": 835,
+          "oracle_regret_per_example": 0.5436197916666666,
+          "replay_examples": 12288,
+          "training_examples_including_replay": 13824,
+          "maximum_batch": 144
+        },
+        "4": {
+          "count": 4000,
+          "optimizer_steps": 250,
+          "clean_accuracy": 0.80025,
+          "noisy_accuracy": 0.76175,
+          "oracle_regret": 744,
+          "oracle_regret_per_example": 0.186,
+          "replay_examples": 32000,
+          "training_examples_including_replay": 36000,
+          "maximum_batch": 144
+        }
+      },
+      "total_optimizer_steps": 3471
+    },
+    {
+      "seed": 240003,
+      "method": "A",
+      "phase3_count": 1024,
+      "phase3_updates": 64,
+      "phase2_state_sha256": "fea78af46fd5da00fb7fce819f12c6f07c36ef23b328739d6183f3828a908bd7",
+      "frozen": {
+        "2": {
+          "r1_accuracy": 0.8716,
+          "r2_accuracy": 0.39855
+        },
+        "3": {
+          "r1_accuracy": 0.5866,
+          "r2_accuracy": 0.6306
+        },
+        "4": {
+          "r1_accuracy": 0.87225,
+          "r2_accuracy": 0.41105
+        }
+      },
+      "damage": 0.28500000000000003,
+      "recovery": 0.28564999999999996,
+      "window": {
+        "count": 480,
+        "updates": 30,
+        "online_clean_errors": 194,
+        "phase2_reference_clean_errors": 65,
+        "extra_errors": 129,
+        "extra_errors_per_example": 0.26875
+      },
+      "phases": {
+        "1": {
+          "count": 40000,
+          "optimizer_steps": 2500,
+          "clean_accuracy": 0.828425,
+          "noisy_accuracy": 0.789325,
+          "oracle_regret": 6368,
+          "oracle_regret_per_example": 0.1592,
+          "replay_examples": 0,
+          "training_examples_including_replay": 40000,
+          "maximum_batch": 16
+        },
+        "2": {
+          "count": 10000,
+          "optimizer_steps": 625,
+          "clean_accuracy": 0.8606,
+          "noisy_accuracy": 0.8196,
+          "oracle_regret": 1296,
+          "oracle_regret_per_example": 0.1296,
+          "replay_examples": 0,
+          "training_examples_including_replay": 10000,
+          "maximum_batch": 16
+        },
+        "3": {
+          "count": 1024,
+          "optimizer_steps": 64,
+          "clean_accuracy": 0.5068359375,
+          "noisy_accuracy": 0.490234375,
+          "oracle_regret": 465,
+          "oracle_regret_per_example": 0.4541015625,
+          "replay_examples": 0,
+          "training_examples_including_replay": 1024,
+          "maximum_batch": 16
+        },
+        "4": {
+          "count": 4000,
+          "optimizer_steps": 250,
+          "clean_accuracy": 0.81125,
+          "noisy_accuracy": 0.77475,
+          "oracle_regret": 719,
+          "oracle_regret_per_example": 0.17975,
+          "replay_examples": 0,
+          "training_examples_including_replay": 4000,
+          "maximum_batch": 16
+        }
+      },
+      "total_optimizer_steps": 3439
+    },
+    {
+      "seed": 240003,
+      "method": "A",
+      "phase3_count": 1536,
+      "phase3_updates": 96,
+      "phase2_state_sha256": "fea78af46fd5da00fb7fce819f12c6f07c36ef23b328739d6183f3828a908bd7",
+      "frozen": {
+        "2": {
+          "r1_accuracy": 0.8716,
+          "r2_accuracy": 0.39855
+        },
+        "3": {
+          "r1_accuracy": 0.52605,
+          "r2_accuracy": 0.68775
+        },
+        "4": {
+          "r1_accuracy": 0.8702,
+          "r2_accuracy": 0.4137
+        }
+      },
+      "damage": 0.34555,
+      "recovery": 0.34414999999999996,
+      "window": {
+        "count": 480,
+        "updates": 30,
+        "online_clean_errors": 214,
+        "phase2_reference_clean_errors": 65,
+        "extra_errors": 149,
+        "extra_errors_per_example": 0.3104166666666667
+      },
+      "phases": {
+        "1": {
+          "count": 40000,
+          "optimizer_steps": 2500,
+          "clean_accuracy": 0.828425,
+          "noisy_accuracy": 0.789325,
+          "oracle_regret": 6368,
+          "oracle_regret_per_example": 0.1592,
+          "replay_examples": 0,
+          "training_examples_including_replay": 40000,
+          "maximum_batch": 16
+        },
+        "2": {
+          "count": 10000,
+          "optimizer_steps": 625,
+          "clean_accuracy": 0.8606,
+          "noisy_accuracy": 0.8196,
+          "oracle_regret": 1296,
+          "oracle_regret_per_example": 0.1296,
+          "replay_examples": 0,
+          "training_examples_including_replay": 10000,
+          "maximum_batch": 16
+        },
+        "3": {
+          "count": 1536,
+          "optimizer_steps": 96,
+          "clean_accuracy": 0.5625,
+          "noisy_accuracy": 0.5403645833333334,
+          "oracle_regret": 625,
+          "oracle_regret_per_example": 0.4069010416666667,
+          "replay_examples": 0,
+          "training_examples_including_replay": 1536,
+          "maximum_batch": 16
+        },
+        "4": {
+          "count": 4000,
+          "optimizer_steps": 250,
+          "clean_accuracy": 0.79825,
+          "noisy_accuracy": 0.76325,
+          "oracle_regret": 765,
+          "oracle_regret_per_example": 0.19125,
+          "replay_examples": 0,
+          "training_examples_including_replay": 4000,
+          "maximum_batch": 16
+        }
+      },
+      "total_optimizer_steps": 3471
+    },
+    {
+      "seed": 240003,
+      "method": "replay",
+      "phase3_count": 1024,
+      "phase3_updates": 64,
+      "phase2_state_sha256": "b6f04524e150e38a5175ecfb8f632324b768111d682a9e587687536916feebd1",
+      "frozen": {
+        "2": {
+          "r1_accuracy": 0.82555,
+          "r2_accuracy": 0.397
+        },
+        "3": {
+          "r1_accuracy": 0.79275,
+          "r2_accuracy": 0.44145
+        },
+        "4": {
+          "r1_accuracy": 0.8205,
+          "r2_accuracy": 0.3996
+        }
+      },
+      "damage": 0.03280000000000005,
+      "recovery": 0.027750000000000052,
+      "window": {
+        "count": 480,
+        "updates": 30,
+        "online_clean_errors": 109,
+        "phase2_reference_clean_errors": 93,
+        "extra_errors": 16,
+        "extra_errors_per_example": 0.03333333333333333
+      },
+      "phases": {
+        "1": {
+          "count": 40000,
+          "optimizer_steps": 2500,
+          "clean_accuracy": 0.819175,
+          "noisy_accuracy": 0.7808,
+          "oracle_regret": 6709,
+          "oracle_regret_per_example": 0.167725,
+          "replay_examples": 319964,
+          "training_examples_including_replay": 359964,
+          "maximum_batch": 144
+        },
+        "2": {
+          "count": 10000,
+          "optimizer_steps": 625,
+          "clean_accuracy": 0.8138,
+          "noisy_accuracy": 0.7756,
+          "oracle_regret": 1736,
+          "oracle_regret_per_example": 0.1736,
+          "replay_examples": 80000,
+          "training_examples_including_replay": 90000,
+          "maximum_batch": 144
+        },
+        "3": {
+          "count": 1024,
+          "optimizer_steps": 64,
+          "clean_accuracy": 0.4052734375,
+          "noisy_accuracy": 0.392578125,
+          "oracle_regret": 565,
+          "oracle_regret_per_example": 0.5517578125,
+          "replay_examples": 8192,
+          "training_examples_including_replay": 9216,
+          "maximum_batch": 144
+        },
+        "4": {
+          "count": 4000,
+          "optimizer_steps": 250,
+          "clean_accuracy": 0.8065,
+          "noisy_accuracy": 0.7725,
+          "oracle_regret": 728,
+          "oracle_regret_per_example": 0.182,
+          "replay_examples": 32000,
+          "training_examples_including_replay": 36000,
+          "maximum_batch": 144
+        }
+      },
+      "total_optimizer_steps": 3439
+    },
+    {
+      "seed": 240003,
+      "method": "replay",
+      "phase3_count": 1536,
+      "phase3_updates": 96,
+      "phase2_state_sha256": "b6f04524e150e38a5175ecfb8f632324b768111d682a9e587687536916feebd1",
+      "frozen": {
+        "2": {
+          "r1_accuracy": 0.82555,
+          "r2_accuracy": 0.397
+        },
+        "3": {
+          "r1_accuracy": 0.78555,
+          "r2_accuracy": 0.4521
+        },
+        "4": {
+          "r1_accuracy": 0.8217,
+          "r2_accuracy": 0.4033
+        }
+      },
+      "damage": 0.040000000000000036,
+      "recovery": 0.036150000000000015,
+      "window": {
+        "count": 480,
+        "updates": 30,
+        "online_clean_errors": 113,
+        "phase2_reference_clean_errors": 93,
+        "extra_errors": 20,
+        "extra_errors_per_example": 0.041666666666666664
+      },
+      "phases": {
+        "1": {
+          "count": 40000,
+          "optimizer_steps": 2500,
+          "clean_accuracy": 0.819175,
+          "noisy_accuracy": 0.7808,
+          "oracle_regret": 6709,
+          "oracle_regret_per_example": 0.167725,
+          "replay_examples": 319964,
+          "training_examples_including_replay": 359964,
+          "maximum_batch": 144
+        },
+        "2": {
+          "count": 10000,
+          "optimizer_steps": 625,
+          "clean_accuracy": 0.8138,
+          "noisy_accuracy": 0.7756,
+          "oracle_regret": 1736,
+          "oracle_regret_per_example": 0.1736,
+          "replay_examples": 80000,
+          "training_examples_including_replay": 90000,
+          "maximum_batch": 144
+        },
+        "3": {
+          "count": 1536,
+          "optimizer_steps": 96,
+          "clean_accuracy": 0.4153645833333333,
+          "noisy_accuracy": 0.404296875,
+          "oracle_regret": 834,
+          "oracle_regret_per_example": 0.54296875,
+          "replay_examples": 12288,
+          "training_examples_including_replay": 13824,
+          "maximum_batch": 144
+        },
+        "4": {
+          "count": 4000,
+          "optimizer_steps": 250,
+          "clean_accuracy": 0.805,
+          "noisy_accuracy": 0.771,
+          "oracle_regret": 734,
+          "oracle_regret_per_example": 0.1835,
+          "replay_examples": 32000,
+          "training_examples_including_replay": 36000,
+          "maximum_batch": 144
+        }
+      },
+      "total_optimizer_steps": 3471
+    }
+  ],
+  "initial_state_sha256": "57cf9334bbbbc44469b1bc3399377501473a9abfdc040f437e0c939be978319c",
+  "validations": [
+    {
+      "seed": 240001,
+      "method": "A",
+      "parent_state_unchanged": true,
+      "phase3_prefix_predictions_equal": true
+    },
+    {
+      "seed": 240001,
+      "method": "replay",
+      "parent_state_unchanged": true,
+      "phase3_prefix_predictions_equal": true
+    },
+    {
+      "seed": 240002,
+      "method": "A",
+      "parent_state_unchanged": true,
+      "phase3_prefix_predictions_equal": true
+    },
+    {
+      "seed": 240002,
+      "method": "replay",
+      "parent_state_unchanged": true,
+      "phase3_prefix_predictions_equal": true
+    },
+    {
+      "seed": 240003,
+      "method": "A",
+      "parent_state_unchanged": true,
+      "phase3_prefix_predictions_equal": true
+    },
+    {
+      "seed": 240003,
+      "method": "replay",
+      "parent_state_unchanged": true,
+      "phase3_prefix_predictions_equal": true
+    }
+  ],
+  "selection": {
+    "eligible_candidates": [
+      1024,
+      1536
+    ],
+    "selected_phase3_count": 1024,
+    "scope": "v0.3 pilot only; no automatic transfer to filtered v0.4",
+    "phase2_control_passed": true,
+    "status": "selected",
+    "suggested_future_candidate": null,
+    "future_candidate_executed": false
+  },
+  "limitations": [
+    "Three stream seeds; fixed teacher and fixed initial model.",
+    "No learnability-gate pass, no confirmatory inference.",
+    "Replay has extra memory and training compute.",
+    "Selection is specific to this v0.3 pilot, not filtered v0.4."
+  ],
+  "revision": "short-pilot-1024-1536",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.2.6",
+    "torch": "2.7.1+cu118",
+    "device": "cpu",
+    "threads": 1
+  }
+}

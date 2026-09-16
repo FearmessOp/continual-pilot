@@ -1,0 +1,24 @@
+{
+  "method": "replay",
+  "seed": 220002,
+  "phase_weights": {
+    "2": {
+      "file": "replay_seed220002_phase2.pt",
+      "state_sha256": "ae9be8df82f54b9357602c327f2d716335f3c9e4da307917cb5409452023753c",
+      "file_sha256": "2ee074e363220c0ee31f8b7f3275a3ca74282e0edcd3e85f3a3c66a528d85c82"
+    },
+    "3": {
+      "file": "replay_seed220002_phase3.pt",
+      "state_sha256": "ecdf245e253847f6de670e2e610ac5904f870ac7bbceb03cb4937ec4fa53d667",
+      "file_sha256": "962e589723bb078e3e07547f646929b7ac07256722adb09711d61ebfe469a801"
+    },
+    "4": {
+      "file": "replay_seed220002_phase4.pt",
+      "state_sha256": "5efc46fd7152eb89e31bf23666c76bc1a8553035719dcab414bebd41bd265450",
+      "file_sha256": "18d0f292e3e9df709593030c5bb22863785772bab6f3ec09db58f2dede42adba"
+    }
+  },
+  "final_state_sha256": "5efc46fd7152eb89e31bf23666c76bc1a8553035719dcab414bebd41bd265450",
+  "predictions_file": "replay_seed220002_predictions.npz",
+  "online_predictions_sha256": "2824d6907e1abf566e20847f7e3df5299b3c2dc8a8eb5d0dd601f4908c5f996f"
+}

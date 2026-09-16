@@ -1,0 +1,1844 @@
+{
+  "revision": "generator-v02",
+  "config": {
+    "alpha": 0.5,
+    "noise": 0.05,
+    "seed_start": 1000,
+    "metric_seed": 50000,
+    "probe_window": 64,
+    "calibration_count": 20000,
+    "threads": 1,
+    "output": "continual_pilot/results_generator_v02"
+  },
+  "environment": {
+    "python": "3.13.2",
+    "torch": "2.7.1+cu118",
+    "numpy": "2.2.6",
+    "device": "cpu"
+  },
+  "criterion": {
+    "class_fraction_band": [
+      0.18,
+      0.35
+    ],
+    "applies_to": "each class, under R1 and R2, under M1 and M2",
+    "disagreement_band": [
+      0.4,
+      0.7
+    ],
+    "max_attempts": 200,
+    "nominal_gate_band": [
+      0.925,
+      0.935
+    ],
+    "note": "Common component calibrated on the real mixed-z distribution (equal M1/M2), not N(0,1). Nominal gate band follows from the class-fraction band; the realized gate is computed later from an independent calibration stream."
+  },
+  "acceptance": {
+    "accepted": false,
+    "attempts_tried": 200,
+    "rejected_count": 200,
+    "rejected_seeds": [
+      {
+        "seed": 1000,
+        "min_class_fraction": 0.0799,
+        "max_class_fraction": 0.433,
+        "disagreement": {
+          "M1": 0.688,
+          "M2": 0.6855
+        }
+      },
+      {
+        "seed": 1001,
+        "min_class_fraction": 0.1399,
+        "max_class_fraction": 0.36725,
+        "disagreement": {
+          "M1": 0.6365,
+          "M2": 0.6187
+        }
+      },
+      {
+        "seed": 1002,
+        "min_class_fraction": 0.04245,
+        "max_class_fraction": 0.4259,
+        "disagreement": {
+          "M1": 0.637,
+          "M2": 0.6181
+        }
+      },
+      {
+        "seed": 1003,
+        "min_class_fraction": 0.0423,
+        "max_class_fraction": 0.44825,
+        "disagreement": {
+          "M1": 0.61805,
+          "M2": 0.6179
+        }
+      },
+      {
+        "seed": 1004,
+        "min_class_fraction": 0.09755,
+        "max_class_fraction": 0.40625,
+        "disagreement": {
+          "M1": 0.65655,
+          "M2": 0.6453
+        }
+      },
+      {
+        "seed": 1005,
+        "min_class_fraction": 0.027,
+        "max_class_fraction": 0.42005,
+        "disagreement": {
+          "M1": 0.70135,
+          "M2": 0.681
+        }
+      },
+      {
+        "seed": 1006,
+        "min_class_fraction": 0.06355,
+        "max_class_fraction": 0.43765,
+        "disagreement": {
+          "M1": 0.6825,
+          "M2": 0.6839
+        }
+      },
+      {
+        "seed": 1007,
+        "min_class_fraction": 0.0114,
+        "max_class_fraction": 0.398,
+        "disagreement": {
+          "M1": 0.69635,
+          "M2": 0.69875
+        }
+      },
+      {
+        "seed": 1008,
+        "min_class_fraction": 0.11145,
+        "max_class_fraction": 0.3413,
+        "disagreement": {
+          "M1": 0.6792,
+          "M2": 0.6824
+        }
+      },
+      {
+        "seed": 1009,
+        "min_class_fraction": 0.08265,
+        "max_class_fraction": 0.38155,
+        "disagreement": {
+          "M1": 0.67785,
+          "M2": 0.6797
+        }
+      },
+      {
+        "seed": 1010,
+        "min_class_fraction": 0.084,
+        "max_class_fraction": 0.40415,
+        "disagreement": {
+          "M1": 0.68315,
+          "M2": 0.6662
+        }
+      },
+      {
+        "seed": 1011,
+        "min_class_fraction": 0.0377,
+        "max_class_fraction": 0.44135,
+        "disagreement": {
+          "M1": 0.6598,
+          "M2": 0.6578
+        }
+      },
+      {
+        "seed": 1012,
+        "min_class_fraction": 0.176,
+        "max_class_fraction": 0.37715,
+        "disagreement": {
+          "M1": 0.67305,
+          "M2": 0.6725
+        }
+      },
+      {
+        "seed": 1013,
+        "min_class_fraction": 0.06275,
+        "max_class_fraction": 0.4354,
+        "disagreement": {
+          "M1": 0.6691,
+          "M2": 0.68365
+        }
+      },
+      {
+        "seed": 1014,
+        "min_class_fraction": 0.0632,
+        "max_class_fraction": 0.43145,
+        "disagreement": {
+          "M1": 0.66595,
+          "M2": 0.6819
+        }
+      },
+      {
+        "seed": 1015,
+        "min_class_fraction": 0.03205,
+        "max_class_fraction": 0.4471,
+        "disagreement": {
+          "M1": 0.5974,
+          "M2": 0.5955
+        }
+      },
+      {
+        "seed": 1016,
+        "min_class_fraction": 0.0962,
+        "max_class_fraction": 0.4426,
+        "disagreement": {
+          "M1": 0.65175,
+          "M2": 0.66375
+        }
+      },
+      {
+        "seed": 1017,
+        "min_class_fraction": 0.07175,
+        "max_class_fraction": 0.4475,
+        "disagreement": {
+          "M1": 0.66515,
+          "M2": 0.6721
+        }
+      },
+      {
+        "seed": 1018,
+        "min_class_fraction": 0.05445,
+        "max_class_fraction": 0.4072,
+        "disagreement": {
+          "M1": 0.67585,
+          "M2": 0.6743
+        }
+      },
+      {
+        "seed": 1019,
+        "min_class_fraction": 0.0313,
+        "max_class_fraction": 0.43685,
+        "disagreement": {
+          "M1": 0.67365,
+          "M2": 0.6996
+        }
+      },
+      {
+        "seed": 1020,
+        "min_class_fraction": 0.08315,
+        "max_class_fraction": 0.4179,
+        "disagreement": {
+          "M1": 0.70225,
+          "M2": 0.68405
+        }
+      },
+      {
+        "seed": 1021,
+        "min_class_fraction": 0.129,
+        "max_class_fraction": 0.37695,
+        "disagreement": {
+          "M1": 0.6818,
+          "M2": 0.66935
+        }
+      },
+      {
+        "seed": 1022,
+        "min_class_fraction": 0.0225,
+        "max_class_fraction": 0.3862,
+        "disagreement": {
+          "M1": 0.70835,
+          "M2": 0.6979
+        }
+      },
+      {
+        "seed": 1023,
+        "min_class_fraction": 0.04075,
+        "max_class_fraction": 0.448,
+        "disagreement": {
+          "M1": 0.72335,
+          "M2": 0.6948
+        }
+      },
+      {
+        "seed": 1024,
+        "min_class_fraction": 0.0956,
+        "max_class_fraction": 0.4598,
+        "disagreement": {
+          "M1": 0.69965,
+          "M2": 0.6821
+        }
+      },
+      {
+        "seed": 1025,
+        "min_class_fraction": 0.0424,
+        "max_class_fraction": 0.4371,
+        "disagreement": {
+          "M1": 0.72325,
+          "M2": 0.71915
+        }
+      },
+      {
+        "seed": 1026,
+        "min_class_fraction": 0.12935,
+        "max_class_fraction": 0.3591,
+        "disagreement": {
+          "M1": 0.7087,
+          "M2": 0.71725
+        }
+      },
+      {
+        "seed": 1027,
+        "min_class_fraction": 0.08355,
+        "max_class_fraction": 0.43285,
+        "disagreement": {
+          "M1": 0.64335,
+          "M2": 0.66055
+        }
+      },
+      {
+        "seed": 1028,
+        "min_class_fraction": 0.09355,
+        "max_class_fraction": 0.3894,
+        "disagreement": {
+          "M1": 0.6734,
+          "M2": 0.664
+        }
+      },
+      {
+        "seed": 1029,
+        "min_class_fraction": 0.12675,
+        "max_class_fraction": 0.40925,
+        "disagreement": {
+          "M1": 0.694,
+          "M2": 0.6927
+        }
+      },
+      {
+        "seed": 1030,
+        "min_class_fraction": 0.09545,
+        "max_class_fraction": 0.4292,
+        "disagreement": {
+          "M1": 0.6295,
+          "M2": 0.6123
+        }
+      },
+      {
+        "seed": 1031,
+        "min_class_fraction": 0.1104,
+        "max_class_fraction": 0.40025,
+        "disagreement": {
+          "M1": 0.6221,
+          "M2": 0.64425
+        }
+      },
+      {
+        "seed": 1032,
+        "min_class_fraction": 0.07325,
+        "max_class_fraction": 0.3757,
+        "disagreement": {
+          "M1": 0.66115,
+          "M2": 0.6847
+        }
+      },
+      {
+        "seed": 1033,
+        "min_class_fraction": 0.1184,
+        "max_class_fraction": 0.388,
+        "disagreement": {
+          "M1": 0.67865,
+          "M2": 0.69335
+        }
+      },
+      {
+        "seed": 1034,
+        "min_class_fraction": 0.12315,
+        "max_class_fraction": 0.36105,
+        "disagreement": {
+          "M1": 0.646,
+          "M2": 0.6441
+        }
+      },
+      {
+        "seed": 1035,
+        "min_class_fraction": 0.00605,
+        "max_class_fraction": 0.43395,
+        "disagreement": {
+          "M1": 0.64445,
+          "M2": 0.6462
+        }
+      },
+      {
+        "seed": 1036,
+        "min_class_fraction": 0.1214,
+        "max_class_fraction": 0.38025,
+        "disagreement": {
+          "M1": 0.616,
+          "M2": 0.6253
+        }
+      },
+      {
+        "seed": 1037,
+        "min_class_fraction": 0.0753,
+        "max_class_fraction": 0.36895,
+        "disagreement": {
+          "M1": 0.6795,
+          "M2": 0.69265
+        }
+      },
+      {
+        "seed": 1038,
+        "min_class_fraction": 0.0459,
+        "max_class_fraction": 0.4247,
+        "disagreement": {
+          "M1": 0.6627,
+          "M2": 0.64425
+        }
+      },
+      {
+        "seed": 1039,
+        "min_class_fraction": 0.10805,
+        "max_class_fraction": 0.3839,
+        "disagreement": {
+          "M1": 0.64345,
+          "M2": 0.6418
+        }
+      },
+      {
+        "seed": 1040,
+        "min_class_fraction": 0.0624,
+        "max_class_fraction": 0.41745,
+        "disagreement": {
+          "M1": 0.58475,
+          "M2": 0.6301
+        }
+      },
+      {
+        "seed": 1041,
+        "min_class_fraction": 0.08035,
+        "max_class_fraction": 0.43225,
+        "disagreement": {
+          "M1": 0.60325,
+          "M2": 0.5881
+        }
+      },
+      {
+        "seed": 1042,
+        "min_class_fraction": 0.1385,
+        "max_class_fraction": 0.3531,
+        "disagreement": {
+          "M1": 0.69605,
+          "M2": 0.69675
+        }
+      },
+      {
+        "seed": 1043,
+        "min_class_fraction": 0.0785,
+        "max_class_fraction": 0.42985,
+        "disagreement": {
+          "M1": 0.70645,
+          "M2": 0.71225
+        }
+      },
+      {
+        "seed": 1044,
+        "min_class_fraction": 0.1247,
+        "max_class_fraction": 0.40535,
+        "disagreement": {
+          "M1": 0.62725,
+          "M2": 0.6235
+        }
+      },
+      {
+        "seed": 1045,
+        "min_class_fraction": 0.0673,
+        "max_class_fraction": 0.41825,
+        "disagreement": {
+          "M1": 0.6294,
+          "M2": 0.6329
+        }
+      },
+      {
+        "seed": 1046,
+        "min_class_fraction": 0.0058,
+        "max_class_fraction": 0.4319,
+        "disagreement": {
+          "M1": 0.6607,
+          "M2": 0.6646
+        }
+      },
+      {
+        "seed": 1047,
+        "min_class_fraction": 0.0789,
+        "max_class_fraction": 0.42765,
+        "disagreement": {
+          "M1": 0.69525,
+          "M2": 0.6931
+        }
+      },
+      {
+        "seed": 1048,
+        "min_class_fraction": 0.09765,
+        "max_class_fraction": 0.416,
+        "disagreement": {
+          "M1": 0.68435,
+          "M2": 0.71065
+        }
+      },
+      {
+        "seed": 1049,
+        "min_class_fraction": 0.0268,
+        "max_class_fraction": 0.3949,
+        "disagreement": {
+          "M1": 0.644,
+          "M2": 0.64165
+        }
+      },
+      {
+        "seed": 1050,
+        "min_class_fraction": 0.0667,
+        "max_class_fraction": 0.4611,
+        "disagreement": {
+          "M1": 0.5836,
+          "M2": 0.638
+        }
+      },
+      {
+        "seed": 1051,
+        "min_class_fraction": 0.04865,
+        "max_class_fraction": 0.44195,
+        "disagreement": {
+          "M1": 0.7546,
+          "M2": 0.72205
+        }
+      },
+      {
+        "seed": 1052,
+        "min_class_fraction": 0.153,
+        "max_class_fraction": 0.3806,
+        "disagreement": {
+          "M1": 0.68665,
+          "M2": 0.6899
+        }
+      },
+      {
+        "seed": 1053,
+        "min_class_fraction": 0.1165,
+        "max_class_fraction": 0.44195,
+        "disagreement": {
+          "M1": 0.72565,
+          "M2": 0.715
+        }
+      },
+      {
+        "seed": 1054,
+        "min_class_fraction": 0.0665,
+        "max_class_fraction": 0.4042,
+        "disagreement": {
+          "M1": 0.6705,
+          "M2": 0.661
+        }
+      },
+      {
+        "seed": 1055,
+        "min_class_fraction": 0.116,
+        "max_class_fraction": 0.36685,
+        "disagreement": {
+          "M1": 0.63605,
+          "M2": 0.6547
+        }
+      },
+      {
+        "seed": 1056,
+        "min_class_fraction": 0.07315,
+        "max_class_fraction": 0.386,
+        "disagreement": {
+          "M1": 0.68745,
+          "M2": 0.66485
+        }
+      },
+      {
+        "seed": 1057,
+        "min_class_fraction": 0.09875,
+        "max_class_fraction": 0.3889,
+        "disagreement": {
+          "M1": 0.63425,
+          "M2": 0.6679
+        }
+      },
+      {
+        "seed": 1058,
+        "min_class_fraction": 0.12875,
+        "max_class_fraction": 0.41835,
+        "disagreement": {
+          "M1": 0.64625,
+          "M2": 0.66935
+        }
+      },
+      {
+        "seed": 1059,
+        "min_class_fraction": 0.08475,
+        "max_class_fraction": 0.42105,
+        "disagreement": {
+          "M1": 0.68355,
+          "M2": 0.6772
+        }
+      },
+      {
+        "seed": 1060,
+        "min_class_fraction": 0.0414,
+        "max_class_fraction": 0.40185,
+        "disagreement": {
+          "M1": 0.7057,
+          "M2": 0.6884
+        }
+      },
+      {
+        "seed": 1061,
+        "min_class_fraction": 0.0537,
+        "max_class_fraction": 0.4232,
+        "disagreement": {
+          "M1": 0.6908,
+          "M2": 0.6687
+        }
+      },
+      {
+        "seed": 1062,
+        "min_class_fraction": 0.1047,
+        "max_class_fraction": 0.4078,
+        "disagreement": {
+          "M1": 0.6765,
+          "M2": 0.6729
+        }
+      },
+      {
+        "seed": 1063,
+        "min_class_fraction": 0.0539,
+        "max_class_fraction": 0.42,
+        "disagreement": {
+          "M1": 0.6878,
+          "M2": 0.7016
+        }
+      },
+      {
+        "seed": 1064,
+        "min_class_fraction": 0.0983,
+        "max_class_fraction": 0.36685,
+        "disagreement": {
+          "M1": 0.66885,
+          "M2": 0.648
+        }
+      },
+      {
+        "seed": 1065,
+        "min_class_fraction": 0.06115,
+        "max_class_fraction": 0.37235,
+        "disagreement": {
+          "M1": 0.70105,
+          "M2": 0.68915
+        }
+      },
+      {
+        "seed": 1066,
+        "min_class_fraction": 0.09655,
+        "max_class_fraction": 0.39205,
+        "disagreement": {
+          "M1": 0.6659,
+          "M2": 0.64485
+        }
+      },
+      {
+        "seed": 1067,
+        "min_class_fraction": 0.1001,
+        "max_class_fraction": 0.3958,
+        "disagreement": {
+          "M1": 0.63465,
+          "M2": 0.65815
+        }
+      },
+      {
+        "seed": 1068,
+        "min_class_fraction": 0.08545,
+        "max_class_fraction": 0.4254,
+        "disagreement": {
+          "M1": 0.7224,
+          "M2": 0.7073
+        }
+      },
+      {
+        "seed": 1069,
+        "min_class_fraction": 0.0897,
+        "max_class_fraction": 0.4458,
+        "disagreement": {
+          "M1": 0.688,
+          "M2": 0.6896
+        }
+      },
+      {
+        "seed": 1070,
+        "min_class_fraction": 0.11035,
+        "max_class_fraction": 0.42725,
+        "disagreement": {
+          "M1": 0.6416,
+          "M2": 0.63245
+        }
+      },
+      {
+        "seed": 1071,
+        "min_class_fraction": 0.07405,
+        "max_class_fraction": 0.4319,
+        "disagreement": {
+          "M1": 0.73575,
+          "M2": 0.72025
+        }
+      },
+      {
+        "seed": 1072,
+        "min_class_fraction": 0.0654,
+        "max_class_fraction": 0.4326,
+        "disagreement": {
+          "M1": 0.70185,
+          "M2": 0.71425
+        }
+      },
+      {
+        "seed": 1073,
+        "min_class_fraction": 0.0693,
+        "max_class_fraction": 0.41635,
+        "disagreement": {
+          "M1": 0.6789,
+          "M2": 0.6744
+        }
+      },
+      {
+        "seed": 1074,
+        "min_class_fraction": 0.07415,
+        "max_class_fraction": 0.39635,
+        "disagreement": {
+          "M1": 0.6608,
+          "M2": 0.61855
+        }
+      },
+      {
+        "seed": 1075,
+        "min_class_fraction": 0.07635,
+        "max_class_fraction": 0.3413,
+        "disagreement": {
+          "M1": 0.6707,
+          "M2": 0.67985
+        }
+      },
+      {
+        "seed": 1076,
+        "min_class_fraction": 0.1412,
+        "max_class_fraction": 0.36125,
+        "disagreement": {
+          "M1": 0.6777,
+          "M2": 0.69235
+        }
+      },
+      {
+        "seed": 1077,
+        "min_class_fraction": 0.1099,
+        "max_class_fraction": 0.4291,
+        "disagreement": {
+          "M1": 0.7158,
+          "M2": 0.71675
+        }
+      },
+      {
+        "seed": 1078,
+        "min_class_fraction": 0.0664,
+        "max_class_fraction": 0.43,
+        "disagreement": {
+          "M1": 0.6943,
+          "M2": 0.69205
+        }
+      },
+      {
+        "seed": 1079,
+        "min_class_fraction": 0.08655,
+        "max_class_fraction": 0.44245,
+        "disagreement": {
+          "M1": 0.6694,
+          "M2": 0.6699
+        }
+      },
+      {
+        "seed": 1080,
+        "min_class_fraction": 0.1524,
+        "max_class_fraction": 0.39085,
+        "disagreement": {
+          "M1": 0.69485,
+          "M2": 0.6898
+        }
+      },
+      {
+        "seed": 1081,
+        "min_class_fraction": 0.0119,
+        "max_class_fraction": 0.43905,
+        "disagreement": {
+          "M1": 0.59065,
+          "M2": 0.57345
+        }
+      },
+      {
+        "seed": 1082,
+        "min_class_fraction": 0.0906,
+        "max_class_fraction": 0.4222,
+        "disagreement": {
+          "M1": 0.6687,
+          "M2": 0.6814
+        }
+      },
+      {
+        "seed": 1083,
+        "min_class_fraction": 0.065,
+        "max_class_fraction": 0.43915,
+        "disagreement": {
+          "M1": 0.6682,
+          "M2": 0.68515
+        }
+      },
+      {
+        "seed": 1084,
+        "min_class_fraction": 0.07645,
+        "max_class_fraction": 0.42005,
+        "disagreement": {
+          "M1": 0.6498,
+          "M2": 0.6682
+        }
+      },
+      {
+        "seed": 1085,
+        "min_class_fraction": 0.1153,
+        "max_class_fraction": 0.3874,
+        "disagreement": {
+          "M1": 0.6908,
+          "M2": 0.69295
+        }
+      },
+      {
+        "seed": 1086,
+        "min_class_fraction": 0.07355,
+        "max_class_fraction": 0.42125,
+        "disagreement": {
+          "M1": 0.6898,
+          "M2": 0.71605
+        }
+      },
+      {
+        "seed": 1087,
+        "min_class_fraction": 0.1262,
+        "max_class_fraction": 0.3555,
+        "disagreement": {
+          "M1": 0.6903,
+          "M2": 0.67095
+        }
+      },
+      {
+        "seed": 1088,
+        "min_class_fraction": 0.0509,
+        "max_class_fraction": 0.41165,
+        "disagreement": {
+          "M1": 0.6666,
+          "M2": 0.6961
+        }
+      },
+      {
+        "seed": 1089,
+        "min_class_fraction": 0.0865,
+        "max_class_fraction": 0.41215,
+        "disagreement": {
+          "M1": 0.6574,
+          "M2": 0.67335
+        }
+      },
+      {
+        "seed": 1090,
+        "min_class_fraction": 0.1334,
+        "max_class_fraction": 0.3744,
+        "disagreement": {
+          "M1": 0.671,
+          "M2": 0.64655
+        }
+      },
+      {
+        "seed": 1091,
+        "min_class_fraction": 0.06265,
+        "max_class_fraction": 0.45735,
+        "disagreement": {
+          "M1": 0.7781,
+          "M2": 0.776
+        }
+      },
+      {
+        "seed": 1092,
+        "min_class_fraction": 0.09095,
+        "max_class_fraction": 0.38125,
+        "disagreement": {
+          "M1": 0.6443,
+          "M2": 0.6269
+        }
+      },
+      {
+        "seed": 1093,
+        "min_class_fraction": 0.0387,
+        "max_class_fraction": 0.46185,
+        "disagreement": {
+          "M1": 0.6986,
+          "M2": 0.70395
+        }
+      },
+      {
+        "seed": 1094,
+        "min_class_fraction": 0.1319,
+        "max_class_fraction": 0.39965,
+        "disagreement": {
+          "M1": 0.66905,
+          "M2": 0.67095
+        }
+      },
+      {
+        "seed": 1095,
+        "min_class_fraction": 0.0377,
+        "max_class_fraction": 0.46335,
+        "disagreement": {
+          "M1": 0.6389,
+          "M2": 0.60645
+        }
+      },
+      {
+        "seed": 1096,
+        "min_class_fraction": 0.01655,
+        "max_class_fraction": 0.5091,
+        "disagreement": {
+          "M1": 0.72985,
+          "M2": 0.7829
+        }
+      },
+      {
+        "seed": 1097,
+        "min_class_fraction": 0.0665,
+        "max_class_fraction": 0.3856,
+        "disagreement": {
+          "M1": 0.68925,
+          "M2": 0.68155
+        }
+      },
+      {
+        "seed": 1098,
+        "min_class_fraction": 0.0239,
+        "max_class_fraction": 0.4459,
+        "disagreement": {
+          "M1": 0.635,
+          "M2": 0.65895
+        }
+      },
+      {
+        "seed": 1099,
+        "min_class_fraction": 0.0463,
+        "max_class_fraction": 0.40715,
+        "disagreement": {
+          "M1": 0.6706,
+          "M2": 0.6634
+        }
+      },
+      {
+        "seed": 1100,
+        "min_class_fraction": 0.0998,
+        "max_class_fraction": 0.34455,
+        "disagreement": {
+          "M1": 0.683,
+          "M2": 0.6781
+        }
+      },
+      {
+        "seed": 1101,
+        "min_class_fraction": 0.11105,
+        "max_class_fraction": 0.355,
+        "disagreement": {
+          "M1": 0.6983,
+          "M2": 0.67615
+        }
+      },
+      {
+        "seed": 1102,
+        "min_class_fraction": 0.07575,
+        "max_class_fraction": 0.37845,
+        "disagreement": {
+          "M1": 0.67935,
+          "M2": 0.68275
+        }
+      },
+      {
+        "seed": 1103,
+        "min_class_fraction": 0.0083,
+        "max_class_fraction": 0.45345,
+        "disagreement": {
+          "M1": 0.5907,
+          "M2": 0.6013
+        }
+      },
+      {
+        "seed": 1104,
+        "min_class_fraction": 0.08495,
+        "max_class_fraction": 0.4466,
+        "disagreement": {
+          "M1": 0.70205,
+          "M2": 0.6772
+        }
+      },
+      {
+        "seed": 1105,
+        "min_class_fraction": 0.0837,
+        "max_class_fraction": 0.395,
+        "disagreement": {
+          "M1": 0.6443,
+          "M2": 0.6433
+        }
+      },
+      {
+        "seed": 1106,
+        "min_class_fraction": 0.0278,
+        "max_class_fraction": 0.47535,
+        "disagreement": {
+          "M1": 0.68685,
+          "M2": 0.6882
+        }
+      },
+      {
+        "seed": 1107,
+        "min_class_fraction": 0.048,
+        "max_class_fraction": 0.3908,
+        "disagreement": {
+          "M1": 0.66225,
+          "M2": 0.6427
+        }
+      },
+      {
+        "seed": 1108,
+        "min_class_fraction": 0.06275,
+        "max_class_fraction": 0.46395,
+        "disagreement": {
+          "M1": 0.734,
+          "M2": 0.70115
+        }
+      },
+      {
+        "seed": 1109,
+        "min_class_fraction": 0.07545,
+        "max_class_fraction": 0.43185,
+        "disagreement": {
+          "M1": 0.6441,
+          "M2": 0.6566
+        }
+      },
+      {
+        "seed": 1110,
+        "min_class_fraction": 0.08115,
+        "max_class_fraction": 0.3774,
+        "disagreement": {
+          "M1": 0.6065,
+          "M2": 0.6174
+        }
+      },
+      {
+        "seed": 1111,
+        "min_class_fraction": 0.0593,
+        "max_class_fraction": 0.4522,
+        "disagreement": {
+          "M1": 0.6721,
+          "M2": 0.692
+        }
+      },
+      {
+        "seed": 1112,
+        "min_class_fraction": 0.09925,
+        "max_class_fraction": 0.4049,
+        "disagreement": {
+          "M1": 0.70155,
+          "M2": 0.7272
+        }
+      },
+      {
+        "seed": 1113,
+        "min_class_fraction": 0.0599,
+        "max_class_fraction": 0.3935,
+        "disagreement": {
+          "M1": 0.6843,
+          "M2": 0.68125
+        }
+      },
+      {
+        "seed": 1114,
+        "min_class_fraction": 0.0973,
+        "max_class_fraction": 0.3902,
+        "disagreement": {
+          "M1": 0.70885,
+          "M2": 0.6978
+        }
+      },
+      {
+        "seed": 1115,
+        "min_class_fraction": 0.0672,
+        "max_class_fraction": 0.4173,
+        "disagreement": {
+          "M1": 0.6443,
+          "M2": 0.65685
+        }
+      },
+      {
+        "seed": 1116,
+        "min_class_fraction": 0.06275,
+        "max_class_fraction": 0.41135,
+        "disagreement": {
+          "M1": 0.59995,
+          "M2": 0.5999
+        }
+      },
+      {
+        "seed": 1117,
+        "min_class_fraction": 0.09795,
+        "max_class_fraction": 0.4375,
+        "disagreement": {
+          "M1": 0.67255,
+          "M2": 0.6707
+        }
+      },
+      {
+        "seed": 1118,
+        "min_class_fraction": 0.06595,
+        "max_class_fraction": 0.43005,
+        "disagreement": {
+          "M1": 0.62765,
+          "M2": 0.6113
+        }
+      },
+      {
+        "seed": 1119,
+        "min_class_fraction": 0.09875,
+        "max_class_fraction": 0.3937,
+        "disagreement": {
+          "M1": 0.6856,
+          "M2": 0.69615
+        }
+      },
+      {
+        "seed": 1120,
+        "min_class_fraction": 0.05365,
+        "max_class_fraction": 0.3925,
+        "disagreement": {
+          "M1": 0.6863,
+          "M2": 0.67855
+        }
+      },
+      {
+        "seed": 1121,
+        "min_class_fraction": 0.08425,
+        "max_class_fraction": 0.42895,
+        "disagreement": {
+          "M1": 0.7127,
+          "M2": 0.69275
+        }
+      },
+      {
+        "seed": 1122,
+        "min_class_fraction": 0.1073,
+        "max_class_fraction": 0.4026,
+        "disagreement": {
+          "M1": 0.6883,
+          "M2": 0.69035
+        }
+      },
+      {
+        "seed": 1123,
+        "min_class_fraction": 0.11085,
+        "max_class_fraction": 0.37625,
+        "disagreement": {
+          "M1": 0.68535,
+          "M2": 0.6818
+        }
+      },
+      {
+        "seed": 1124,
+        "min_class_fraction": 0.051,
+        "max_class_fraction": 0.46215,
+        "disagreement": {
+          "M1": 0.62905,
+          "M2": 0.6481
+        }
+      },
+      {
+        "seed": 1125,
+        "min_class_fraction": 0.0457,
+        "max_class_fraction": 0.4166,
+        "disagreement": {
+          "M1": 0.63015,
+          "M2": 0.6598
+        }
+      },
+      {
+        "seed": 1126,
+        "min_class_fraction": 0.06825,
+        "max_class_fraction": 0.40715,
+        "disagreement": {
+          "M1": 0.66345,
+          "M2": 0.6382
+        }
+      },
+      {
+        "seed": 1127,
+        "min_class_fraction": 0.0861,
+        "max_class_fraction": 0.3852,
+        "disagreement": {
+          "M1": 0.6833,
+          "M2": 0.68365
+        }
+      },
+      {
+        "seed": 1128,
+        "min_class_fraction": 0.01025,
+        "max_class_fraction": 0.4314,
+        "disagreement": {
+          "M1": 0.69765,
+          "M2": 0.71595
+        }
+      },
+      {
+        "seed": 1129,
+        "min_class_fraction": 0.0033,
+        "max_class_fraction": 0.40385,
+        "disagreement": {
+          "M1": 0.618,
+          "M2": 0.6213
+        }
+      },
+      {
+        "seed": 1130,
+        "min_class_fraction": 0.1154,
+        "max_class_fraction": 0.4252,
+        "disagreement": {
+          "M1": 0.67895,
+          "M2": 0.6999
+        }
+      },
+      {
+        "seed": 1131,
+        "min_class_fraction": 0.1389,
+        "max_class_fraction": 0.33765,
+        "disagreement": {
+          "M1": 0.65665,
+          "M2": 0.65535
+        }
+      },
+      {
+        "seed": 1132,
+        "min_class_fraction": 0.135,
+        "max_class_fraction": 0.3402,
+        "disagreement": {
+          "M1": 0.6815,
+          "M2": 0.6762
+        }
+      },
+      {
+        "seed": 1133,
+        "min_class_fraction": 0.05095,
+        "max_class_fraction": 0.43225,
+        "disagreement": {
+          "M1": 0.69385,
+          "M2": 0.7041
+        }
+      },
+      {
+        "seed": 1134,
+        "min_class_fraction": 0.12615,
+        "max_class_fraction": 0.37505,
+        "disagreement": {
+          "M1": 0.6386,
+          "M2": 0.6612
+        }
+      },
+      {
+        "seed": 1135,
+        "min_class_fraction": 0.0995,
+        "max_class_fraction": 0.4196,
+        "disagreement": {
+          "M1": 0.6235,
+          "M2": 0.6436
+        }
+      },
+      {
+        "seed": 1136,
+        "min_class_fraction": 0.10765,
+        "max_class_fraction": 0.3953,
+        "disagreement": {
+          "M1": 0.7122,
+          "M2": 0.70805
+        }
+      },
+      {
+        "seed": 1137,
+        "min_class_fraction": 0.0982,
+        "max_class_fraction": 0.4037,
+        "disagreement": {
+          "M1": 0.6514,
+          "M2": 0.64915
+        }
+      },
+      {
+        "seed": 1138,
+        "min_class_fraction": 0.109,
+        "max_class_fraction": 0.4171,
+        "disagreement": {
+          "M1": 0.6431,
+          "M2": 0.6712
+        }
+      },
+      {
+        "seed": 1139,
+        "min_class_fraction": 0.0647,
+        "max_class_fraction": 0.4284,
+        "disagreement": {
+          "M1": 0.719,
+          "M2": 0.69935
+        }
+      },
+      {
+        "seed": 1140,
+        "min_class_fraction": 0.07655,
+        "max_class_fraction": 0.4347,
+        "disagreement": {
+          "M1": 0.69205,
+          "M2": 0.6781
+        }
+      },
+      {
+        "seed": 1141,
+        "min_class_fraction": 0.10585,
+        "max_class_fraction": 0.40775,
+        "disagreement": {
+          "M1": 0.6983,
+          "M2": 0.71685
+        }
+      },
+      {
+        "seed": 1142,
+        "min_class_fraction": 0.05085,
+        "max_class_fraction": 0.4008,
+        "disagreement": {
+          "M1": 0.69525,
+          "M2": 0.68525
+        }
+      },
+      {
+        "seed": 1143,
+        "min_class_fraction": 0.0578,
+        "max_class_fraction": 0.40085,
+        "disagreement": {
+          "M1": 0.70825,
+          "M2": 0.7034
+        }
+      },
+      {
+        "seed": 1144,
+        "min_class_fraction": 0.10305,
+        "max_class_fraction": 0.39065,
+        "disagreement": {
+          "M1": 0.6987,
+          "M2": 0.68445
+        }
+      },
+      {
+        "seed": 1145,
+        "min_class_fraction": 0.1065,
+        "max_class_fraction": 0.37915,
+        "disagreement": {
+          "M1": 0.66255,
+          "M2": 0.65445
+        }
+      },
+      {
+        "seed": 1146,
+        "min_class_fraction": 0.0582,
+        "max_class_fraction": 0.41855,
+        "disagreement": {
+          "M1": 0.69415,
+          "M2": 0.69835
+        }
+      },
+      {
+        "seed": 1147,
+        "min_class_fraction": 0.0318,
+        "max_class_fraction": 0.45435,
+        "disagreement": {
+          "M1": 0.7136,
+          "M2": 0.68265
+        }
+      },
+      {
+        "seed": 1148,
+        "min_class_fraction": 0.13125,
+        "max_class_fraction": 0.39215,
+        "disagreement": {
+          "M1": 0.68005,
+          "M2": 0.6649
+        }
+      },
+      {
+        "seed": 1149,
+        "min_class_fraction": 0.05045,
+        "max_class_fraction": 0.4416,
+        "disagreement": {
+          "M1": 0.7025,
+          "M2": 0.67575
+        }
+      },
+      {
+        "seed": 1150,
+        "min_class_fraction": 0.03715,
+        "max_class_fraction": 0.44645,
+        "disagreement": {
+          "M1": 0.6048,
+          "M2": 0.6333
+        }
+      },
+      {
+        "seed": 1151,
+        "min_class_fraction": 0.1035,
+        "max_class_fraction": 0.40765,
+        "disagreement": {
+          "M1": 0.67435,
+          "M2": 0.6857
+        }
+      },
+      {
+        "seed": 1152,
+        "min_class_fraction": 0.13815,
+        "max_class_fraction": 0.34415,
+        "disagreement": {
+          "M1": 0.67395,
+          "M2": 0.67305
+        }
+      },
+      {
+        "seed": 1153,
+        "min_class_fraction": 0.08475,
+        "max_class_fraction": 0.37835,
+        "disagreement": {
+          "M1": 0.6729,
+          "M2": 0.66965
+        }
+      },
+      {
+        "seed": 1154,
+        "min_class_fraction": 0.107,
+        "max_class_fraction": 0.36545,
+        "disagreement": {
+          "M1": 0.6932,
+          "M2": 0.68735
+        }
+      },
+      {
+        "seed": 1155,
+        "min_class_fraction": 0.0338,
+        "max_class_fraction": 0.44555,
+        "disagreement": {
+          "M1": 0.7007,
+          "M2": 0.72195
+        }
+      },
+      {
+        "seed": 1156,
+        "min_class_fraction": 0.0802,
+        "max_class_fraction": 0.39155,
+        "disagreement": {
+          "M1": 0.68555,
+          "M2": 0.6682
+        }
+      },
+      {
+        "seed": 1157,
+        "min_class_fraction": 0.1041,
+        "max_class_fraction": 0.41815,
+        "disagreement": {
+          "M1": 0.68075,
+          "M2": 0.6614
+        }
+      },
+      {
+        "seed": 1158,
+        "min_class_fraction": 0.02945,
+        "max_class_fraction": 0.42555,
+        "disagreement": {
+          "M1": 0.69625,
+          "M2": 0.6963
+        }
+      },
+      {
+        "seed": 1159,
+        "min_class_fraction": 0.143,
+        "max_class_fraction": 0.3609,
+        "disagreement": {
+          "M1": 0.686,
+          "M2": 0.6717
+        }
+      },
+      {
+        "seed": 1160,
+        "min_class_fraction": 0.0501,
+        "max_class_fraction": 0.4541,
+        "disagreement": {
+          "M1": 0.6537,
+          "M2": 0.6596
+        }
+      },
+      {
+        "seed": 1161,
+        "min_class_fraction": 0.02665,
+        "max_class_fraction": 0.3691,
+        "disagreement": {
+          "M1": 0.6617,
+          "M2": 0.65235
+        }
+      },
+      {
+        "seed": 1162,
+        "min_class_fraction": 0.0128,
+        "max_class_fraction": 0.42245,
+        "disagreement": {
+          "M1": 0.7063,
+          "M2": 0.702
+        }
+      },
+      {
+        "seed": 1163,
+        "min_class_fraction": 0.05435,
+        "max_class_fraction": 0.47075,
+        "disagreement": {
+          "M1": 0.69765,
+          "M2": 0.6917
+        }
+      },
+      {
+        "seed": 1164,
+        "min_class_fraction": 0.14955,
+        "max_class_fraction": 0.33055,
+        "disagreement": {
+          "M1": 0.6513,
+          "M2": 0.6403
+        }
+      },
+      {
+        "seed": 1165,
+        "min_class_fraction": 0.03965,
+        "max_class_fraction": 0.38995,
+        "disagreement": {
+          "M1": 0.71915,
+          "M2": 0.7141
+        }
+      },
+      {
+        "seed": 1166,
+        "min_class_fraction": 0.0275,
+        "max_class_fraction": 0.4091,
+        "disagreement": {
+          "M1": 0.71425,
+          "M2": 0.70395
+        }
+      },
+      {
+        "seed": 1167,
+        "min_class_fraction": 0.09705,
+        "max_class_fraction": 0.4294,
+        "disagreement": {
+          "M1": 0.6988,
+          "M2": 0.71505
+        }
+      },
+      {
+        "seed": 1168,
+        "min_class_fraction": 0.12675,
+        "max_class_fraction": 0.3845,
+        "disagreement": {
+          "M1": 0.6641,
+          "M2": 0.66245
+        }
+      },
+      {
+        "seed": 1169,
+        "min_class_fraction": 0.14565,
+        "max_class_fraction": 0.387,
+        "disagreement": {
+          "M1": 0.67895,
+          "M2": 0.6873
+        }
+      },
+      {
+        "seed": 1170,
+        "min_class_fraction": 0.0511,
+        "max_class_fraction": 0.43745,
+        "disagreement": {
+          "M1": 0.67395,
+          "M2": 0.69025
+        }
+      },
+      {
+        "seed": 1171,
+        "min_class_fraction": 0.0855,
+        "max_class_fraction": 0.38015,
+        "disagreement": {
+          "M1": 0.7,
+          "M2": 0.6977
+        }
+      },
+      {
+        "seed": 1172,
+        "min_class_fraction": 0.0072,
+        "max_class_fraction": 0.48755,
+        "disagreement": {
+          "M1": 0.6316,
+          "M2": 0.59255
+        }
+      },
+      {
+        "seed": 1173,
+        "min_class_fraction": 0.07985,
+        "max_class_fraction": 0.4478,
+        "disagreement": {
+          "M1": 0.71145,
+          "M2": 0.72645
+        }
+      },
+      {
+        "seed": 1174,
+        "min_class_fraction": 0.13025,
+        "max_class_fraction": 0.3921,
+        "disagreement": {
+          "M1": 0.71075,
+          "M2": 0.71565
+        }
+      },
+      {
+        "seed": 1175,
+        "min_class_fraction": 0.06205,
+        "max_class_fraction": 0.4238,
+        "disagreement": {
+          "M1": 0.6671,
+          "M2": 0.6748
+        }
+      },
+      {
+        "seed": 1176,
+        "min_class_fraction": 0.0923,
+        "max_class_fraction": 0.34615,
+        "disagreement": {
+          "M1": 0.68885,
+          "M2": 0.68805
+        }
+      },
+      {
+        "seed": 1177,
+        "min_class_fraction": 0.04805,
+        "max_class_fraction": 0.4503,
+        "disagreement": {
+          "M1": 0.74005,
+          "M2": 0.75125
+        }
+      },
+      {
+        "seed": 1178,
+        "min_class_fraction": 0.1063,
+        "max_class_fraction": 0.38905,
+        "disagreement": {
+          "M1": 0.68095,
+          "M2": 0.68935
+        }
+      },
+      {
+        "seed": 1179,
+        "min_class_fraction": 0.12495,
+        "max_class_fraction": 0.4071,
+        "disagreement": {
+          "M1": 0.65995,
+          "M2": 0.6612
+        }
+      },
+      {
+        "seed": 1180,
+        "min_class_fraction": 0.03015,
+        "max_class_fraction": 0.4182,
+        "disagreement": {
+          "M1": 0.70895,
+          "M2": 0.7084
+        }
+      },
+      {
+        "seed": 1181,
+        "min_class_fraction": 0.07395,
+        "max_class_fraction": 0.38085,
+        "disagreement": {
+          "M1": 0.7089,
+          "M2": 0.68765
+        }
+      },
+      {
+        "seed": 1182,
+        "min_class_fraction": 0.1139,
+        "max_class_fraction": 0.41375,
+        "disagreement": {
+          "M1": 0.649,
+          "M2": 0.6705
+        }
+      },
+      {
+        "seed": 1183,
+        "min_class_fraction": 0.07935,
+        "max_class_fraction": 0.42305,
+        "disagreement": {
+          "M1": 0.6924,
+          "M2": 0.69805
+        }
+      },
+      {
+        "seed": 1184,
+        "min_class_fraction": 0.0748,
+        "max_class_fraction": 0.40655,
+        "disagreement": {
+          "M1": 0.6578,
+          "M2": 0.6976
+        }
+      },
+      {
+        "seed": 1185,
+        "min_class_fraction": 0.0984,
+        "max_class_fraction": 0.4095,
+        "disagreement": {
+          "M1": 0.63945,
+          "M2": 0.64685
+        }
+      },
+      {
+        "seed": 1186,
+        "min_class_fraction": 0.05815,
+        "max_class_fraction": 0.4092,
+        "disagreement": {
+          "M1": 0.7033,
+          "M2": 0.69125
+        }
+      },
+      {
+        "seed": 1187,
+        "min_class_fraction": 0.07095,
+        "max_class_fraction": 0.4,
+        "disagreement": {
+          "M1": 0.6389,
+          "M2": 0.67445
+        }
+      },
+      {
+        "seed": 1188,
+        "min_class_fraction": 0.12515,
+        "max_class_fraction": 0.4323,
+        "disagreement": {
+          "M1": 0.70235,
+          "M2": 0.70195
+        }
+      },
+      {
+        "seed": 1189,
+        "min_class_fraction": 0.06115,
+        "max_class_fraction": 0.39935,
+        "disagreement": {
+          "M1": 0.6756,
+          "M2": 0.6834
+        }
+      },
+      {
+        "seed": 1190,
+        "min_class_fraction": 0.006,
+        "max_class_fraction": 0.377,
+        "disagreement": {
+          "M1": 0.73585,
+          "M2": 0.73215
+        }
+      },
+      {
+        "seed": 1191,
+        "min_class_fraction": 0.05085,
+        "max_class_fraction": 0.4508,
+        "disagreement": {
+          "M1": 0.72165,
+          "M2": 0.7216
+        }
+      },
+      {
+        "seed": 1192,
+        "min_class_fraction": 0.05485,
+        "max_class_fraction": 0.42,
+        "disagreement": {
+          "M1": 0.6888,
+          "M2": 0.6822
+        }
+      },
+      {
+        "seed": 1193,
+        "min_class_fraction": 0.0991,
+        "max_class_fraction": 0.4009,
+        "disagreement": {
+          "M1": 0.69875,
+          "M2": 0.70165
+        }
+      },
+      {
+        "seed": 1194,
+        "min_class_fraction": 0.05265,
+        "max_class_fraction": 0.4177,
+        "disagreement": {
+          "M1": 0.62965,
+          "M2": 0.64195
+        }
+      },
+      {
+        "seed": 1195,
+        "min_class_fraction": 0.12685,
+        "max_class_fraction": 0.35505,
+        "disagreement": {
+          "M1": 0.67065,
+          "M2": 0.67235
+        }
+      },
+      {
+        "seed": 1196,
+        "min_class_fraction": 0.11955,
+        "max_class_fraction": 0.43365,
+        "disagreement": {
+          "M1": 0.6655,
+          "M2": 0.6501
+        }
+      },
+      {
+        "seed": 1197,
+        "min_class_fraction": 0.07025,
+        "max_class_fraction": 0.43715,
+        "disagreement": {
+          "M1": 0.7021,
+          "M2": 0.7134
+        }
+      },
+      {
+        "seed": 1198,
+        "min_class_fraction": 0.03825,
+        "max_class_fraction": 0.44845,
+        "disagreement": {
+          "M1": 0.65915,
+          "M2": 0.65895
+        }
+      },
+      {
+        "seed": 1199,
+        "min_class_fraction": 0.0623,
+        "max_class_fraction": 0.37845,
+        "disagreement": {
+          "M1": 0.65225,
+          "M2": 0.63815
+        }
+      }
+    ],
+    "note": "Design failure: no seed satisfied the criterion; version must change and the criterion must NOT be loosened."
+  }
+}

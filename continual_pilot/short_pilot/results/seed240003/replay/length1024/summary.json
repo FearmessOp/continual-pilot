@@ -1,0 +1,78 @@
+{
+  "seed": 240003,
+  "method": "replay",
+  "phase3_count": 1024,
+  "phase3_updates": 64,
+  "phase2_state_sha256": "b6f04524e150e38a5175ecfb8f632324b768111d682a9e587687536916feebd1",
+  "frozen": {
+    "2": {
+      "r1_accuracy": 0.82555,
+      "r2_accuracy": 0.397
+    },
+    "3": {
+      "r1_accuracy": 0.79275,
+      "r2_accuracy": 0.44145
+    },
+    "4": {
+      "r1_accuracy": 0.8205,
+      "r2_accuracy": 0.3996
+    }
+  },
+  "damage": 0.03280000000000005,
+  "recovery": 0.027750000000000052,
+  "window": {
+    "count": 480,
+    "updates": 30,
+    "online_clean_errors": 109,
+    "phase2_reference_clean_errors": 93,
+    "extra_errors": 16,
+    "extra_errors_per_example": 0.03333333333333333
+  },
+  "phases": {
+    "1": {
+      "count": 40000,
+      "optimizer_steps": 2500,
+      "clean_accuracy": 0.819175,
+      "noisy_accuracy": 0.7808,
+      "oracle_regret": 6709,
+      "oracle_regret_per_example": 0.167725,
+      "replay_examples": 319964,
+      "training_examples_including_replay": 359964,
+      "maximum_batch": 144
+    },
+    "2": {
+      "count": 10000,
+      "optimizer_steps": 625,
+      "clean_accuracy": 0.8138,
+      "noisy_accuracy": 0.7756,
+      "oracle_regret": 1736,
+      "oracle_regret_per_example": 0.1736,
+      "replay_examples": 80000,
+      "training_examples_including_replay": 90000,
+      "maximum_batch": 144
+    },
+    "3": {
+      "count": 1024,
+      "optimizer_steps": 64,
+      "clean_accuracy": 0.4052734375,
+      "noisy_accuracy": 0.392578125,
+      "oracle_regret": 565,
+      "oracle_regret_per_example": 0.5517578125,
+      "replay_examples": 8192,
+      "training_examples_including_replay": 9216,
+      "maximum_batch": 144
+    },
+    "4": {
+      "count": 4000,
+      "optimizer_steps": 250,
+      "clean_accuracy": 0.8065,
+      "noisy_accuracy": 0.7725,
+      "oracle_regret": 728,
+      "oracle_regret_per_example": 0.182,
+      "replay_examples": 32000,
+      "training_examples_including_replay": 36000,
+      "maximum_batch": 144
+    }
+  },
+  "total_optimizer_steps": 3439
+}

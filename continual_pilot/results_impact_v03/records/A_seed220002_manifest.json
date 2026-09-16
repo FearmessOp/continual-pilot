@@ -1,0 +1,24 @@
+{
+  "method": "A",
+  "seed": 220002,
+  "phase_weights": {
+    "2": {
+      "file": "A_seed220002_phase2.pt",
+      "state_sha256": "ee62dec57e497aa41d6c1f11a1f14dcab24ab252f07aa981816b968ae1774f39",
+      "file_sha256": "7fbcf6ddddcebfb43135df9f9d633d14d3e654a91d53946e95150275d1b40522"
+    },
+    "3": {
+      "file": "A_seed220002_phase3.pt",
+      "state_sha256": "71a9e587d9d9e646e8eed9ecd1f1d95d0eadaac0f5ff7b90753e919034ff88e8",
+      "file_sha256": "aff3650e0086e7675a28a73998e75c9602771bdd2fe2b82f98d84619fd60b800"
+    },
+    "4": {
+      "file": "A_seed220002_phase4.pt",
+      "state_sha256": "7826cbfbfd4151458969e04234b54c8cb653e726da67eec89e639b1e8a3ba57a",
+      "file_sha256": "0f550d5d034a2fcb6707ff7964bbeb3175f7a2c2d10a1e96ec16436612ce9a24"
+    }
+  },
+  "final_state_sha256": "7826cbfbfd4151458969e04234b54c8cb653e726da67eec89e639b1e8a3ba57a",
+  "predictions_file": "A_seed220002_predictions.npz",
+  "online_predictions_sha256": "ee995f42c78a408bcda202ed0b044efc3e577645a13fa02b9bc123e4d6a346cd"
+}

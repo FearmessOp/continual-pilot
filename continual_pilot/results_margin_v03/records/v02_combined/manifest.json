@@ -1,0 +1,22 @@
+{
+  "final_state_sha256": "79b6ad1fa7417b605f05fd89664fc4fb9798be5384f853833860dbe66ca2f71c",
+  "weights_file_sha256": "5c7367760848261326ca2a7324902c4c92f18bb5bc14ed8a15af2cf90b5d433d",
+  "arrays": {
+    "train_predictions": {
+      "count": 40000,
+      "sha256": "25b06ca507eea69cc0eda45889f8dae1317c0e5a64db8fb5f70626ebf0304993"
+    },
+    "eval_predictions": {
+      "count": 20000,
+      "sha256": "090e4e087800797f7e4c2080383914a70fdea1da1e2bdb3cc2f92100b142caa8"
+    },
+    "eval_clean": {
+      "count": 20000,
+      "sha256": "8f09a9f395f8432026034dd3b9bd533cd26a8d79154263861ecfa0454d5e2578"
+    },
+    "eval_noisy": {
+      "count": 20000,
+      "sha256": "aa43194975ff9101a3c1c1606960e5fef38a4ae23252681e6e1d2ec59ec9477b"
+    }
+  }
+}

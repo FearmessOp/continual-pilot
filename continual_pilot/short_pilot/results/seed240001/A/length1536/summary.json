@@ -1,0 +1,78 @@
+{
+  "seed": 240001,
+  "method": "A",
+  "phase3_count": 1536,
+  "phase3_updates": 96,
+  "phase2_state_sha256": "a8ff4124364c891021f5d2a814a13f0ea47bd963d5731f8d20ba2fc50aab83f6",
+  "frozen": {
+    "2": {
+      "r1_accuracy": 0.864,
+      "r2_accuracy": 0.39735
+    },
+    "3": {
+      "r1_accuracy": 0.5343,
+      "r2_accuracy": 0.70825
+    },
+    "4": {
+      "r1_accuracy": 0.86415,
+      "r2_accuracy": 0.41175
+    }
+  },
+  "damage": 0.3297,
+  "recovery": 0.32985,
+  "window": {
+    "count": 480,
+    "updates": 30,
+    "online_clean_errors": 200,
+    "phase2_reference_clean_errors": 65,
+    "extra_errors": 135,
+    "extra_errors_per_example": 0.28125
+  },
+  "phases": {
+    "1": {
+      "count": 40000,
+      "optimizer_steps": 2500,
+      "clean_accuracy": 0.8323,
+      "noisy_accuracy": 0.794575,
+      "oracle_regret": 6271,
+      "oracle_regret_per_example": 0.156775,
+      "replay_examples": 0,
+      "training_examples_including_replay": 40000,
+      "maximum_batch": 16
+    },
+    "2": {
+      "count": 10000,
+      "optimizer_steps": 625,
+      "clean_accuracy": 0.8603,
+      "noisy_accuracy": 0.8205,
+      "oracle_regret": 1302,
+      "oracle_regret_per_example": 0.1302,
+      "replay_examples": 0,
+      "training_examples_including_replay": 10000,
+      "maximum_batch": 16
+    },
+    "3": {
+      "count": 1536,
+      "optimizer_steps": 96,
+      "clean_accuracy": 0.5397135416666666,
+      "noisy_accuracy": 0.5201822916666666,
+      "oracle_regret": 665,
+      "oracle_regret_per_example": 0.4329427083333333,
+      "replay_examples": 0,
+      "training_examples_including_replay": 1536,
+      "maximum_batch": 16
+    },
+    "4": {
+      "count": 4000,
+      "optimizer_steps": 250,
+      "clean_accuracy": 0.8015,
+      "noisy_accuracy": 0.763,
+      "oracle_regret": 750,
+      "oracle_regret_per_example": 0.1875,
+      "replay_examples": 0,
+      "training_examples_including_replay": 4000,
+      "maximum_batch": 16
+    }
+  },
+  "total_optimizer_steps": 3471
+}

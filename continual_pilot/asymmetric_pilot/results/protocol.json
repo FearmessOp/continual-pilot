@@ -1,0 +1,32 @@
+{
+  "generator_seed": 1000,
+  "alpha": 0.5,
+  "noise": 0.05,
+  "calibration_count": 20000,
+  "hidden": 64,
+  "model_seed": 7,
+  "lr": 0.001,
+  "minibatch": 16,
+  "capacity": 512,
+  "replay_per_new_example": 8,
+  "stream_seeds": [
+    230001,
+    230002,
+    230003
+  ],
+  "phase1_count": 40000,
+  "phase2_count": 10000,
+  "phase3_candidates": [
+    2000,
+    4000
+  ],
+  "phase4_count": 4000,
+  "evaluation_seed": 239001,
+  "evaluation_count": 20000,
+  "window_updates": 30,
+  "minimum_phase2_accuracy": 0.8,
+  "damage_band": [
+    0.2,
+    0.4
+  ]
+}

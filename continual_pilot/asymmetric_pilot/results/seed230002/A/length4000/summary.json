@@ -1,0 +1,78 @@
+{
+  "seed": 230002,
+  "method": "A",
+  "phase3_count": 4000,
+  "phase3_updates": 250,
+  "phase2_state_sha256": "31fd8c7c5fec475f204ea2e8e4d33cae19d5d3957b672aff9507b8902b339c5f",
+  "frozen": {
+    "2": {
+      "r1_accuracy": 0.8717,
+      "r2_accuracy": 0.4058
+    },
+    "3": {
+      "r1_accuracy": 0.4362,
+      "r2_accuracy": 0.77935
+    },
+    "4": {
+      "r1_accuracy": 0.85535,
+      "r2_accuracy": 0.4189
+    }
+  },
+  "damage": 0.43550000000000005,
+  "recovery": 0.4191500000000001,
+  "window": {
+    "count": 480,
+    "updates": 30,
+    "online_clean_errors": 245,
+    "phase2_reference_clean_errors": 71,
+    "extra_errors": 174,
+    "extra_errors_per_example": 0.3625
+  },
+  "phases": {
+    "1": {
+      "count": 40000,
+      "optimizer_steps": 2500,
+      "clean_accuracy": 0.8329,
+      "noisy_accuracy": 0.791625,
+      "oracle_regret": 6261,
+      "oracle_regret_per_example": 0.156525,
+      "replay_examples": 0,
+      "training_examples_including_replay": 40000,
+      "maximum_batch": 16
+    },
+    "2": {
+      "count": 10000,
+      "optimizer_steps": 625,
+      "clean_accuracy": 0.865,
+      "noisy_accuracy": 0.8224,
+      "oracle_regret": 1244,
+      "oracle_regret_per_example": 0.1244,
+      "replay_examples": 0,
+      "training_examples_including_replay": 10000,
+      "maximum_batch": 16
+    },
+    "3": {
+      "count": 4000,
+      "optimizer_steps": 250,
+      "clean_accuracy": 0.68025,
+      "noisy_accuracy": 0.64925,
+      "oracle_regret": 1194,
+      "oracle_regret_per_example": 0.2985,
+      "replay_examples": 0,
+      "training_examples_including_replay": 4000,
+      "maximum_batch": 16
+    },
+    "4": {
+      "count": 4000,
+      "optimizer_steps": 250,
+      "clean_accuracy": 0.771,
+      "noisy_accuracy": 0.73775,
+      "oracle_regret": 859,
+      "oracle_regret_per_example": 0.21475,
+      "replay_examples": 0,
+      "training_examples_including_replay": 4000,
+      "maximum_batch": 16
+    }
+  },
+  "total_optimizer_steps": 3625
+}

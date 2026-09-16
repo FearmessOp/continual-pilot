@@ -1,0 +1,237 @@
+{
+  "config": {
+    "seed": 7,
+    "alpha": 0.5,
+    "noise": 0.05,
+    "phase_length": 5000,
+    "health_length": 10000,
+    "hidden": 64,
+    "lr": 0.001,
+    "capacity": 512,
+    "replay_batch": 8,
+    "context_window": 64,
+    "block_size": 200,
+    "threads": 1,
+    "output": "continual_pilot\\results_pilot"
+  },
+  "environment": {
+    "python": "3.13.2",
+    "torch": "2.7.1+cu118",
+    "numpy": "2.2.6",
+    "device": "cpu"
+  },
+  "generator": {
+    "M1": {
+      "disagreement": 0.7048,
+      "R1_class_fractions": [
+        0.2381,
+        0.0122,
+        0.4177,
+        0.332
+      ],
+      "R2_class_fractions": [
+        0.1693,
+        0.4054,
+        0.4022,
+        0.0231
+      ],
+      "observed_noise": 0.0492
+    },
+    "M2": {
+      "disagreement": 0.7378,
+      "R1_class_fractions": [
+        0.3089,
+        0.0344,
+        0.2801,
+        0.3766
+      ],
+      "R2_class_fractions": [
+        0.2858,
+        0.4107,
+        0.2603,
+        0.0432
+      ],
+      "observed_noise": 0.05
+    }
+  },
+  "limitations": [
+    "Single seed, exploratory pilot, not a significance test.",
+    "Same model and stream; replay uses extra memory and training compute.",
+    "Replay retains historical context, not reconstructed current context.",
+    "Memory is explicit payload accounting, NOT measured process peak RSS.",
+    "Python overhead, activations, temporary batches and evaluator data excluded.",
+    "FLOPs approximate linear layers only; timings include online maintenance.",
+    "No routing, renewal, changepoint detector or plasticity probe implemented."
+  ],
+  "runs": {
+    "health_A": {
+      "seconds": 5.248465300001044,
+      "parameters": 10820,
+      "parameter_bytes": 43280,
+      "gradient_bytes": 43280,
+      "optimizer_tensor_bytes": 86576,
+      "replay_allocated_bytes": 0,
+      "context_payload_capacity_bytes": 9248,
+      "persistent_tensor_payload_bytes": 139104,
+      "payload_with_gradients_bytes": 182384,
+      "training_examples_including_replay": 10000,
+      "optimizer_steps": 10000,
+      "maximum_training_batch": 1,
+      "approx_dense_linear_flops": 860160000,
+      "phases": [
+        {
+          "phase": 1,
+          "accuracy": 0.8449,
+          "clean_rule_accuracy": 0.8874,
+          "oracle_accuracy": 0.9498,
+          "first_window_size": 1000,
+          "first_window_regret": 174,
+          "total_regret": 1049,
+          "last_1000_accuracy": 0.852
+        }
+      ]
+    },
+    "health_replay": {
+      "seconds": 5.931765399998767,
+      "parameters": 10820,
+      "parameter_bytes": 43280,
+      "gradient_bytes": 43280,
+      "optimizer_tensor_bytes": 86576,
+      "replay_allocated_bytes": 339968,
+      "context_payload_capacity_bytes": 9248,
+      "persistent_tensor_payload_bytes": 479072,
+      "payload_with_gradients_bytes": 522352,
+      "training_examples_including_replay": 89964,
+      "optimizer_steps": 10000,
+      "maximum_training_batch": 9,
+      "approx_dense_linear_flops": 6018797568,
+      "phases": [
+        {
+          "phase": 1,
+          "accuracy": 0.8238,
+          "clean_rule_accuracy": 0.8647,
+          "oracle_accuracy": 0.9498,
+          "first_window_size": 1000,
+          "first_window_regret": 126,
+          "total_regret": 1260,
+          "last_1000_accuracy": 0.817
+        }
+      ]
+    },
+    "stream_A": {
+      "seconds": 10.389350199999171,
+      "parameters": 10820,
+      "parameter_bytes": 43280,
+      "gradient_bytes": 43280,
+      "optimizer_tensor_bytes": 86576,
+      "replay_allocated_bytes": 0,
+      "context_payload_capacity_bytes": 9248,
+      "persistent_tensor_payload_bytes": 139104,
+      "payload_with_gradients_bytes": 182384,
+      "training_examples_including_replay": 20000,
+      "optimizer_steps": 20000,
+      "maximum_training_batch": 1,
+      "approx_dense_linear_flops": 1720320000,
+      "phases": [
+        {
+          "phase": 1,
+          "accuracy": 0.8286,
+          "clean_rule_accuracy": 0.8638,
+          "oracle_accuracy": 0.9524,
+          "first_window_size": 1000,
+          "first_window_regret": 197,
+          "total_regret": 619,
+          "last_1000_accuracy": 0.855
+        },
+        {
+          "phase": 2,
+          "accuracy": 0.848,
+          "clean_rule_accuracy": 0.8896,
+          "oracle_accuracy": 0.9504,
+          "first_window_size": 1000,
+          "first_window_regret": 104,
+          "total_regret": 512,
+          "last_1000_accuracy": 0.844
+        },
+        {
+          "phase": 3,
+          "accuracy": 0.7918,
+          "clean_rule_accuracy": 0.8324,
+          "oracle_accuracy": 0.947,
+          "first_window_size": 1000,
+          "first_window_regret": 297,
+          "total_regret": 776,
+          "last_1000_accuracy": 0.842
+        },
+        {
+          "phase": 4,
+          "accuracy": 0.8264,
+          "clean_rule_accuracy": 0.8662,
+          "oracle_accuracy": 0.9494,
+          "first_window_size": 1000,
+          "first_window_regret": 173,
+          "total_regret": 615,
+          "last_1000_accuracy": 0.831
+        }
+      ]
+    },
+    "stream_replay": {
+      "seconds": 12.041309099999125,
+      "parameters": 10820,
+      "parameter_bytes": 43280,
+      "gradient_bytes": 43280,
+      "optimizer_tensor_bytes": 86576,
+      "replay_allocated_bytes": 339968,
+      "context_payload_capacity_bytes": 9248,
+      "persistent_tensor_payload_bytes": 479072,
+      "payload_with_gradients_bytes": 522352,
+      "training_examples_including_replay": 179964,
+      "optimizer_steps": 20000,
+      "maximum_training_batch": 9,
+      "approx_dense_linear_flops": 12039917568,
+      "phases": [
+        {
+          "phase": 1,
+          "accuracy": 0.8312,
+          "clean_rule_accuracy": 0.8674,
+          "oracle_accuracy": 0.9524,
+          "first_window_size": 1000,
+          "first_window_regret": 170,
+          "total_regret": 606,
+          "last_1000_accuracy": 0.846
+        },
+        {
+          "phase": 2,
+          "accuracy": 0.8078,
+          "clean_rule_accuracy": 0.8488,
+          "oracle_accuracy": 0.9504,
+          "first_window_size": 1000,
+          "first_window_regret": 145,
+          "total_regret": 713,
+          "last_1000_accuracy": 0.803
+        },
+        {
+          "phase": 3,
+          "accuracy": 0.6964,
+          "clean_rule_accuracy": 0.729,
+          "oracle_accuracy": 0.947,
+          "first_window_size": 1000,
+          "first_window_regret": 404,
+          "total_regret": 1253,
+          "last_1000_accuracy": 0.772
+        },
+        {
+          "phase": 4,
+          "accuracy": 0.7892,
+          "clean_rule_accuracy": 0.8298,
+          "oracle_accuracy": 0.9494,
+          "first_window_size": 1000,
+          "first_window_regret": 163,
+          "total_regret": 801,
+          "last_1000_accuracy": 0.797
+        }
+      ]
+    }
+  },
+  "phase4_replay_minus_A_regret": -10
+}

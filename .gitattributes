@@ -1,0 +1,4 @@
+# Preserve exact bytes of the research archive and protocol hashes.
+* -text
+*.pt binary
+*.npz binary

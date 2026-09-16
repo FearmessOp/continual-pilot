@@ -1,0 +1,78 @@
+{
+  "seed": 230003,
+  "method": "A",
+  "phase3_count": 4000,
+  "phase3_updates": 250,
+  "phase2_state_sha256": "3ee9a474670808732ebb6b6d0eec3a47b1ede1442736d2719ed9e12d3eac8898",
+  "frozen": {
+    "2": {
+      "r1_accuracy": 0.869,
+      "r2_accuracy": 0.41005
+    },
+    "3": {
+      "r1_accuracy": 0.43975,
+      "r2_accuracy": 0.78455
+    },
+    "4": {
+      "r1_accuracy": 0.8479,
+      "r2_accuracy": 0.41685
+    }
+  },
+  "damage": 0.42925,
+  "recovery": 0.40815,
+  "window": {
+    "count": 480,
+    "updates": 30,
+    "online_clean_errors": 246,
+    "phase2_reference_clean_errors": 53,
+    "extra_errors": 193,
+    "extra_errors_per_example": 0.40208333333333335
+  },
+  "phases": {
+    "1": {
+      "count": 40000,
+      "optimizer_steps": 2500,
+      "clean_accuracy": 0.826925,
+      "noisy_accuracy": 0.789275,
+      "oracle_regret": 6476,
+      "oracle_regret_per_example": 0.1619,
+      "replay_examples": 0,
+      "training_examples_including_replay": 40000,
+      "maximum_batch": 16
+    },
+    "2": {
+      "count": 10000,
+      "optimizer_steps": 625,
+      "clean_accuracy": 0.8543,
+      "noisy_accuracy": 0.8135,
+      "oracle_regret": 1358,
+      "oracle_regret_per_example": 0.1358,
+      "replay_examples": 0,
+      "training_examples_including_replay": 10000,
+      "maximum_batch": 16
+    },
+    "3": {
+      "count": 4000,
+      "optimizer_steps": 250,
+      "clean_accuracy": 0.6935,
+      "noisy_accuracy": 0.6675,
+      "oracle_regret": 1143,
+      "oracle_regret_per_example": 0.28575,
+      "replay_examples": 0,
+      "training_examples_including_replay": 4000,
+      "maximum_batch": 16
+    },
+    "4": {
+      "count": 4000,
+      "optimizer_steps": 250,
+      "clean_accuracy": 0.7745,
+      "noisy_accuracy": 0.7335,
+      "oracle_regret": 836,
+      "oracle_regret_per_example": 0.209,
+      "replay_examples": 0,
+      "training_examples_including_replay": 4000,
+      "maximum_batch": 16
+    }
+  },
+  "total_optimizer_steps": 3625
+}

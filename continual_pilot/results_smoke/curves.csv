@@ -1,0 +1,11 @@
+run,phase,step_end,phase_step_end,count,accuracy,oracle_accuracy,regret,cumulative_phase_regret
+health_A,1,100,100,100,0.39,0.95,56,56
+health_replay,1,100,100,100,0.5,0.95,45,45
+stream_A,1,100,100,100,0.49,0.94,45,45
+stream_A,2,200,100,100,0.71,0.98,27,27
+stream_A,3,300,100,100,0.4,0.97,57,57
+stream_A,4,400,100,100,0.65,0.98,33,33
+stream_replay,1,100,100,100,0.56,0.94,38,38
+stream_replay,2,200,100,100,0.76,0.98,22,22
+stream_replay,3,300,100,100,0.26,0.97,71,71
+stream_replay,4,400,100,100,0.8,0.98,18,18

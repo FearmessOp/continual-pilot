@@ -1,0 +1,24 @@
+{
+  "method": "A",
+  "seed": 220001,
+  "phase_weights": {
+    "2": {
+      "file": "A_seed220001_phase2.pt",
+      "state_sha256": "ebc1b434874cd41a219d082736e9f823b7699ea84f61a828854d11dcec02e1a9",
+      "file_sha256": "808b946518f553fcd5a6a0751df2d47acbdcd9701754df4123125fc8f7fe85b8"
+    },
+    "3": {
+      "file": "A_seed220001_phase3.pt",
+      "state_sha256": "cc48121564db47c4b1020110abdb2d2e6b44f7187782aa3c0029ac16dbcfadf6",
+      "file_sha256": "e18f0d55d4f6e279ced332b0fbacaa23d523691f65230c0397524ee418d3c870"
+    },
+    "4": {
+      "file": "A_seed220001_phase4.pt",
+      "state_sha256": "60e69bb1189753e1d7517c1875e401f1fd104aa43caad388870a639878fbd541",
+      "file_sha256": "33c8b931943b71f65f09e8d44529bf3161c66a95b8f7abadbd9d53d2974c51b2"
+    }
+  },
+  "final_state_sha256": "60e69bb1189753e1d7517c1875e401f1fd104aa43caad388870a639878fbd541",
+  "predictions_file": "A_seed220001_predictions.npz",
+  "online_predictions_sha256": "2c6d7584f009ae1ffab4a4a43eb94fe8e5cfee8a59ed5917830c39cf256a54ee"
+}

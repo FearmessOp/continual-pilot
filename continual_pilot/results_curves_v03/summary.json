@@ -1,0 +1,1552 @@
+{
+  "revision": "line1-curves-v03",
+  "label": "Learnability gate NOT passed; this run is an impact-window EXPLORATION, not a hypothesis test.",
+  "scope": "Phase-3 curves from stored records; no retraining, no Line 2.",
+  "block": 1000,
+  "damage_band": [
+    0.2,
+    0.4
+  ],
+  "seeds": {
+    "220001": {
+      "A": {
+        "teacher_R1_R2_agreement": 0.41425,
+        "phase3_blocks": [
+          {
+            "block_end": 1000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.711,
+            "pred_vs_R2_accuracy": 0.519
+          },
+          {
+            "block_end": 2000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.512,
+            "pred_vs_R2_accuracy": 0.692
+          },
+          {
+            "block_end": 3000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.461,
+            "pred_vs_R2_accuracy": 0.722
+          },
+          {
+            "block_end": 4000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.491,
+            "pred_vs_R2_accuracy": 0.778
+          },
+          {
+            "block_end": 5000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.505,
+            "pred_vs_R2_accuracy": 0.785
+          },
+          {
+            "block_end": 6000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.439,
+            "pred_vs_R2_accuracy": 0.776
+          },
+          {
+            "block_end": 7000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.439,
+            "pred_vs_R2_accuracy": 0.799
+          },
+          {
+            "block_end": 8000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.46,
+            "pred_vs_R2_accuracy": 0.769
+          },
+          {
+            "block_end": 9000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.433,
+            "pred_vs_R2_accuracy": 0.796
+          },
+          {
+            "block_end": 10000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.455,
+            "pred_vs_R2_accuracy": 0.819
+          },
+          {
+            "block_end": 11000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.412,
+            "pred_vs_R2_accuracy": 0.807
+          },
+          {
+            "block_end": 12000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.414,
+            "pred_vs_R2_accuracy": 0.828
+          },
+          {
+            "block_end": 13000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.434,
+            "pred_vs_R2_accuracy": 0.825
+          },
+          {
+            "block_end": 14000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.451,
+            "pred_vs_R2_accuracy": 0.833
+          },
+          {
+            "block_end": 15000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.433,
+            "pred_vs_R2_accuracy": 0.831
+          },
+          {
+            "block_end": 16000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.436,
+            "pred_vs_R2_accuracy": 0.841
+          },
+          {
+            "block_end": 17000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.41,
+            "pred_vs_R2_accuracy": 0.821
+          },
+          {
+            "block_end": 18000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.442,
+            "pred_vs_R2_accuracy": 0.824
+          },
+          {
+            "block_end": 19000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.433,
+            "pred_vs_R2_accuracy": 0.806
+          },
+          {
+            "block_end": 20000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.439,
+            "pred_vs_R2_accuracy": 0.815
+          },
+          {
+            "block_end": 21000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.414,
+            "pred_vs_R2_accuracy": 0.827
+          },
+          {
+            "block_end": 22000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.42,
+            "pred_vs_R2_accuracy": 0.833
+          },
+          {
+            "block_end": 23000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.442,
+            "pred_vs_R2_accuracy": 0.841
+          },
+          {
+            "block_end": 24000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.436,
+            "pred_vs_R2_accuracy": 0.829
+          },
+          {
+            "block_end": 25000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.454,
+            "pred_vs_R2_accuracy": 0.84
+          },
+          {
+            "block_end": 26000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.436,
+            "pred_vs_R2_accuracy": 0.826
+          },
+          {
+            "block_end": 27000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.376,
+            "pred_vs_R2_accuracy": 0.84
+          },
+          {
+            "block_end": 28000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.423,
+            "pred_vs_R2_accuracy": 0.844
+          },
+          {
+            "block_end": 29000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.402,
+            "pred_vs_R2_accuracy": 0.836
+          },
+          {
+            "block_end": 30000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.42,
+            "pred_vs_R2_accuracy": 0.832
+          },
+          {
+            "block_end": 31000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.46,
+            "pred_vs_R2_accuracy": 0.832
+          },
+          {
+            "block_end": 32000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.393,
+            "pred_vs_R2_accuracy": 0.83
+          },
+          {
+            "block_end": 33000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.426,
+            "pred_vs_R2_accuracy": 0.84
+          },
+          {
+            "block_end": 34000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.456,
+            "pred_vs_R2_accuracy": 0.855
+          },
+          {
+            "block_end": 35000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.433,
+            "pred_vs_R2_accuracy": 0.836
+          },
+          {
+            "block_end": 36000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.408,
+            "pred_vs_R2_accuracy": 0.831
+          },
+          {
+            "block_end": 37000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.409,
+            "pred_vs_R2_accuracy": 0.867
+          },
+          {
+            "block_end": 38000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.431,
+            "pred_vs_R2_accuracy": 0.854
+          },
+          {
+            "block_end": 39000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.429,
+            "pred_vs_R2_accuracy": 0.848
+          },
+          {
+            "block_end": 40000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.419,
+            "pred_vs_R2_accuracy": 0.834
+          }
+        ],
+        "candidate_window_from_A_R1": {
+          "phase2_reference_accuracy": 0.8898,
+          "damage_band": [
+            0.2,
+            0.4
+          ],
+          "r1_accuracy_band": [
+            0.4898,
+            0.6898
+          ],
+          "blocks_in_band_by_example_index": [
+            2000,
+            4000,
+            5000
+          ],
+          "note": "Online blocks, not frozen checkpoints; candidate ranges only."
+        }
+      },
+      "replay": {
+        "teacher_R1_R2_agreement": 0.41425,
+        "phase3_blocks": [
+          {
+            "block_end": 1000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.812,
+            "pred_vs_R2_accuracy": 0.414
+          },
+          {
+            "block_end": 2000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.822,
+            "pred_vs_R2_accuracy": 0.45
+          },
+          {
+            "block_end": 3000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.805,
+            "pred_vs_R2_accuracy": 0.424
+          },
+          {
+            "block_end": 4000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.83,
+            "pred_vs_R2_accuracy": 0.476
+          },
+          {
+            "block_end": 5000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.829,
+            "pred_vs_R2_accuracy": 0.478
+          },
+          {
+            "block_end": 6000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.812,
+            "pred_vs_R2_accuracy": 0.441
+          },
+          {
+            "block_end": 7000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.788,
+            "pred_vs_R2_accuracy": 0.488
+          },
+          {
+            "block_end": 8000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.797,
+            "pred_vs_R2_accuracy": 0.46
+          },
+          {
+            "block_end": 9000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.773,
+            "pred_vs_R2_accuracy": 0.481
+          },
+          {
+            "block_end": 10000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.795,
+            "pred_vs_R2_accuracy": 0.488
+          },
+          {
+            "block_end": 11000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.778,
+            "pred_vs_R2_accuracy": 0.472
+          },
+          {
+            "block_end": 12000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.749,
+            "pred_vs_R2_accuracy": 0.47
+          },
+          {
+            "block_end": 13000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.745,
+            "pred_vs_R2_accuracy": 0.462
+          },
+          {
+            "block_end": 14000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.742,
+            "pred_vs_R2_accuracy": 0.514
+          },
+          {
+            "block_end": 15000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.773,
+            "pred_vs_R2_accuracy": 0.515
+          },
+          {
+            "block_end": 16000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.773,
+            "pred_vs_R2_accuracy": 0.524
+          },
+          {
+            "block_end": 17000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.744,
+            "pred_vs_R2_accuracy": 0.485
+          },
+          {
+            "block_end": 18000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.751,
+            "pred_vs_R2_accuracy": 0.521
+          },
+          {
+            "block_end": 19000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.766,
+            "pred_vs_R2_accuracy": 0.496
+          },
+          {
+            "block_end": 20000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.766,
+            "pred_vs_R2_accuracy": 0.507
+          },
+          {
+            "block_end": 21000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.741,
+            "pred_vs_R2_accuracy": 0.505
+          },
+          {
+            "block_end": 22000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.698,
+            "pred_vs_R2_accuracy": 0.554
+          },
+          {
+            "block_end": 23000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.762,
+            "pred_vs_R2_accuracy": 0.538
+          },
+          {
+            "block_end": 24000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.741,
+            "pred_vs_R2_accuracy": 0.525
+          },
+          {
+            "block_end": 25000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.764,
+            "pred_vs_R2_accuracy": 0.527
+          },
+          {
+            "block_end": 26000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.741,
+            "pred_vs_R2_accuracy": 0.544
+          },
+          {
+            "block_end": 27000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.723,
+            "pred_vs_R2_accuracy": 0.508
+          },
+          {
+            "block_end": 28000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.738,
+            "pred_vs_R2_accuracy": 0.53
+          },
+          {
+            "block_end": 29000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.719,
+            "pred_vs_R2_accuracy": 0.52
+          },
+          {
+            "block_end": 30000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.738,
+            "pred_vs_R2_accuracy": 0.523
+          },
+          {
+            "block_end": 31000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.756,
+            "pred_vs_R2_accuracy": 0.536
+          },
+          {
+            "block_end": 32000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.707,
+            "pred_vs_R2_accuracy": 0.517
+          },
+          {
+            "block_end": 33000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.729,
+            "pred_vs_R2_accuracy": 0.554
+          },
+          {
+            "block_end": 34000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.734,
+            "pred_vs_R2_accuracy": 0.565
+          },
+          {
+            "block_end": 35000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.734,
+            "pred_vs_R2_accuracy": 0.541
+          },
+          {
+            "block_end": 36000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.717,
+            "pred_vs_R2_accuracy": 0.536
+          },
+          {
+            "block_end": 37000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.675,
+            "pred_vs_R2_accuracy": 0.564
+          },
+          {
+            "block_end": 38000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.687,
+            "pred_vs_R2_accuracy": 0.571
+          },
+          {
+            "block_end": 39000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.688,
+            "pred_vs_R2_accuracy": 0.561
+          },
+          {
+            "block_end": 40000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.697,
+            "pred_vs_R2_accuracy": 0.558
+          }
+        ],
+        "candidate_window_from_A_R1": null
+      }
+    },
+    "220002": {
+      "A": {
+        "teacher_R1_R2_agreement": 0.40945,
+        "phase3_blocks": [
+          {
+            "block_end": 1000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.756,
+            "pred_vs_R2_accuracy": 0.557
+          },
+          {
+            "block_end": 2000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.493,
+            "pred_vs_R2_accuracy": 0.712
+          },
+          {
+            "block_end": 3000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.478,
+            "pred_vs_R2_accuracy": 0.744
+          },
+          {
+            "block_end": 4000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.509,
+            "pred_vs_R2_accuracy": 0.749
+          },
+          {
+            "block_end": 5000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.436,
+            "pred_vs_R2_accuracy": 0.781
+          },
+          {
+            "block_end": 6000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.461,
+            "pred_vs_R2_accuracy": 0.776
+          },
+          {
+            "block_end": 7000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.424,
+            "pred_vs_R2_accuracy": 0.773
+          },
+          {
+            "block_end": 8000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.429,
+            "pred_vs_R2_accuracy": 0.794
+          },
+          {
+            "block_end": 9000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.467,
+            "pred_vs_R2_accuracy": 0.798
+          },
+          {
+            "block_end": 10000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.406,
+            "pred_vs_R2_accuracy": 0.803
+          },
+          {
+            "block_end": 11000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.454,
+            "pred_vs_R2_accuracy": 0.8
+          },
+          {
+            "block_end": 12000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.438,
+            "pred_vs_R2_accuracy": 0.796
+          },
+          {
+            "block_end": 13000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.435,
+            "pred_vs_R2_accuracy": 0.8
+          },
+          {
+            "block_end": 14000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.423,
+            "pred_vs_R2_accuracy": 0.81
+          },
+          {
+            "block_end": 15000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.419,
+            "pred_vs_R2_accuracy": 0.806
+          },
+          {
+            "block_end": 16000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.421,
+            "pred_vs_R2_accuracy": 0.796
+          },
+          {
+            "block_end": 17000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.417,
+            "pred_vs_R2_accuracy": 0.822
+          },
+          {
+            "block_end": 18000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.424,
+            "pred_vs_R2_accuracy": 0.83
+          },
+          {
+            "block_end": 19000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.445,
+            "pred_vs_R2_accuracy": 0.813
+          },
+          {
+            "block_end": 20000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.399,
+            "pred_vs_R2_accuracy": 0.811
+          },
+          {
+            "block_end": 21000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.424,
+            "pred_vs_R2_accuracy": 0.806
+          },
+          {
+            "block_end": 22000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.453,
+            "pred_vs_R2_accuracy": 0.815
+          },
+          {
+            "block_end": 23000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.431,
+            "pred_vs_R2_accuracy": 0.832
+          },
+          {
+            "block_end": 24000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.442,
+            "pred_vs_R2_accuracy": 0.837
+          },
+          {
+            "block_end": 25000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.428,
+            "pred_vs_R2_accuracy": 0.823
+          },
+          {
+            "block_end": 26000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.442,
+            "pred_vs_R2_accuracy": 0.812
+          },
+          {
+            "block_end": 27000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.428,
+            "pred_vs_R2_accuracy": 0.821
+          },
+          {
+            "block_end": 28000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.424,
+            "pred_vs_R2_accuracy": 0.829
+          },
+          {
+            "block_end": 29000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.389,
+            "pred_vs_R2_accuracy": 0.833
+          },
+          {
+            "block_end": 30000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.438,
+            "pred_vs_R2_accuracy": 0.838
+          },
+          {
+            "block_end": 31000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.465,
+            "pred_vs_R2_accuracy": 0.825
+          },
+          {
+            "block_end": 32000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.412,
+            "pred_vs_R2_accuracy": 0.819
+          },
+          {
+            "block_end": 33000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.409,
+            "pred_vs_R2_accuracy": 0.843
+          },
+          {
+            "block_end": 34000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.398,
+            "pred_vs_R2_accuracy": 0.829
+          },
+          {
+            "block_end": 35000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.406,
+            "pred_vs_R2_accuracy": 0.826
+          },
+          {
+            "block_end": 36000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.449,
+            "pred_vs_R2_accuracy": 0.867
+          },
+          {
+            "block_end": 37000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.431,
+            "pred_vs_R2_accuracy": 0.84
+          },
+          {
+            "block_end": 38000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.418,
+            "pred_vs_R2_accuracy": 0.84
+          },
+          {
+            "block_end": 39000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.418,
+            "pred_vs_R2_accuracy": 0.832
+          },
+          {
+            "block_end": 40000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.406,
+            "pred_vs_R2_accuracy": 0.846
+          }
+        ],
+        "candidate_window_from_A_R1": {
+          "phase2_reference_accuracy": 0.88785,
+          "damage_band": [
+            0.2,
+            0.4
+          ],
+          "r1_accuracy_band": [
+            0.48785,
+            0.6878500000000001
+          ],
+          "blocks_in_band_by_example_index": [
+            2000,
+            4000
+          ],
+          "note": "Online blocks, not frozen checkpoints; candidate ranges only."
+        }
+      },
+      "replay": {
+        "teacher_R1_R2_agreement": 0.40945,
+        "phase3_blocks": [
+          {
+            "block_end": 1000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.856,
+            "pred_vs_R2_accuracy": 0.456
+          },
+          {
+            "block_end": 2000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.818,
+            "pred_vs_R2_accuracy": 0.42
+          },
+          {
+            "block_end": 3000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.801,
+            "pred_vs_R2_accuracy": 0.475
+          },
+          {
+            "block_end": 4000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.84,
+            "pred_vs_R2_accuracy": 0.486
+          },
+          {
+            "block_end": 5000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.81,
+            "pred_vs_R2_accuracy": 0.471
+          },
+          {
+            "block_end": 6000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.797,
+            "pred_vs_R2_accuracy": 0.492
+          },
+          {
+            "block_end": 7000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.788,
+            "pred_vs_R2_accuracy": 0.48
+          },
+          {
+            "block_end": 8000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.778,
+            "pred_vs_R2_accuracy": 0.467
+          },
+          {
+            "block_end": 9000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.819,
+            "pred_vs_R2_accuracy": 0.471
+          },
+          {
+            "block_end": 10000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.808,
+            "pred_vs_R2_accuracy": 0.475
+          },
+          {
+            "block_end": 11000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.776,
+            "pred_vs_R2_accuracy": 0.486
+          },
+          {
+            "block_end": 12000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.755,
+            "pred_vs_R2_accuracy": 0.502
+          },
+          {
+            "block_end": 13000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.8,
+            "pred_vs_R2_accuracy": 0.492
+          },
+          {
+            "block_end": 14000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.772,
+            "pred_vs_R2_accuracy": 0.482
+          },
+          {
+            "block_end": 15000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.776,
+            "pred_vs_R2_accuracy": 0.498
+          },
+          {
+            "block_end": 16000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.773,
+            "pred_vs_R2_accuracy": 0.492
+          },
+          {
+            "block_end": 17000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.78,
+            "pred_vs_R2_accuracy": 0.501
+          },
+          {
+            "block_end": 18000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.777,
+            "pred_vs_R2_accuracy": 0.507
+          },
+          {
+            "block_end": 19000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.779,
+            "pred_vs_R2_accuracy": 0.532
+          },
+          {
+            "block_end": 20000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.757,
+            "pred_vs_R2_accuracy": 0.501
+          },
+          {
+            "block_end": 21000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.774,
+            "pred_vs_R2_accuracy": 0.501
+          },
+          {
+            "block_end": 22000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.786,
+            "pred_vs_R2_accuracy": 0.512
+          },
+          {
+            "block_end": 23000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.781,
+            "pred_vs_R2_accuracy": 0.505
+          },
+          {
+            "block_end": 24000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.777,
+            "pred_vs_R2_accuracy": 0.512
+          },
+          {
+            "block_end": 25000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.768,
+            "pred_vs_R2_accuracy": 0.516
+          },
+          {
+            "block_end": 26000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.736,
+            "pred_vs_R2_accuracy": 0.539
+          },
+          {
+            "block_end": 27000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.753,
+            "pred_vs_R2_accuracy": 0.546
+          },
+          {
+            "block_end": 28000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.747,
+            "pred_vs_R2_accuracy": 0.536
+          },
+          {
+            "block_end": 29000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.706,
+            "pred_vs_R2_accuracy": 0.526
+          },
+          {
+            "block_end": 30000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.753,
+            "pred_vs_R2_accuracy": 0.538
+          },
+          {
+            "block_end": 31000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.74,
+            "pred_vs_R2_accuracy": 0.562
+          },
+          {
+            "block_end": 32000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.721,
+            "pred_vs_R2_accuracy": 0.538
+          },
+          {
+            "block_end": 33000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.729,
+            "pred_vs_R2_accuracy": 0.56
+          },
+          {
+            "block_end": 34000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.712,
+            "pred_vs_R2_accuracy": 0.547
+          },
+          {
+            "block_end": 35000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.704,
+            "pred_vs_R2_accuracy": 0.543
+          },
+          {
+            "block_end": 36000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.769,
+            "pred_vs_R2_accuracy": 0.555
+          },
+          {
+            "block_end": 37000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.715,
+            "pred_vs_R2_accuracy": 0.57
+          },
+          {
+            "block_end": 38000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.721,
+            "pred_vs_R2_accuracy": 0.556
+          },
+          {
+            "block_end": 39000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.688,
+            "pred_vs_R2_accuracy": 0.572
+          },
+          {
+            "block_end": 40000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.715,
+            "pred_vs_R2_accuracy": 0.543
+          }
+        ],
+        "candidate_window_from_A_R1": null
+      }
+    },
+    "220003": {
+      "A": {
+        "teacher_R1_R2_agreement": 0.412025,
+        "phase3_blocks": [
+          {
+            "block_end": 1000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.801,
+            "pred_vs_R2_accuracy": 0.554
+          },
+          {
+            "block_end": 2000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.533,
+            "pred_vs_R2_accuracy": 0.73
+          },
+          {
+            "block_end": 3000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.47,
+            "pred_vs_R2_accuracy": 0.771
+          },
+          {
+            "block_end": 4000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.478,
+            "pred_vs_R2_accuracy": 0.769
+          },
+          {
+            "block_end": 5000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.441,
+            "pred_vs_R2_accuracy": 0.766
+          },
+          {
+            "block_end": 6000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.402,
+            "pred_vs_R2_accuracy": 0.795
+          },
+          {
+            "block_end": 7000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.425,
+            "pred_vs_R2_accuracy": 0.798
+          },
+          {
+            "block_end": 8000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.418,
+            "pred_vs_R2_accuracy": 0.81
+          },
+          {
+            "block_end": 9000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.439,
+            "pred_vs_R2_accuracy": 0.798
+          },
+          {
+            "block_end": 10000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.44,
+            "pred_vs_R2_accuracy": 0.794
+          },
+          {
+            "block_end": 11000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.415,
+            "pred_vs_R2_accuracy": 0.841
+          },
+          {
+            "block_end": 12000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.447,
+            "pred_vs_R2_accuracy": 0.813
+          },
+          {
+            "block_end": 13000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.441,
+            "pred_vs_R2_accuracy": 0.801
+          },
+          {
+            "block_end": 14000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.459,
+            "pred_vs_R2_accuracy": 0.826
+          },
+          {
+            "block_end": 15000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.432,
+            "pred_vs_R2_accuracy": 0.818
+          },
+          {
+            "block_end": 16000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.418,
+            "pred_vs_R2_accuracy": 0.813
+          },
+          {
+            "block_end": 17000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.426,
+            "pred_vs_R2_accuracy": 0.833
+          },
+          {
+            "block_end": 18000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.467,
+            "pred_vs_R2_accuracy": 0.81
+          },
+          {
+            "block_end": 19000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.435,
+            "pred_vs_R2_accuracy": 0.81
+          },
+          {
+            "block_end": 20000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.44,
+            "pred_vs_R2_accuracy": 0.809
+          },
+          {
+            "block_end": 21000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.433,
+            "pred_vs_R2_accuracy": 0.832
+          },
+          {
+            "block_end": 22000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.42,
+            "pred_vs_R2_accuracy": 0.815
+          },
+          {
+            "block_end": 23000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.436,
+            "pred_vs_R2_accuracy": 0.834
+          },
+          {
+            "block_end": 24000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.431,
+            "pred_vs_R2_accuracy": 0.833
+          },
+          {
+            "block_end": 25000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.442,
+            "pred_vs_R2_accuracy": 0.815
+          },
+          {
+            "block_end": 26000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.423,
+            "pred_vs_R2_accuracy": 0.829
+          },
+          {
+            "block_end": 27000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.402,
+            "pred_vs_R2_accuracy": 0.839
+          },
+          {
+            "block_end": 28000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.417,
+            "pred_vs_R2_accuracy": 0.836
+          },
+          {
+            "block_end": 29000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.398,
+            "pred_vs_R2_accuracy": 0.836
+          },
+          {
+            "block_end": 30000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.406,
+            "pred_vs_R2_accuracy": 0.842
+          },
+          {
+            "block_end": 31000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.397,
+            "pred_vs_R2_accuracy": 0.854
+          },
+          {
+            "block_end": 32000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.43,
+            "pred_vs_R2_accuracy": 0.83
+          },
+          {
+            "block_end": 33000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.435,
+            "pred_vs_R2_accuracy": 0.855
+          },
+          {
+            "block_end": 34000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.445,
+            "pred_vs_R2_accuracy": 0.818
+          },
+          {
+            "block_end": 35000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.424,
+            "pred_vs_R2_accuracy": 0.829
+          },
+          {
+            "block_end": 36000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.426,
+            "pred_vs_R2_accuracy": 0.849
+          },
+          {
+            "block_end": 37000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.406,
+            "pred_vs_R2_accuracy": 0.846
+          },
+          {
+            "block_end": 38000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.415,
+            "pred_vs_R2_accuracy": 0.846
+          },
+          {
+            "block_end": 39000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.435,
+            "pred_vs_R2_accuracy": 0.844
+          },
+          {
+            "block_end": 40000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.417,
+            "pred_vs_R2_accuracy": 0.858
+          }
+        ],
+        "candidate_window_from_A_R1": {
+          "phase2_reference_accuracy": 0.89065,
+          "damage_band": [
+            0.2,
+            0.4
+          ],
+          "r1_accuracy_band": [
+            0.49065000000000003,
+            0.69065
+          ],
+          "blocks_in_band_by_example_index": [
+            2000
+          ],
+          "note": "Online blocks, not frozen checkpoints; candidate ranges only."
+        }
+      },
+      "replay": {
+        "teacher_R1_R2_agreement": 0.412025,
+        "phase3_blocks": [
+          {
+            "block_end": 1000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.848,
+            "pred_vs_R2_accuracy": 0.425
+          },
+          {
+            "block_end": 2000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.811,
+            "pred_vs_R2_accuracy": 0.43
+          },
+          {
+            "block_end": 3000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.828,
+            "pred_vs_R2_accuracy": 0.425
+          },
+          {
+            "block_end": 4000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.817,
+            "pred_vs_R2_accuracy": 0.431
+          },
+          {
+            "block_end": 5000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.82,
+            "pred_vs_R2_accuracy": 0.427
+          },
+          {
+            "block_end": 6000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.779,
+            "pred_vs_R2_accuracy": 0.422
+          },
+          {
+            "block_end": 7000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.822,
+            "pred_vs_R2_accuracy": 0.414
+          },
+          {
+            "block_end": 8000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.778,
+            "pred_vs_R2_accuracy": 0.464
+          },
+          {
+            "block_end": 9000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.797,
+            "pred_vs_R2_accuracy": 0.457
+          },
+          {
+            "block_end": 10000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.783,
+            "pred_vs_R2_accuracy": 0.438
+          },
+          {
+            "block_end": 11000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.805,
+            "pred_vs_R2_accuracy": 0.447
+          },
+          {
+            "block_end": 12000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.777,
+            "pred_vs_R2_accuracy": 0.488
+          },
+          {
+            "block_end": 13000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.787,
+            "pred_vs_R2_accuracy": 0.468
+          },
+          {
+            "block_end": 14000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.773,
+            "pred_vs_R2_accuracy": 0.474
+          },
+          {
+            "block_end": 15000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.772,
+            "pred_vs_R2_accuracy": 0.512
+          },
+          {
+            "block_end": 16000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.772,
+            "pred_vs_R2_accuracy": 0.475
+          },
+          {
+            "block_end": 17000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.762,
+            "pred_vs_R2_accuracy": 0.497
+          },
+          {
+            "block_end": 18000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.758,
+            "pred_vs_R2_accuracy": 0.512
+          },
+          {
+            "block_end": 19000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.782,
+            "pred_vs_R2_accuracy": 0.483
+          },
+          {
+            "block_end": 20000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.749,
+            "pred_vs_R2_accuracy": 0.504
+          },
+          {
+            "block_end": 21000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.743,
+            "pred_vs_R2_accuracy": 0.511
+          },
+          {
+            "block_end": 22000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.743,
+            "pred_vs_R2_accuracy": 0.518
+          },
+          {
+            "block_end": 23000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.742,
+            "pred_vs_R2_accuracy": 0.51
+          },
+          {
+            "block_end": 24000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.759,
+            "pred_vs_R2_accuracy": 0.487
+          },
+          {
+            "block_end": 25000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.751,
+            "pred_vs_R2_accuracy": 0.502
+          },
+          {
+            "block_end": 26000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.761,
+            "pred_vs_R2_accuracy": 0.492
+          },
+          {
+            "block_end": 27000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.743,
+            "pred_vs_R2_accuracy": 0.482
+          },
+          {
+            "block_end": 28000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.731,
+            "pred_vs_R2_accuracy": 0.495
+          },
+          {
+            "block_end": 29000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.739,
+            "pred_vs_R2_accuracy": 0.51
+          },
+          {
+            "block_end": 30000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.73,
+            "pred_vs_R2_accuracy": 0.499
+          },
+          {
+            "block_end": 31000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.708,
+            "pred_vs_R2_accuracy": 0.512
+          },
+          {
+            "block_end": 32000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.719,
+            "pred_vs_R2_accuracy": 0.505
+          },
+          {
+            "block_end": 33000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.737,
+            "pred_vs_R2_accuracy": 0.5
+          },
+          {
+            "block_end": 34000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.715,
+            "pred_vs_R2_accuracy": 0.518
+          },
+          {
+            "block_end": 35000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.747,
+            "pred_vs_R2_accuracy": 0.505
+          },
+          {
+            "block_end": 36000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.734,
+            "pred_vs_R2_accuracy": 0.531
+          },
+          {
+            "block_end": 37000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.707,
+            "pred_vs_R2_accuracy": 0.524
+          },
+          {
+            "block_end": 38000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.727,
+            "pred_vs_R2_accuracy": 0.523
+          },
+          {
+            "block_end": 39000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.719,
+            "pred_vs_R2_accuracy": 0.542
+          },
+          {
+            "block_end": 40000,
+            "count": 1000,
+            "pred_vs_R1_accuracy": 0.68,
+            "pred_vs_R2_accuracy": 0.542
+          }
+        ],
+        "candidate_window_from_A_R1": null
+      }
+    }
+  },
+  "limitations": [
+    "Learnability gate NOT passed; this run is an impact-window EXPLORATION, not a hypothesis test.",
+    "Stream inputs were not stored; reproduced by seed. Input bit-equality is NOT proven, only phase-regret agreement.",
+    "Online block accuracies are not frozen-checkpoint measurements.",
+    "Candidate phase-length ranges must be validated in a separate pilot.",
+    "Buffer R1 fraction in phase 3 is time-varying (~100% -> ~66.7%), not a constant two-thirds; conflicting-label reading is a strong candidate, not a proven mechanism."
+  ],
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.2.6",
+    "torch": "2.7.1+cu118",
+    "device": "cpu"
+  }
+}

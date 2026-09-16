@@ -1,0 +1,281 @@
+{
+  "revision": "line1-impact-v03",
+  "label": "Learnability gate NOT passed; this run is an impact-window EXPLORATION, not a hypothesis test.",
+  "protocol": {
+    "generator_seed": 1000,
+    "alpha": 0.5,
+    "noise": 0.05,
+    "generator_calibration_count": 20000,
+    "hidden": 64,
+    "input_dimension": 32,
+    "model_seed": 7,
+    "learning_rate": 0.001,
+    "minibatch": 16,
+    "phase_length": 40000,
+    "capacity": 512,
+    "replay_batch": 8,
+    "training_seeds": [
+      220001,
+      220002,
+      220003
+    ],
+    "eval_history_seed": 221000,
+    "eval_stream_seed": 221001,
+    "eval_count": 20000,
+    "transition_window": 1000,
+    "block": 1000,
+    "schedule": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "eval_clean_sha256": "d896c480175158402644a5f620984918ccd533f685649a9dae57bb32e9333cc3",
+  "seeds": {
+    "220001": {
+      "A": {
+        "frozen_m2r1_accuracy": {
+          "2": 0.8898,
+          "3": 0.43295,
+          "4": 0.8995
+        },
+        "damage_phase2_minus_phase3": 0.45685000000000003,
+        "recovery_phase4_minus_phase3": 0.46654999999999996,
+        "d1000": 310,
+        "optimizer_steps": 10000,
+        "transition_window_updates": 62,
+        "phase_regret": [
+          {
+            "phase": 1,
+            "first_1000_regret": 425,
+            "total_regret": 6608
+          },
+          {
+            "phase": 2,
+            "first_1000_regret": 135,
+            "total_regret": 4814
+          },
+          {
+            "phase": 3,
+            "first_1000_regret": 449,
+            "total_regret": 7020
+          },
+          {
+            "phase": 4,
+            "first_1000_regret": 400,
+            "total_regret": 5028
+          }
+        ],
+        "final_state_sha256": "60e69bb1189753e1d7517c1875e401f1fd104aa43caad388870a639878fbd541"
+      },
+      "replay": {
+        "frozen_m2r1_accuracy": {
+          "2": 0.84825,
+          "3": 0.6873,
+          "4": 0.7962
+        },
+        "damage_phase2_minus_phase3": 0.16094999999999993,
+        "recovery_phase4_minus_phase3": 0.1089,
+        "d1000": 107,
+        "optimizer_steps": 10000,
+        "transition_window_updates": 62,
+        "phase_regret": [
+          {
+            "phase": 1,
+            "first_1000_regret": 394,
+            "total_regret": 6661
+          },
+          {
+            "phase": 2,
+            "first_1000_regret": 146,
+            "total_regret": 5796
+          },
+          {
+            "phase": 3,
+            "first_1000_regret": 546,
+            "total_regret": 18331
+          },
+          {
+            "phase": 4,
+            "first_1000_regret": 247,
+            "total_regret": 8398
+          }
+        ],
+        "final_state_sha256": "aa6033873b5243c8eb5d8d549b98258813dc1304b1d8b70822f6e5bc04a3f85c"
+      },
+      "shared_initial_state_sha256": "57cf9334bbbbc44469b1bc3399377501473a9abfdc040f437e0c939be978319c"
+    },
+    "220002": {
+      "A": {
+        "frozen_m2r1_accuracy": {
+          "2": 0.88785,
+          "3": 0.41625,
+          "4": 0.90165
+        },
+        "damage_phase2_minus_phase3": 0.4716,
+        "recovery_phase4_minus_phase3": 0.48539999999999994,
+        "d1000": 328,
+        "optimizer_steps": 10000,
+        "transition_window_updates": 62,
+        "phase_regret": [
+          {
+            "phase": 1,
+            "first_1000_regret": 423,
+            "total_regret": 6326
+          },
+          {
+            "phase": 2,
+            "first_1000_regret": 156,
+            "total_regret": 4844
+          },
+          {
+            "phase": 3,
+            "first_1000_regret": 421,
+            "total_regret": 7327
+          },
+          {
+            "phase": 4,
+            "first_1000_regret": 426,
+            "total_regret": 5044
+          }
+        ],
+        "final_state_sha256": "7826cbfbfd4151458969e04234b54c8cb653e726da67eec89e639b1e8a3ba57a"
+      },
+      "replay": {
+        "frozen_m2r1_accuracy": {
+          "2": 0.86665,
+          "3": 0.7031,
+          "4": 0.77705
+        },
+        "damage_phase2_minus_phase3": 0.16355000000000008,
+        "recovery_phase4_minus_phase3": 0.07395000000000007,
+        "d1000": 150,
+        "optimizer_steps": 10000,
+        "transition_window_updates": 62,
+        "phase_regret": [
+          {
+            "phase": 1,
+            "first_1000_regret": 408,
+            "total_regret": 6443
+          },
+          {
+            "phase": 2,
+            "first_1000_regret": 179,
+            "total_regret": 5623
+          },
+          {
+            "phase": 3,
+            "first_1000_regret": 520,
+            "total_regret": 18265
+          },
+          {
+            "phase": 4,
+            "first_1000_regret": 270,
+            "total_regret": 8944
+          }
+        ],
+        "final_state_sha256": "5efc46fd7152eb89e31bf23666c76bc1a8553035719dcab414bebd41bd265450"
+      },
+      "shared_initial_state_sha256": "57cf9334bbbbc44469b1bc3399377501473a9abfdc040f437e0c939be978319c"
+    },
+    "220003": {
+      "A": {
+        "frozen_m2r1_accuracy": {
+          "2": 0.89065,
+          "3": 0.43115,
+          "4": 0.90285
+        },
+        "damage_phase2_minus_phase3": 0.4595000000000001,
+        "recovery_phase4_minus_phase3": 0.47170000000000006,
+        "d1000": 325,
+        "optimizer_steps": 10000,
+        "transition_window_updates": 62,
+        "phase_regret": [
+          {
+            "phase": 1,
+            "first_1000_regret": 413,
+            "total_regret": 6467
+          },
+          {
+            "phase": 2,
+            "first_1000_regret": 147,
+            "total_regret": 4878
+          },
+          {
+            "phase": 3,
+            "first_1000_regret": 417,
+            "total_regret": 7009
+          },
+          {
+            "phase": 4,
+            "first_1000_regret": 428,
+            "total_regret": 5022
+          }
+        ],
+        "final_state_sha256": "fd7776b7684c842f8e4c23f71321020eb15396fcf23acd5804585b3f51d6a04d"
+      },
+      "replay": {
+        "frozen_m2r1_accuracy": {
+          "2": 0.82975,
+          "3": 0.69185,
+          "4": 0.7779
+        },
+        "damage_phase2_minus_phase3": 0.13790000000000002,
+        "recovery_phase4_minus_phase3": 0.08605000000000007,
+        "d1000": 90,
+        "optimizer_steps": 10000,
+        "transition_window_updates": 62,
+        "phase_regret": [
+          {
+            "phase": 1,
+            "first_1000_regret": 387,
+            "total_regret": 7317
+          },
+          {
+            "phase": 2,
+            "first_1000_regret": 160,
+            "total_regret": 6393
+          },
+          {
+            "phase": 3,
+            "first_1000_regret": 529,
+            "total_regret": 19225
+          },
+          {
+            "phase": 4,
+            "first_1000_regret": 255,
+            "total_regret": 8899
+          }
+        ],
+        "final_state_sha256": "f7af8be063ec590a1a9e54d1128b03ead14cbe923ac36ac1afe01ddfbc362c2f"
+      },
+      "shared_initial_state_sha256": "57cf9334bbbbc44469b1bc3399377501473a9abfdc040f437e0c939be978319c"
+    }
+  },
+  "limitations": [
+    "Learnability gate NOT passed; this run is an impact-window EXPLORATION, not a hypothesis test.",
+    "Three seeds; per-seed rows only, no confirmatory pooling.",
+    "D1000 mixes forgetting and re-learning by design.",
+    "Reference is each method's own phase-2 model, not an oracle.",
+    "No router, renewal, Line 2 (v0.4) or gate change in this run."
+  ],
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.2.6",
+    "torch": "2.7.1+cu118",
+    "device": "cpu"
+  }
+}

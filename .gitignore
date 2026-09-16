@@ -1,0 +1,21 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local editor and secret configuration
+.vscode/
+.idea/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# OS temporary files
+.DS_Store
+Thumbs.db

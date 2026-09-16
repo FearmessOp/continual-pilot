@@ -1,0 +1,194 @@
+{
+  "revision": "margin-diagnostic-v03",
+  "scope": "Reproduce old combined and v0.3 primary; margin diagnostic only.",
+  "fixed_margin_thresholds": [
+    0.1,
+    0.25,
+    0.5
+  ],
+  "quintiles": 5,
+  "concentration_target": 0.7,
+  "scale_calibration": {
+    "distribution": "equal M1/M2 mixture, 10000 per mixture",
+    "old_seed": 130000,
+    "v03_seed": 130100,
+    "definition": "population std over all sample and class score elements"
+  },
+  "limitations": [
+    "No student, generator, acceptance or gate-formula change; no v0.4.",
+    "Score margin is not a direct geometric distance to the boundary.",
+    "Old-generator prediction sequence equality is NOT proven.",
+    "Quintile concentration is a descriptive flag, not a hypothesis test.",
+    "Teacher seed and calibration also changed; old-new gap is not the isolated causal effect of the offset."
+  ],
+  "old_combined": {
+    "scale_std": 1.1427446283506566,
+    "raw_margin_quantiles_10_25_50_75_90": [
+      0.2115683267068878,
+      0.5318011151231966,
+      1.0716345041598518,
+      1.7219145621132672,
+      2.241996491762897
+    ],
+    "normalized_margin_quantiles_10_25_50_75_90": [
+      0.18514051298779508,
+      0.4653717916755859,
+      0.9377725150251293,
+      1.5068235889225194,
+      1.961940083672771
+    ],
+    "normalized_below_fixed_thresholds": {
+      "below_0.1": 0.05475,
+      "below_0.25": 0.13455,
+      "below_0.5": 0.26745
+    },
+    "total_errors": 1282,
+    "quintiles": [
+      {
+        "quintile": 1,
+        "count": 4000,
+        "raw_margin_min": 0.0001687566089322301,
+        "raw_margin_max": 0.4270524164725393,
+        "error_count": 1157,
+        "within_bin_error_rate": 0.28925,
+        "share_of_total_errors": 0.9024960998439937
+      },
+      {
+        "quintile": 2,
+        "count": 4000,
+        "raw_margin_min": 0.42720816886210955,
+        "raw_margin_max": 0.8571114002979845,
+        "error_count": 124,
+        "within_bin_error_rate": 0.031,
+        "share_of_total_errors": 0.0967238689547582
+      },
+      {
+        "quintile": 3,
+        "count": 4000,
+        "raw_margin_min": 0.8575136844260465,
+        "raw_margin_max": 1.3127593599639416,
+        "error_count": 1,
+        "within_bin_error_rate": 0.00025,
+        "share_of_total_errors": 0.00078003120124805
+      },
+      {
+        "quintile": 4,
+        "count": 4000,
+        "raw_margin_min": 1.3127768341706876,
+        "raw_margin_max": 1.8869808061408575,
+        "error_count": 0,
+        "within_bin_error_rate": 0.0,
+        "share_of_total_errors": 0.0
+      },
+      {
+        "quintile": 5,
+        "count": 4000,
+        "raw_margin_min": 1.887152245552231,
+        "raw_margin_max": 4.629841253701797,
+        "error_count": 0,
+        "within_bin_error_rate": 0.0,
+        "share_of_total_errors": 0.0
+      }
+    ],
+    "lowest_quintile_error_share": 0.9024960998439937,
+    "concentration_flag": true,
+    "concentration_target": 0.7,
+    "student": "old_combined",
+    "generator": "pilot_seed7",
+    "reproduced_clean_accuracy": 0.9359,
+    "matched_confusion_matrix": true,
+    "matched_initial_state": true,
+    "matched_optimizer_steps": true,
+    "final_state_sha256": "79b6ad1fa7417b605f05fd89664fc4fb9798be5384f853833860dbe66ca2f71c",
+    "prediction_sequence_equality_proven": false
+  },
+  "v03_primary": {
+    "scale_std": 1.2332424658477523,
+    "raw_margin_quantiles_10_25_50_75_90": [
+      0.10274998719527617,
+      0.26310765276191694,
+      0.5550324080276164,
+      0.9229328644542337,
+      1.3558441012147948
+    ],
+    "normalized_margin_quantiles_10_25_50_75_90": [
+      0.0833169389156933,
+      0.21334624783704,
+      0.4500594355109865,
+      0.7483790819835202,
+      1.0994140558424281
+    ],
+    "normalized_below_fixed_thresholds": {
+      "below_0.1": 0.1217,
+      "below_0.25": 0.2904,
+      "below_0.5": 0.5468
+    },
+    "total_errors": 2513,
+    "quintiles": [
+      {
+        "quintile": 1,
+        "count": 4000,
+        "raw_margin_min": 7.633835982456816e-06,
+        "raw_margin_max": 0.20720768852823546,
+        "error_count": 1572,
+        "within_bin_error_rate": 0.393,
+        "share_of_total_errors": 0.6255471547950656
+      },
+      {
+        "quintile": 2,
+        "count": 4000,
+        "raw_margin_min": 0.20726997820525894,
+        "raw_margin_max": 0.431123013337251,
+        "error_count": 674,
+        "within_bin_error_rate": 0.1685,
+        "share_of_total_errors": 0.2682053322721846
+      },
+      {
+        "quintile": 3,
+        "count": 4000,
+        "raw_margin_min": 0.43112622318293325,
+        "raw_margin_max": 0.689287916460362,
+        "error_count": 198,
+        "within_bin_error_rate": 0.0495,
+        "share_of_total_errors": 0.07879029048945484
+      },
+      {
+        "quintile": 4,
+        "count": 4000,
+        "raw_margin_min": 0.6893548077559499,
+        "raw_margin_max": 1.0349405566146568,
+        "error_count": 54,
+        "within_bin_error_rate": 0.0135,
+        "share_of_total_errors": 0.02148826104257859
+      },
+      {
+        "quintile": 5,
+        "count": 4000,
+        "raw_margin_min": 1.0349747256324608,
+        "raw_margin_max": 3.3389390889251267,
+        "error_count": 15,
+        "within_bin_error_rate": 0.00375,
+        "share_of_total_errors": 0.005968961400716275
+      }
+    ],
+    "lowest_quintile_error_share": 0.6255471547950656,
+    "concentration_flag": false,
+    "concentration_target": 0.7,
+    "student": "v03_primary",
+    "generator": "v03_seed1000",
+    "reproduced_clean_accuracy": 0.87435,
+    "matched_confusion_matrix": true,
+    "matched_initial_state": true,
+    "matched_optimizer_steps": true,
+    "matched_final_state_sha": true,
+    "matched_target_shas": true,
+    "final_state_sha256": "b17f34a03733f1c80476a6815dd65c284efc2749dceb81d758d6a48b29e06dfd",
+    "prediction_sequence_equality_proven": true
+  },
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.2.6",
+    "torch": "2.7.1+cu118",
+    "device": "cpu"
+  }
+}

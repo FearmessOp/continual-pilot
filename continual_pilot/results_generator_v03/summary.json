@@ -1,0 +1,126 @@
+{
+  "revision": "generator-v03",
+  "config": {
+    "alpha": 0.5,
+    "noise": 0.05,
+    "seed_start": 1000,
+    "metric_seed": 50000,
+    "probe_window": 64,
+    "calibration_count": 20000,
+    "threads": 1,
+    "output": "continual_pilot/results_generator_v03"
+  },
+  "environment": {
+    "python": "3.13.2",
+    "torch": "2.7.1+cu118",
+    "numpy": "2.2.6",
+    "device": "cpu"
+  },
+  "rationale": "v0.2 left balance to rejection sampling over 16 simultaneous narrow-band conditions; the joint probability is effectively zero, so it was a specification error, not a generator failure. v0.3 BUILDS balance with per-class additive offsets and keeps rejection sampling only as verification.",
+  "offset_spec": {
+    "form": "s_r(z) = alpha*h_common + h_specific(z_r) + beta_r",
+    "target": 0.25,
+    "iterations": 50,
+    "eta": 0.5,
+    "calibration_count": 20000,
+    "calibration_distribution": "equal M1/M2 mixture",
+    "recomputed_per_seed": true,
+    "note": "Offset targets the MIXED marginal; acceptance measures the R1/R2 x M1/M2 breakdown. The offset does not guarantee balance, only centers the mixed expectation at 1/4."
+  },
+  "criterion": {
+    "class_fraction_band": [
+      0.18,
+      0.35
+    ],
+    "applies_to": "each class, under R1 and R2, under M1 and M2",
+    "disagreement_band": [
+      0.4,
+      0.7
+    ],
+    "max_attempts": 200,
+    "nominal_gate_band": [
+      0.925,
+      0.935
+    ],
+    "note": "Unchanged from v0.2. Realized gate computed later from an independent calibration stream."
+  },
+  "mechanical_tolerance": 0.02,
+  "acceptance": {
+    "accepted": true,
+    "accepted_seed": 1000,
+    "attempts_tried": 1,
+    "rejected_count": 0,
+    "rejected_by_reason": {
+      "balance_only": 0,
+      "disagreement_only": 0,
+      "both": 0
+    },
+    "rejected_seeds": [],
+    "accepted_metrics": {
+      "class_fractions": {
+        "M1_R1": [
+          0.25155,
+          0.2456,
+          0.27905,
+          0.2238
+        ],
+        "M1_R2": [
+          0.27825,
+          0.22675,
+          0.26065,
+          0.23435
+        ],
+        "M2_R1": [
+          0.24575,
+          0.25955,
+          0.2234,
+          0.2713
+        ],
+        "M2_R2": [
+          0.2308,
+          0.28975,
+          0.2289,
+          0.25055
+        ]
+      },
+      "disagreement": {
+        "M1": 0.59165,
+        "M2": 0.58505
+      },
+      "min_class_fraction": 0.2234,
+      "max_class_fraction": 0.28975
+    },
+    "accepted_mixed_marginals": {
+      "R1": [
+        0.25125,
+        0.2424,
+        0.24515,
+        0.2612
+      ],
+      "R2": [
+        0.2571,
+        0.25055,
+        0.24795,
+        0.2444
+      ]
+    }
+  },
+  "summary_probe_full_noisy": {
+    "feature_dimension": 132,
+    "regime_probe_test_accuracy": 1.0,
+    "chance_level": 0.5,
+    "raw_test_rows": 896,
+    "distinct_windows_per_stream": 448,
+    "effective_independent_blocks_estimate": 14,
+    "note": "Windows overlap; raw rows overstate independence. Noisy labels match the student. Re-measured on the v0.3 generator."
+  },
+  "summary_probe_4freq_noisy": {
+    "feature_dimension": 4,
+    "regime_probe_test_accuracy": 0.6540178571428571,
+    "chance_level": 0.5,
+    "raw_test_rows": 896,
+    "distinct_windows_per_stream": 448,
+    "effective_independent_blocks_estimate": 14,
+    "note": "Windows overlap; raw rows overstate independence. Noisy labels match the student. Re-measured on the v0.3 generator."
+  }
+}

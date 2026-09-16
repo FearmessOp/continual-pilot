@@ -1,0 +1,874 @@
+{
+  "revision": "generator-v03-robustness",
+  "selected_generator_seed_unchanged": 1000,
+  "protocol": {
+    "seed_start": 1000,
+    "candidates": 20,
+    "metric_seed_start": 50000,
+    "count_per_mixture": 20000,
+    "alpha": 0.5,
+    "noise": 0.05,
+    "class_band": [
+      0.18,
+      0.35
+    ],
+    "disagreement_band": [
+      0.4,
+      0.7
+    ],
+    "early_stopping": false
+  },
+  "counts": {
+    "accepted": 14,
+    "balance_only": 6,
+    "disagreement_only": 0,
+    "both": 0
+  },
+  "acceptance_rate": 0.7,
+  "records": [
+    {
+      "generator_seed": 1000,
+      "offset_seed": 91000,
+      "metric_seed": 50000,
+      "accepted": true,
+      "reasons": [],
+      "metrics": {
+        "class_fractions": {
+          "M1_R1": [
+            0.25155,
+            0.2456,
+            0.27905,
+            0.2238
+          ],
+          "M1_R2": [
+            0.27825,
+            0.22675,
+            0.26065,
+            0.23435
+          ],
+          "M2_R1": [
+            0.24575,
+            0.25955,
+            0.2234,
+            0.2713
+          ],
+          "M2_R2": [
+            0.2308,
+            0.28975,
+            0.2289,
+            0.25055
+          ]
+        },
+        "disagreement": {
+          "M1": 0.59165,
+          "M2": 0.58505
+        },
+        "min_class_fraction": 0.2234,
+        "max_class_fraction": 0.28975
+      }
+    },
+    {
+      "generator_seed": 1001,
+      "offset_seed": 91001,
+      "metric_seed": 50001,
+      "accepted": false,
+      "reasons": [
+        "balance"
+      ],
+      "metrics": {
+        "class_fractions": {
+          "M1_R1": [
+            0.28345,
+            0.1997,
+            0.2002,
+            0.31665
+          ],
+          "M1_R2": [
+            0.27095,
+            0.2262,
+            0.1821,
+            0.32075
+          ],
+          "M2_R1": [
+            0.20675,
+            0.2987,
+            0.31,
+            0.18455
+          ],
+          "M2_R2": [
+            0.22895,
+            0.27745,
+            0.31415,
+            0.17945
+          ]
+        },
+        "disagreement": {
+          "M1": 0.60455,
+          "M2": 0.59075
+        },
+        "min_class_fraction": 0.17945,
+        "max_class_fraction": 0.32075
+      }
+    },
+    {
+      "generator_seed": 1002,
+      "offset_seed": 91002,
+      "metric_seed": 50002,
+      "accepted": true,
+      "reasons": [],
+      "metrics": {
+        "class_fractions": {
+          "M1_R1": [
+            0.1832,
+            0.241,
+            0.26045,
+            0.31535
+          ],
+          "M1_R2": [
+            0.185,
+            0.2488,
+            0.2614,
+            0.3048
+          ],
+          "M2_R1": [
+            0.32215,
+            0.25105,
+            0.23885,
+            0.18795
+          ],
+          "M2_R2": [
+            0.327,
+            0.2455,
+            0.23885,
+            0.18865
+          ]
+        },
+        "disagreement": {
+          "M1": 0.5927,
+          "M2": 0.5739
+        },
+        "min_class_fraction": 0.1832,
+        "max_class_fraction": 0.327
+      }
+    },
+    {
+      "generator_seed": 1003,
+      "offset_seed": 91003,
+      "metric_seed": 50003,
+      "accepted": true,
+      "reasons": [],
+      "metrics": {
+        "class_fractions": {
+          "M1_R1": [
+            0.25665,
+            0.22575,
+            0.2297,
+            0.2879
+          ],
+          "M1_R2": [
+            0.24755,
+            0.23275,
+            0.24055,
+            0.27915
+          ],
+          "M2_R1": [
+            0.24405,
+            0.2714,
+            0.2709,
+            0.21365
+          ],
+          "M2_R2": [
+            0.2482,
+            0.2723,
+            0.27065,
+            0.20885
+          ]
+        },
+        "disagreement": {
+          "M1": 0.65415,
+          "M2": 0.6375
+        },
+        "min_class_fraction": 0.20885,
+        "max_class_fraction": 0.2879
+      }
+    },
+    {
+      "generator_seed": 1004,
+      "offset_seed": 91004,
+      "metric_seed": 50004,
+      "accepted": false,
+      "reasons": [
+        "balance"
+      ],
+      "metrics": {
+        "class_fractions": {
+          "M1_R1": [
+            0.1779,
+            0.26515,
+            0.2709,
+            0.28605
+          ],
+          "M1_R2": [
+            0.1706,
+            0.28895,
+            0.28015,
+            0.2603
+          ],
+          "M2_R1": [
+            0.32605,
+            0.23205,
+            0.22385,
+            0.21805
+          ],
+          "M2_R2": [
+            0.32955,
+            0.20995,
+            0.228,
+            0.2325
+          ]
+        },
+        "disagreement": {
+          "M1": 0.6364,
+          "M2": 0.6115
+        },
+        "min_class_fraction": 0.1706,
+        "max_class_fraction": 0.32955
+      }
+    },
+    {
+      "generator_seed": 1005,
+      "offset_seed": 91005,
+      "metric_seed": 50005,
+      "accepted": true,
+      "reasons": [],
+      "metrics": {
+        "class_fractions": {
+          "M1_R1": [
+            0.24775,
+            0.2664,
+            0.28405,
+            0.2018
+          ],
+          "M1_R2": [
+            0.2509,
+            0.2616,
+            0.28755,
+            0.19995
+          ],
+          "M2_R1": [
+            0.24565,
+            0.24175,
+            0.2171,
+            0.2955
+          ],
+          "M2_R2": [
+            0.2484,
+            0.2376,
+            0.21265,
+            0.30135
+          ]
+        },
+        "disagreement": {
+          "M1": 0.6565,
+          "M2": 0.6428
+        },
+        "min_class_fraction": 0.19995,
+        "max_class_fraction": 0.30135
+      }
+    },
+    {
+      "generator_seed": 1006,
+      "offset_seed": 91006,
+      "metric_seed": 50006,
+      "accepted": true,
+      "reasons": [],
+      "metrics": {
+        "class_fractions": {
+          "M1_R1": [
+            0.26495,
+            0.21765,
+            0.2574,
+            0.26
+          ],
+          "M1_R2": [
+            0.2644,
+            0.23925,
+            0.23645,
+            0.2599
+          ],
+          "M2_R1": [
+            0.23195,
+            0.28475,
+            0.25155,
+            0.23175
+          ],
+          "M2_R2": [
+            0.2371,
+            0.26035,
+            0.25515,
+            0.2474
+          ]
+        },
+        "disagreement": {
+          "M1": 0.65995,
+          "M2": 0.6634
+        },
+        "min_class_fraction": 0.21765,
+        "max_class_fraction": 0.28475
+      }
+    },
+    {
+      "generator_seed": 1007,
+      "offset_seed": 91007,
+      "metric_seed": 50007,
+      "accepted": true,
+      "reasons": [],
+      "metrics": {
+        "class_fractions": {
+          "M1_R1": [
+            0.23145,
+            0.24,
+            0.26695,
+            0.2616
+          ],
+          "M1_R2": [
+            0.2226,
+            0.23145,
+            0.2557,
+            0.29025
+          ],
+          "M2_R1": [
+            0.26345,
+            0.26035,
+            0.23525,
+            0.24095
+          ],
+          "M2_R2": [
+            0.27345,
+            0.26525,
+            0.25025,
+            0.21105
+          ]
+        },
+        "disagreement": {
+          "M1": 0.67125,
+          "M2": 0.67505
+        },
+        "min_class_fraction": 0.21105,
+        "max_class_fraction": 0.29025
+      }
+    },
+    {
+      "generator_seed": 1008,
+      "offset_seed": 91008,
+      "metric_seed": 50008,
+      "accepted": true,
+      "reasons": [],
+      "metrics": {
+        "class_fractions": {
+          "M1_R1": [
+            0.2209,
+            0.322,
+            0.2644,
+            0.1927
+          ],
+          "M1_R2": [
+            0.24505,
+            0.2809,
+            0.2548,
+            0.21925
+          ],
+          "M2_R1": [
+            0.28705,
+            0.18155,
+            0.2188,
+            0.3126
+          ],
+          "M2_R2": [
+            0.2386,
+            0.2224,
+            0.24365,
+            0.29535
+          ]
+        },
+        "disagreement": {
+          "M1": 0.6643,
+          "M2": 0.67295
+        },
+        "min_class_fraction": 0.18155,
+        "max_class_fraction": 0.322
+      }
+    },
+    {
+      "generator_seed": 1009,
+      "offset_seed": 91009,
+      "metric_seed": 50009,
+      "accepted": false,
+      "reasons": [
+        "balance"
+      ],
+      "metrics": {
+        "class_fractions": {
+          "M1_R1": [
+            0.21365,
+            0.27675,
+            0.2265,
+            0.2831
+          ],
+          "M1_R2": [
+            0.2095,
+            0.3157,
+            0.195,
+            0.2798
+          ],
+          "M2_R1": [
+            0.27925,
+            0.22025,
+            0.27625,
+            0.22425
+          ],
+          "M2_R2": [
+            0.2992,
+            0.17655,
+            0.3047,
+            0.21955
+          ]
+        },
+        "disagreement": {
+          "M1": 0.6503,
+          "M2": 0.6505
+        },
+        "min_class_fraction": 0.17655,
+        "max_class_fraction": 0.3157
+      }
+    },
+    {
+      "generator_seed": 1010,
+      "offset_seed": 91010,
+      "metric_seed": 50010,
+      "accepted": true,
+      "reasons": [],
+      "metrics": {
+        "class_fractions": {
+          "M1_R1": [
+            0.30485,
+            0.2788,
+            0.2194,
+            0.19695
+          ],
+          "M1_R2": [
+            0.3089,
+            0.28585,
+            0.2235,
+            0.18175
+          ],
+          "M2_R1": [
+            0.1999,
+            0.2241,
+            0.2769,
+            0.2991
+          ],
+          "M2_R2": [
+            0.1964,
+            0.2157,
+            0.26335,
+            0.32455
+          ]
+        },
+        "disagreement": {
+          "M1": 0.62455,
+          "M2": 0.6216
+        },
+        "min_class_fraction": 0.18175,
+        "max_class_fraction": 0.32455
+      }
+    },
+    {
+      "generator_seed": 1011,
+      "offset_seed": 91011,
+      "metric_seed": 50011,
+      "accepted": false,
+      "reasons": [
+        "balance"
+      ],
+      "metrics": {
+        "class_fractions": {
+          "M1_R1": [
+            0.2485,
+            0.20175,
+            0.2313,
+            0.31845
+          ],
+          "M1_R2": [
+            0.2471,
+            0.21995,
+            0.20025,
+            0.3327
+          ],
+          "M2_R1": [
+            0.25745,
+            0.2939,
+            0.26385,
+            0.1848
+          ],
+          "M2_R2": [
+            0.24195,
+            0.28235,
+            0.30355,
+            0.17215
+          ]
+        },
+        "disagreement": {
+          "M1": 0.6323,
+          "M2": 0.6395
+        },
+        "min_class_fraction": 0.17215,
+        "max_class_fraction": 0.3327
+      }
+    },
+    {
+      "generator_seed": 1012,
+      "offset_seed": 91012,
+      "metric_seed": 50012,
+      "accepted": true,
+      "reasons": [],
+      "metrics": {
+        "class_fractions": {
+          "M1_R1": [
+            0.28335,
+            0.26215,
+            0.21305,
+            0.24145
+          ],
+          "M1_R2": [
+            0.27545,
+            0.25655,
+            0.2238,
+            0.2442
+          ],
+          "M2_R1": [
+            0.218,
+            0.24915,
+            0.29235,
+            0.2405
+          ],
+          "M2_R2": [
+            0.22225,
+            0.23595,
+            0.2843,
+            0.2575
+          ]
+        },
+        "disagreement": {
+          "M1": 0.686,
+          "M2": 0.6689
+        },
+        "min_class_fraction": 0.21305,
+        "max_class_fraction": 0.29235
+      }
+    },
+    {
+      "generator_seed": 1013,
+      "offset_seed": 91013,
+      "metric_seed": 50013,
+      "accepted": true,
+      "reasons": [],
+      "metrics": {
+        "class_fractions": {
+          "M1_R1": [
+            0.2238,
+            0.2629,
+            0.20145,
+            0.31185
+          ],
+          "M1_R2": [
+            0.2718,
+            0.21985,
+            0.1975,
+            0.31085
+          ],
+          "M2_R1": [
+            0.2701,
+            0.24315,
+            0.29575,
+            0.191
+          ],
+          "M2_R2": [
+            0.23375,
+            0.26815,
+            0.31175,
+            0.18635
+          ]
+        },
+        "disagreement": {
+          "M1": 0.65935,
+          "M2": 0.6506
+        },
+        "min_class_fraction": 0.18635,
+        "max_class_fraction": 0.31185
+      }
+    },
+    {
+      "generator_seed": 1014,
+      "offset_seed": 91014,
+      "metric_seed": 50014,
+      "accepted": false,
+      "reasons": [
+        "balance"
+      ],
+      "metrics": {
+        "class_fractions": {
+          "M1_R1": [
+            0.2357,
+            0.18395,
+            0.3229,
+            0.25745
+          ],
+          "M1_R2": [
+            0.27175,
+            0.17635,
+            0.3243,
+            0.2276
+          ],
+          "M2_R1": [
+            0.2789,
+            0.3187,
+            0.17195,
+            0.23045
+          ],
+          "M2_R2": [
+            0.2404,
+            0.32165,
+            0.1643,
+            0.27365
+          ]
+        },
+        "disagreement": {
+          "M1": 0.6255,
+          "M2": 0.6371
+        },
+        "min_class_fraction": 0.1643,
+        "max_class_fraction": 0.3243
+      }
+    },
+    {
+      "generator_seed": 1015,
+      "offset_seed": 91015,
+      "metric_seed": 50015,
+      "accepted": false,
+      "reasons": [
+        "balance"
+      ],
+      "metrics": {
+        "class_fractions": {
+          "M1_R1": [
+            0.2476,
+            0.28225,
+            0.30775,
+            0.1624
+          ],
+          "M1_R2": [
+            0.2064,
+            0.30635,
+            0.31235,
+            0.1749
+          ],
+          "M2_R1": [
+            0.24905,
+            0.211,
+            0.20965,
+            0.3303
+          ],
+          "M2_R2": [
+            0.2735,
+            0.19755,
+            0.1978,
+            0.33115
+          ]
+        },
+        "disagreement": {
+          "M1": 0.6017,
+          "M2": 0.57
+        },
+        "min_class_fraction": 0.1624,
+        "max_class_fraction": 0.33115
+      }
+    },
+    {
+      "generator_seed": 1016,
+      "offset_seed": 91016,
+      "metric_seed": 50016,
+      "accepted": true,
+      "reasons": [],
+      "metrics": {
+        "class_fractions": {
+          "M1_R1": [
+            0.3011,
+            0.20365,
+            0.20585,
+            0.2894
+          ],
+          "M1_R2": [
+            0.3241,
+            0.20435,
+            0.19055,
+            0.281
+          ],
+          "M2_R1": [
+            0.212,
+            0.2873,
+            0.29215,
+            0.20855
+          ],
+          "M2_R2": [
+            0.1974,
+            0.2905,
+            0.2926,
+            0.2195
+          ]
+        },
+        "disagreement": {
+          "M1": 0.5999,
+          "M2": 0.5992
+        },
+        "min_class_fraction": 0.19055,
+        "max_class_fraction": 0.3241
+      }
+    },
+    {
+      "generator_seed": 1017,
+      "offset_seed": 91017,
+      "metric_seed": 50017,
+      "accepted": true,
+      "reasons": [],
+      "metrics": {
+        "class_fractions": {
+          "M1_R1": [
+            0.24945,
+            0.27145,
+            0.19085,
+            0.28825
+          ],
+          "M1_R2": [
+            0.22245,
+            0.29245,
+            0.2036,
+            0.2815
+          ],
+          "M2_R1": [
+            0.2462,
+            0.2261,
+            0.3197,
+            0.208
+          ],
+          "M2_R2": [
+            0.27495,
+            0.2152,
+            0.2981,
+            0.21175
+          ]
+        },
+        "disagreement": {
+          "M1": 0.6541,
+          "M2": 0.65065
+        },
+        "min_class_fraction": 0.19085,
+        "max_class_fraction": 0.3197
+      }
+    },
+    {
+      "generator_seed": 1018,
+      "offset_seed": 91018,
+      "metric_seed": 50018,
+      "accepted": true,
+      "reasons": [],
+      "metrics": {
+        "class_fractions": {
+          "M1_R1": [
+            0.2189,
+            0.30075,
+            0.26205,
+            0.2183
+          ],
+          "M1_R2": [
+            0.2409,
+            0.2987,
+            0.2233,
+            0.2371
+          ],
+          "M2_R1": [
+            0.2801,
+            0.1993,
+            0.2369,
+            0.2837
+          ],
+          "M2_R2": [
+            0.25875,
+            0.2156,
+            0.26905,
+            0.2566
+          ]
+        },
+        "disagreement": {
+          "M1": 0.68085,
+          "M2": 0.6816
+        },
+        "min_class_fraction": 0.1993,
+        "max_class_fraction": 0.30075
+      }
+    },
+    {
+      "generator_seed": 1019,
+      "offset_seed": 91019,
+      "metric_seed": 50019,
+      "accepted": true,
+      "reasons": [],
+      "metrics": {
+        "class_fractions": {
+          "M1_R1": [
+            0.2916,
+            0.2098,
+            0.2766,
+            0.222
+          ],
+          "M1_R2": [
+            0.2644,
+            0.18675,
+            0.32125,
+            0.2276
+          ],
+          "M2_R1": [
+            0.2015,
+            0.28505,
+            0.2356,
+            0.27785
+          ],
+          "M2_R2": [
+            0.2361,
+            0.3062,
+            0.1902,
+            0.2675
+          ]
+        },
+        "disagreement": {
+          "M1": 0.6685,
+          "M2": 0.6789
+        },
+        "min_class_fraction": 0.18675,
+        "max_class_fraction": 0.32125
+      }
+    }
+  ],
+  "limitations": [
+    "Descriptive fraction over 20 fixed seeds, not a population guarantee.",
+    "This audit does not select a new generator or train any learner.",
+    "The original acceptance report remains unchanged.",
+    "No extrapolation to the 200-attempt cap or multi-seed power."
+  ],
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.2.6",
+    "torch": "2.7.1+cu118",
+    "device": "cpu"
+  }
+}

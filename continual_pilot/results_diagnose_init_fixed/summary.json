@@ -1,0 +1,196 @@
+{
+  "revision": "init-fix-only",
+  "validation": {
+    "reference_vs_pilot_health_A": {
+      "bitwise_equal": true,
+      "count": 10000,
+      "mismatches": 0,
+      "sha256": "63ee24a2561eedbe627959f37fec391b46624410928c9250afb29edefa45101e"
+    },
+    "long_prefix_vs_reference": {
+      "bitwise_equal": true,
+      "count": 10000,
+      "mismatches": 0,
+      "sha256": "63ee24a2561eedbe627959f37fec391b46624410928c9250afb29edefa45101e"
+    }
+  },
+  "config": {
+    "seed": 7,
+    "alpha": 0.5,
+    "noise": 0.05,
+    "reference_length": 10000,
+    "long_length": 40000,
+    "lr": 0.001,
+    "context_window": 64,
+    "threads": 1,
+    "output": "continual_pilot\\results_diagnose_init_fixed"
+  },
+  "environment": {
+    "python": "3.13.2",
+    "torch": "2.7.1+cu118",
+    "numpy": "2.2.6",
+    "device": "cpu"
+  },
+  "protocol": [
+    "Same-shaped controls have identical seeded initial parameters.",
+    "Different shapes share a seed, not identical parameters.",
+    "This revision changes initialization only; legacy clean-label probe remains non-comparable to noisy student context.",
+    "No gate threshold or causal conclusion is assigned in this revision.",
+    "no_context also reduces input width and parameter count.",
+    "long_40k shares its first 10k examples with the reference.",
+    "Prediction always precedes the label (prequential).",
+    "Frozen accuracy uses a fresh evaluation stream, excluded from updates.",
+    "Single seed, exploratory; not a significance test.",
+    "Generator is NOT modified; debiasing is measured only."
+  ],
+  "generator_balance": {
+    "M1": {
+      "R1_class_fractions": [
+        0.2305,
+        0.0122,
+        0.42035,
+        0.33695
+      ],
+      "disagreement": 0.70595,
+      "debiased_R1_class_fractions": [
+        0.23075,
+        0.01235,
+        0.42085,
+        0.33605
+      ],
+      "debiased_min_class_fraction": 0.01235
+    },
+    "M2": {
+      "R1_class_fractions": [
+        0.31795,
+        0.02985,
+        0.2791,
+        0.3731
+      ],
+      "disagreement": 0.73345,
+      "debiased_R1_class_fractions": [
+        0.3183,
+        0.0302,
+        0.27955,
+        0.37195
+      ],
+      "debiased_min_class_fraction": 0.0302
+    }
+  },
+  "context_summary_probe": {
+    "regime_probe_test_accuracy": 1.0,
+    "chance_level": 0.5,
+    "test_examples": 896,
+    "note": "Chance means this linear probe cannot separate regimes; not a proof that the summary is information-free."
+  },
+  "controls": {
+    "reference": {
+      "online_accuracy": 0.8449,
+      "online_clean_accuracy": 0.8874,
+      "oracle_accuracy": 0.9498,
+      "last_tail_accuracy": 0.852,
+      "total_regret": 1049,
+      "initial_state_sha256": "f41f457806fe323c795216b3902097bf84228abc9a34b8cdf80345a99fab7d8d",
+      "frozen_noisy_accuracy": 0.8518,
+      "frozen_clean_accuracy": 0.8924,
+      "hidden": 64,
+      "uses_context": true,
+      "minibatch": 1,
+      "stream_length": 10000,
+      "optimizer_steps": 10000,
+      "parameters": 10820,
+      "parameter_bytes": 43280,
+      "seconds": 4.973955299999943
+    },
+    "no_context": {
+      "online_accuracy": 0.8636,
+      "online_clean_accuracy": 0.9077,
+      "oracle_accuracy": 0.9498,
+      "last_tail_accuracy": 0.869,
+      "total_regret": 862,
+      "initial_state_sha256": "57cf9334bbbbc44469b1bc3399377501473a9abfdc040f437e0c939be978319c",
+      "frozen_noisy_accuracy": 0.8718,
+      "frozen_clean_accuracy": 0.9144,
+      "hidden": 64,
+      "uses_context": false,
+      "minibatch": 1,
+      "stream_length": 10000,
+      "optimizer_steps": 10000,
+      "parameters": 2372,
+      "parameter_bytes": 9488,
+      "seconds": 4.69171070000084
+    },
+    "hidden_128": {
+      "online_accuracy": 0.8426,
+      "online_clean_accuracy": 0.8848,
+      "oracle_accuracy": 0.9498,
+      "last_tail_accuracy": 0.845,
+      "total_regret": 1072,
+      "initial_state_sha256": "aa7264fe39e077d01e408b72cf371b41d0ebf5c2dcb7873bc2ef72666bc1f424",
+      "frozen_noisy_accuracy": 0.8494,
+      "frozen_clean_accuracy": 0.8896,
+      "hidden": 128,
+      "uses_context": true,
+      "minibatch": 1,
+      "stream_length": 10000,
+      "optimizer_steps": 10000,
+      "parameters": 21636,
+      "parameter_bytes": 86544,
+      "seconds": 5.258227900001657
+    },
+    "hidden_256": {
+      "online_accuracy": 0.8402,
+      "online_clean_accuracy": 0.8823,
+      "oracle_accuracy": 0.9498,
+      "last_tail_accuracy": 0.847,
+      "total_regret": 1096,
+      "initial_state_sha256": "a904f6a38f3075d278e2603fca456bb1d4e677cce86b795d07360c76853a8872",
+      "frozen_noisy_accuracy": 0.8494,
+      "frozen_clean_accuracy": 0.8894,
+      "hidden": 256,
+      "uses_context": true,
+      "minibatch": 1,
+      "stream_length": 10000,
+      "optimizer_steps": 10000,
+      "parameters": 43268,
+      "parameter_bytes": 173072,
+      "seconds": 5.736804100000882
+    },
+    "minibatch_16": {
+      "online_accuracy": 0.8261,
+      "online_clean_accuracy": 0.8688,
+      "oracle_accuracy": 0.9498,
+      "last_tail_accuracy": 0.848,
+      "total_regret": 1237,
+      "initial_state_sha256": "f41f457806fe323c795216b3902097bf84228abc9a34b8cdf80345a99fab7d8d",
+      "frozen_noisy_accuracy": 0.862,
+      "frozen_clean_accuracy": 0.905,
+      "hidden": 64,
+      "uses_context": true,
+      "minibatch": 16,
+      "stream_length": 10000,
+      "optimizer_steps": 625,
+      "parameters": 10820,
+      "parameter_bytes": 43280,
+      "seconds": 0.9091459999981453
+    },
+    "long_40k": {
+      "online_accuracy": 0.8647,
+      "online_clean_accuracy": 0.907925,
+      "oracle_accuracy": 0.9503,
+      "last_tail_accuracy": 0.89,
+      "total_regret": 3424,
+      "initial_state_sha256": "f41f457806fe323c795216b3902097bf84228abc9a34b8cdf80345a99fab7d8d",
+      "frozen_noisy_accuracy": 0.8766,
+      "frozen_clean_accuracy": 0.9198,
+      "hidden": 64,
+      "uses_context": true,
+      "minibatch": 1,
+      "stream_length": 40000,
+      "optimizer_steps": 40000,
+      "parameters": 10820,
+      "parameter_bytes": 43280,
+      "seconds": 20.13072330000068
+    }
+  }
+}
