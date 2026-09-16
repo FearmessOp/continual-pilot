@@ -11,7 +11,7 @@ class PoolTests(unittest.TestCase):
     @staticmethod
     def decision(attempt, accepted=False):
         return {
-            "teacher_seed": 10000 + attempt,
+            "teacher_seed": 11000 + attempt,
             "accepted": accepted,
             "reasons": [] if accepted else [
                 {"mixture": 0, "criterion": "balance"},
@@ -24,7 +24,7 @@ class PoolTests(unittest.TestCase):
         all_seeds = []
         for attempt in range(200):
             seeds = candidate_seeds(attempt)
-            self.assertEqual(seeds["teacher"], 10000 + attempt)
+            self.assertEqual(seeds["teacher"], 11000 + attempt)
             self.assertEqual(seeds, candidate_seeds(attempt))
             all_seeds.extend([
                 seeds["teacher"], seeds["offset"], seeds["scale"],
@@ -59,7 +59,7 @@ class PoolTests(unittest.TestCase):
                          {"balance": 2, "exclusion": 2})
         self.assertEqual([item["pair"] for item in accepted], [0, 1, 2])
         self.assertEqual([item["teacher_seed"] for item in accepted],
-                         [10001, 10003, 10004])
+                         [11001, 11003, 11004])
         for item, attempt in zip(accepted, (1, 3, 4)):
             self.assertIs(item["filtered"], objects[attempt])
         records.json.assert_called_once_with("acceptance_summary.json", summary)
@@ -79,7 +79,7 @@ class PoolTests(unittest.TestCase):
         self.assertEqual(summary["attempts_tried"], 200)
         self.assertEqual(summary["rejected_count"], 198)
         self.assertEqual(summary["next_action"], "stop_for_user_no_gate")
-        self.assertEqual([item["teacher_seed"] for item in accepted], [10000, 10199])
+        self.assertEqual([item["teacher_seed"] for item in accepted], [11000, 11199])
         self.assertFalse(summary["learner_performance_used_for_selection"])
 
     def test_protocol_mismatch_prevents_candidate_evaluation(self):

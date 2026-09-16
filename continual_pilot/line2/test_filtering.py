@@ -45,8 +45,9 @@ class FilteringTests(unittest.TestCase):
     def test_joint_threshold_includes_equality_not_one_rule_only(self):
         filtered, _, _ = self.make_filter()
         z = np.zeros((5, 8), dtype=np.float64)
+        below = np.nextafter(0.1, 0.0)
         margins = np.array([
-            [.25, .25], [.5, .249], [.249, .5], [.4, .4], [.0, .0]
+            [.1, .1], [.5, below], [below, .5], [.4, .4], [.0, .0]
         ])
         with patch.object(filtered, "normalized_margins", return_value=margins):
             np.testing.assert_array_equal(filtered.keep(z),

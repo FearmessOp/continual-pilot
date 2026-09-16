@@ -14,7 +14,9 @@ from pathlib import Path
 import numpy as np
 import torch
 
-from .config import PROTOCOL_SHA256, verify_protocol
+from .config import (
+    ACTIVE_REVISION, PROTOCOL_SHA256, V05_PROTOCOL_SHA256, verify_v05_protocol,
+)
 
 
 DIRECTORY = Path(__file__).resolve().parent
@@ -28,6 +30,11 @@ def source_inventory():
     paths += [
         DIRECTORY / "PREREGISTRATION_DRAFT.md",
         DIRECTORY / "IMPLEMENTATION_ADDENDUM_2026-09-16.md",
+        DIRECTORY / "PREREGISTRATION_V05_2026-09-16.md",
+        DIRECTORY / "LOCK_V05_2026-09-16.md",
+        DIRECTORY / "BACKUP_V04_VERIFICATION_2026-09-16.json",
+        DIRECTORY / "OTS_VERIFICATION_2026-09-16.json",
+        DIRECTORY / "PREREGISTRATION_DRAFT.md.upgraded.ots",
         DIRECTORY.parent / "pilot.py",
         DIRECTORY.parent / "diagnose.py",
         DIRECTORY.parent / "generator_v03.py",
@@ -40,7 +47,7 @@ def source_inventory():
 
 
 def verify_documents():
-    verify_protocol()
+    verify_v05_protocol()
     path = DIRECTORY / "IMPLEMENTATION_ADDENDUM_2026-09-16.md"
     actual = hashlib.sha256(path.read_bytes()).hexdigest()
     if actual != ADDENDUM_SHA256:
@@ -88,7 +95,9 @@ def validate_to(path):
                       and result.testsRun == count and not result.skipped
                       and not result.expectedFailures and unchanged)
         report = {
-            "schema": "line2-mechanical-validation-v1",
+            "schema": "line2-mechanical-validation-v05",
+            "active_revision": ACTIVE_REVISION,
+            "v05_protocol_sha256": V05_PROTOCOL_SHA256,
             "started_utc": started_utc,
             "completed_utc": datetime.now(timezone.utc).isoformat(),
             "seconds": time.perf_counter() - started,
@@ -118,7 +127,9 @@ def require_current_validation(path):
     """Fail closed on stale sources, changed runtime, or unsuccessful test evidence."""
     verify_documents()
     report = json.loads(Path(path).read_text(encoding="utf-8"))
-    if (report.get("schema") != "line2-mechanical-validation-v1"
+    if (report.get("schema") != "line2-mechanical-validation-v05"
+            or report.get("active_revision") != ACTIVE_REVISION
+            or report.get("v05_protocol_sha256") != V05_PROTOCOL_SHA256
             or report.get("passed") is not True
             or report.get("sources_unchanged") is not True
             or report.get("scientific_experiment_started") is not False

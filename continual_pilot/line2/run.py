@@ -1,6 +1,7 @@
 """Guarded entry point for authorized acceptance and stationary controls only."""
 import argparse
 import hashlib
+import json
 import subprocess
 import time
 import traceback
@@ -9,7 +10,7 @@ from pathlib import Path
 
 import torch
 
-from .config import MAX_CANDIDATES
+from .config import ACTIVE_REVISION, MAX_CANDIDATES, V05_PROTOCOL_SHA256
 from .pool import candidate_seeds
 from .records import Records
 from .validation import WORKSPACE, environment, require_current_validation, source_inventory
@@ -44,16 +45,35 @@ def verify_backup(sources):
             "verified_utc": datetime.now(timezone.utc).isoformat()}
 
 
+def require_external_archive():
+    """Require the completed remote-download verification, not upload alone."""
+    path = WORKSPACE / "continual_pilot/line2/BACKUP_V04_VERIFICATION_2026-09-16.json"
+    report = json.loads(path.read_text(encoding="utf-8"))
+    if (report.get("schema") != "external-backup-verification-v1"
+            or report.get("all_files_match") is not True
+            or report.get("repository") != "FearmessOp/continual-pilot"
+            or report.get("release_id") != 390088986
+            or report.get("verified_files_including_manifest") != 3651
+            or report.get("verified_bytes_including_manifest") != 5832842691
+            or report.get("original_manifest_sha256") !=
+            "2c37cd3ff958c0fae9f0a7983958bdd85ba924de4af41fe796b4391baa89c29d"
+            or len(report.get("parts", [])) != 11):
+        raise ValueError("Complete verified external archive is required before v0.5")
+    return report
+
+
 def execute(*, output, validation_path):
     """No bypass flags, parameter search, automatic retry or later experiment."""
     validation = require_current_validation(validation_path)
     sources = source_inventory()
     backup = verify_backup(sources)
+    external_archive = require_external_archive()
     records = Records(output)
     started = time.perf_counter()
     try:
         records.json("prerun/validation.json", validation)
         records.json("prerun/backup.json", backup)
+        records.json("prerun/external_archive_verification.json", external_archive)
         for name, expected in sources.items():
             data = (WORKSPACE / name).read_bytes()
             if hashlib.sha256(data).hexdigest() != expected:
@@ -73,9 +93,12 @@ def execute(*, output, validation_path):
             **environment(), "threads": torch.get_num_threads(),
             "deterministic_algorithms": torch.are_deterministic_algorithms_enabled(),
             "started_utc": datetime.now(timezone.utc).isoformat(),
-            "bitcoin_confirmation_required_before_run": False,
-            "bitcoin_status": "not_verified_by_this_runner",
-            "authorization": "approved_2026-09-16_control_implementation_addendum",
+            "active_revision": ACTIVE_REVISION,
+            "v05_protocol_sha256": V05_PROTOCOL_SHA256,
+            "external_archive_verified": True,
+            "bitcoin_status": "previous_verification_archived_with_sources",
+            "bitcoin_trust_model": "local_proof_and_two_explorers_not_full_chain",
+            "authorization": "final_v05_preregistration_2026-09-16",
         })
         if sources != source_inventory():
             raise ValueError("Source inventory changed before experiment")
@@ -86,7 +109,8 @@ def execute(*, output, validation_path):
             "completed_utc": datetime.now(timezone.utc).isoformat(),
             "wall_seconds": time.perf_counter() - started,
             "scientific_checks_passed": report["passed"],
-            "next_action": "stop_for_user",
+            "next_action": "close_line_publish_lessons_no_more_scientific_runs",
+            "final_scientific_attempt": True,
         })
         records.finish()
     except Exception as error:

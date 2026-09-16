@@ -14,6 +14,11 @@ PROTOCOL_PATH = Path(__file__).with_name("PREREGISTRATION_DRAFT.md")
 PROTOCOL_SHA256 = (
     "0800b0647a0feec22dc13b83ddfaaa7478dc4cd8fe54d3a923423f3cd8d136f7"
 )
+V05_PROTOCOL_PATH = Path(__file__).with_name("PREREGISTRATION_V05_2026-09-16.md")
+V05_PROTOCOL_SHA256 = (
+    "5a0b7758f5a4da1c15f0638fc5ae30c47db1814901c104d0bb2aca4808554e2c"
+)
+ACTIVE_REVISION = "v0.5-final"
 ROOT_SEED = 20260916
 SEED_SCHEMA = "line2-revision1-role-seeds-v1"
 
@@ -41,7 +46,7 @@ REPLAY_PER_NEW = 8
 KNN_WINDOW = 256
 KNN_NEIGHBORS = 5
 
-MARGIN_THRESHOLD = 0.25
+MARGIN_THRESHOLD = 0.1
 MAX_EXCLUSION = 0.30
 CLASS_BAND = (0.18, 0.35)
 DISAGREEMENT_BAND = (0.40, 0.70)
@@ -50,7 +55,7 @@ EXCLUSION_PROPOSALS = 100000
 ACCEPTANCE_COUNT = 20000
 MAX_PROPOSALS = 1000000
 MAX_CANDIDATES = 200
-CONTROL_POOL_START = 10000
+CONTROL_POOL_START = 11000
 CONTROL_PAIRS = 3
 TRAIN_COUNT = 40000
 EVALUATION_COUNT = 20000
@@ -73,6 +78,17 @@ def verify_protocol(path=PROTOCOL_PATH):
     if actual != PROTOCOL_SHA256:
         raise ValueError(
             f"Locked protocol mismatch: expected {PROTOCOL_SHA256}, got {actual}"
+        )
+    return actual
+
+
+def verify_v05_protocol(path=V05_PROTOCOL_PATH):
+    """Verify both preserved revision 1 and the final approved v0.5 addendum."""
+    verify_protocol()
+    actual = hashlib.sha256(Path(path).read_bytes()).hexdigest()
+    if actual != V05_PROTOCOL_SHA256:
+        raise ValueError(
+            f"Locked v0.5 mismatch: expected {V05_PROTOCOL_SHA256}, got {actual}"
         )
     return actual
 

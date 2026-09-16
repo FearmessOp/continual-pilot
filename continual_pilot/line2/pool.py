@@ -12,8 +12,9 @@ import numpy as np
 
 from .acceptance import assess_candidate
 from .config import (
-    ACCEPTANCE_COUNT, CALIBRATION_COUNT, CONTROL_PAIRS, CONTROL_POOL_START,
-    EXCLUSION_PROPOSALS, MAX_CANDIDATES, derive_seed, verify_protocol,
+    ACCEPTANCE_COUNT, ACTIVE_REVISION, CALIBRATION_COUNT, CONTROL_PAIRS,
+    CONTROL_POOL_START, EXCLUSION_PROPOSALS, MARGIN_THRESHOLD, MAX_CANDIDATES,
+    derive_seed, verify_v05_protocol as verify_protocol,
 )
 from .filtering import JointMarginFilter, ProposalBudgetExceeded
 from .teacher import RecordedTeacher
@@ -158,6 +159,11 @@ def run_control_pool(records):
         if len(accepted) == CONTROL_PAIRS:
             break
     summary = {
+        "active_revision": ACTIVE_REVISION,
+        "margin_threshold": MARGIN_THRESHOLD,
+        "teacher_pool_start": CONTROL_POOL_START,
+        "maximum_candidates": MAX_CANDIDATES,
+        "final_scientific_attempt": True,
         "accepted": len(accepted) == CONTROL_PAIRS,
         "required_generators": CONTROL_PAIRS,
         "accepted_generators": [

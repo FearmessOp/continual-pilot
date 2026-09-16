@@ -100,7 +100,21 @@ class RunTests(unittest.TestCase):
         self.assertFalse(result["passed"])
         self.assertTrue((self.output / "manifest.json").exists())
         execution = json.loads((self.output / "execution.json").read_text())
-        self.assertEqual(execution["next_action"], "stop_for_user")
+        self.assertEqual(execution["next_action"],
+                         "close_line_publish_lessons_no_more_scientific_runs")
+        self.assertTrue(execution["final_scientific_attempt"])
+
+    def test_incomplete_external_backup_prevents_execution(self):
+        with patch.object(run, "require_current_validation", return_value={}):
+            with patch.object(run, "verify_backup", return_value={"mock": True}):
+                with patch.object(run, "require_external_archive",
+                                  side_effect=ValueError("Incomplete external backup")):
+                    with patch.object(run, "run_allowed_stages") as workflow:
+                        with self.assertRaisesRegex(ValueError, "Incomplete external backup"):
+                            run.execute(output=self.output,
+                                        validation_path=self.validation_path)
+                        workflow.assert_not_called()
+        self.assertFalse(self.output.exists())
 
     def test_failure_retains_partial_records_without_retry(self):
         def fail(records):
